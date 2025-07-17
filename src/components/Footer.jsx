@@ -35,12 +35,14 @@ const Footer = () => {
           {/* Navigation Links */}
           <div className="flex flex-col gap-2 ">
             <p className="text-sm text-[#BBBBBB] cursor-pointer"
-          onClick={() => navigate('/')}
+             onClick={() => navigate('/')}
             >
             Home
             </p>
             <p className="text-sm text-[#BBBBBB] cursor-pointer">Shop / Products</p>
-            <p className="text-sm text-[#BBBBBB] cursor-pointer">About Us</p>
+            <p className="text-sm text-[#BBBBBB] cursor-pointer"
+            onClick={() => navigate('/about')}
+            >About Us</p>
             <p className="text-sm text-[#BBBBBB] cursor-pointer">Blog / Guides</p>
             <p className="text-sm text-[#BBBBBB] cursor-pointer">Contact</p>
             <p className="text-sm text-[#BBBBBB] cursor-pointer">Track Order / My Account</p>
