@@ -52,7 +52,9 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <p className="text-sm text-[#BBBBBB]">Brake System</p>
             <p className="text-sm text-[#BBBBBB]">Engine Parts</p>
-            <p className="text-sm text-[#BBBBBB]">Suspension</p>
+            <p className="text-sm text-[#BBBBBB] cursor-pointer"
+             onClick={() => navigate('/suspension')}
+            >Suspension</p>
             <p className="text-sm text-[#BBBBBB]">Body & Exterior</p>
             <p className="text-sm text-[#BBBBBB]">Electrical Components</p>
           </div>

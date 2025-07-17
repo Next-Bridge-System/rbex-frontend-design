@@ -25,6 +25,7 @@ const products = [
         price: '$65.00',
         image: 'src/assets/4x4.png',
     },
+    
 
 ];
 

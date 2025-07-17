@@ -2,7 +2,7 @@ import AboutCar from '../../assets/aboutCar.svg';
 
 const HeroAbout = () => {
   return (
-    <section className="bg-[#F4FDFF] pt-6 pb-12 px-4 sm:px-6 lg:px-16">
+   <section className="bg-[#F4FDFF] pt-6 pb-12 px-4 sm:px-6 lg:px-16">
   <div className="max-w-7xl mx-auto flex flex-col items-start">
     
     {/* Heading */}
