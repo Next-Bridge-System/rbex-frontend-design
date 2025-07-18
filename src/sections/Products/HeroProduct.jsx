@@ -43,7 +43,7 @@ const HeroProduct = () => {
         </div>
 
         {/* Product Content Section */}
-<div className="w-full flex flex-col lg:flex-row items-stretch justify-between gap-6 sm:gap-10 lg:gap-10">
+        <div className="w-full flex flex-col lg:flex-row items-stretch justify-between gap-6 sm:gap-10 lg:gap-10">
           {/* Left Content - Product Images */}
           <div className="w-full lg:w-1/3">
             {/* Main Product Image */}
@@ -128,7 +128,7 @@ const HeroProduct = () => {
 
             {/* Social Links */}
             <div className="mt-6 flex items-center gap-3 justify-end">
-              
+
               <img src={ItemLink} alt="Social 1" className="w-8 h-8 cursor-pointer" />
               <img src={ItemLink1} alt="Social 1" className="w-8 h-8 cursor-pointer" />
               <img src={ItemLink2} alt="Social 2" className="w-8 h-8 cursor-pointer" />

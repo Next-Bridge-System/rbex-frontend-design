@@ -9,6 +9,8 @@ import CheckOut from './pages/CheckOut';
 import AboutUs from './pages/AboutUs';
 import Suspension from './pages/Suspension';
 import Products from './pages/Products';
+import Blogs from './pages/Blogs';
+
 function App() {
 
   return (
@@ -24,6 +26,7 @@ function App() {
         <Route path='/about' element={<AboutUs />} />
         <Route path='/suspension' element={<Suspension />} />
         <Route path='/products' element={<Products/>} />
+        <Route path='/blogs' element={<Blogs/>}/>
       </Routes>
     </Router>
   )

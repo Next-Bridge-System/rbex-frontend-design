@@ -45,7 +45,9 @@ const Footer = () => {
             <p className="text-sm text-[#BBBBBB] cursor-pointer"
             onClick={() => navigate('/about')}
             >About Us</p>
-            <p className="text-sm text-[#BBBBBB] cursor-pointer">Blog / Guides</p>
+            <p className="text-sm text-[#BBBBBB] cursor-pointer"
+            onClick={()=> navigate('/blogs')}
+            >Blog / Guides</p>
             <p className="text-sm text-[#BBBBBB] cursor-pointer">Contact</p>
             <p className="text-sm text-[#BBBBBB] cursor-pointer">Track Order / My Account</p>
           </div>
