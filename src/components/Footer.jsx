@@ -39,7 +39,9 @@ const Footer = () => {
             >
             Home
             </p>
-            <p className="text-sm text-[#BBBBBB] cursor-pointer">Shop / Products</p>
+            <p className="text-sm text-[#BBBBBB] cursor-pointer"
+            onClick={() => navigate('/products')}
+            >Shop / Products</p>
             <p className="text-sm text-[#BBBBBB] cursor-pointer"
             onClick={() => navigate('/about')}
             >About Us</p>

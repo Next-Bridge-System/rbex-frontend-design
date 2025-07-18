@@ -1,4 +1,4 @@
-import { IoIosArrowDown } from 'react-icons/io';
+
 const products = [
     {
         id: 1,
