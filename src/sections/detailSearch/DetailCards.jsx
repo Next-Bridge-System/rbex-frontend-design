@@ -3,7 +3,7 @@ import ListIcon from '../../assets/list.svg';
 import GridIcon from '../../assets/grid.svg';
 import cartIcon from '../../assets/button2.png';
 import cartIcon1 from '../../assets/button2 (2).png';
-import discountTag from '../../assets/polygon.png';
+// import discountTag from '../../assets/polygon.png';
 import closeIcon from '../../assets/close.png';
 import detail1 from '../../assets/detail1.svg';
 import detail2 from '../../assets/detail2.svg';
@@ -12,6 +12,115 @@ import Corolla from '../../assets/Corolla.png';
 import Jeep from '../../assets/Jeep.png';
 import city from '../../assets/city.png';
 import civic from '../../assets/civicbumper.svg';
+import Ok from '../../assets/ok.png';
+
+// Helper component (put right above DetailCards)
+
+//Modal Component here
+const Modal = ({ title, image, onClose }) => {
+    const [activeTab, setActiveTab] = useState('fitments');
+
+    const tabs = [
+        { key: 'fitments', label: 'Fitments' },
+        { key: 'oem', label: 'OEM / Alt Numbers' },
+        { key: 'designations', label: 'Designations' },
+    ];
+
+    const data = {
+        fitments: [
+            '2016 TOYOTA COROLLA SEDAN',
+            '2015 TOYOTA COROLLA SEDAN',
+            '2014 TOYOTA COROLLA SEDAN',
+            '2016 HONDA CIVIC SEDAN',
+            '2015 HONDA CIVIC SEDAN',
+            '2014 HONDA CIVIC SEDAN',
+        ],
+        oem: ['1524-01729C', '31663900', '316639004', 'VO1070111'],
+        designations: [
+            'PBM24601',
+            'PLASTIC BUMPER',
+            'HIGH-GRADE ABS PLASTIC',
+            'PRE-PRIMED READY TO PAINT',
+
+        ],
+        features: [
+            'HIGH-GRADE ABS PLASTIC',
+            'PRE-PRIMED READY TO PAINT',
+            'DIRECT OEM FITMENT',
+            'IMPACT-RESISTANT AND FLEXIBLE',
+
+        ],
+    };
+
+    return (
+        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-5">
+            {/* reduced max-width & max-height */}
+            <div className="bg-white rounded-xl  w-[40%] max-h-[90vh] overflow-x-hidden flex flex-col shadow-2xl">
+
+                {/* Header */}
+                <div className="flex items-center bg-[#BA2027] justify-between px-4 py-3  border-b">
+                    <h2 className="text-lg text-[#FAFAFA] font-rubik">{title}</h2>
+                    <button
+                        className="text-2xl text-[#FAFAFA]  hover:text-red-600"
+                        onClick={onClose}
+                    >
+                        &times;
+                    </button>
+                </div>
+
+                {/* Image + Features */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 border-b">
+                    <div className="md:col-span-2 flex items-center justify-center">
+                        <img
+                            src={image}
+                            alt={title}
+                            className="w-full max-w-[180px] object-contain rounded"
+                        />
+                    </div>
+
+                    <div className="md:col-span-2 text-[#000000] font-rubik space-y-2 text-sm flex flex-col ml-auto justify-center ">
+                        {data.features.map((txt) => (
+                            <div key={txt} className="flex items-center gap-2">
+                                <img src={Ok} alt='ok' />
+                                <span>{txt}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Tabs */}
+                <div className="flex border-b">
+                    {tabs.map(({ key, label }) => (
+                        <button
+                            key={key}
+                            onClick={() => setActiveTab(key)}
+                            className={`flex-1 py-2 text-sm font-medium transition
+                ${activeTab === key
+                                    ? 'border-b-2 border-red-600 text-red-600'
+                                    : 'text-gray-600 hover:text-red-500'}`}
+                        >
+                            {label}
+
+                        </button>
+                    ))}
+                </div>
+
+                {/* taller tab content (no inner scroll) */}
+                <div className="p-4 text-sm space-y-1">
+                    {activeTab === 'fitments' &&
+                        data.fitments.map((f) => <div key={f}>• {f}</div>)}
+
+                    {activeTab === 'oem' &&
+                        data.oem.map((o) => <div key={o}>{o}</div>)}
+
+                    {activeTab === 'designations' &&
+                        data.designations.map((d) => <div key={d}>✓ {d}</div>)}
+                </div>
+            </div>
+        </div>
+    );
+};
+
 
 const bumperParts = [
     {
@@ -57,6 +166,12 @@ const bumperParts = [
 ];
 
 const DetailCards = () => {
+    const [openModalId, setOpenModalId] = useState(null);
+
+    const openModal = (id) => setOpenModalId(id);
+    const closeModal = () => setOpenModalId(null);
+
+    const activePart = bumperParts.find(p => p.id === openModalId);
     const [filters, setFilters] = useState({
         yearMade: '',
         vehicleMake: '',
@@ -323,8 +438,8 @@ const DetailCards = () => {
                                         >
                                             <path d="M0 0 L100 0 L0 100 Z" />
                                         </svg>
-                                        <span className="absolute top-4 left-1.5 text-white font-bold text-xs transform -rotate-45">
-                                            50%<br />SALE
+                                        <span className="absolute top-4 left-1.5 font-roboto text-white  text-xs transform -rotate-45">
+                                            50% off
                                         </span>
                                     </div>
 
@@ -337,10 +452,14 @@ const DetailCards = () => {
 
                                     {/* Product Info */}
                                     <div className="flex-1 min-w-0">
-                                        <h3 className="text-[#004379] font-semibold text-lg">{part.title}</h3>
-                                        <div className="flex gap-2 mt-2">
+                                        <h3
+                                            className="text-[#004379] font-semibold text-lg cursor-pointer hover:underline"
+                                            onClick={() => openModal(part.id)}
+                                        >
+                                            {part.title}
+                                        </h3>                                        <div className="flex gap-2 mt-2  ">
                                             {part.details.map((icon, idx) => (
-                                                <img key={idx} src={icon} alt="detail" className="w-6 h-6" />
+                                                <img key={idx} src={icon} alt="detail" />
                                             ))}
                                         </div>
                                         <p className="text-sm text-[#4D4D4D] mt-1">
@@ -359,7 +478,7 @@ const DetailCards = () => {
                                                 List Price <span className="line-through">{part.listPrice}</span>
                                             </p>
                                         </div>
-                                        <button className="bg-red-600 text-white px-7 py-2 rounded text-sm flex items-center hover:bg-red-700 transition mt-3">
+                                        <button className="bg-[#BA2027] text-white px-7 py-2 rounded text-sm flex items-center hover:bg-red-700 transition mt-3">
                                             Add to Cart
                                             <img src={cartIcon1} alt="cart" className="w-4 h-4 ml-2" />
                                         </button>
@@ -402,7 +521,10 @@ const DetailCards = () => {
                                         {/* Content wrapper – now left-aligned */}
                                         <div className="px-4 flex flex-col items-start space-y-2">
                                             {/* Title */}
-                                            <h3 className="font-semibold text-lg text-[#004379]">
+                                            <h3
+                                                className="font-semibold text-lg text-[#004379] cursor-pointer hover:underline"
+                                                onClick={() => openModal(part.id)}
+                                            >
                                                 {part.title}
                                             </h3>
 
@@ -442,8 +564,21 @@ const DetailCards = () => {
                                         </div>
                                     </div>
                                 ))}
+                                {/* Product Display Area */}
+
+
+
+
                             </div>
+
                         )}
+                    {activePart && (
+                        <Modal
+                            title={activePart.title}
+                            image={activePart.image}  // Add this line
+                            onClose={closeModal}
+                        />
+                    )}
                 </div>
             </div>
         </div>

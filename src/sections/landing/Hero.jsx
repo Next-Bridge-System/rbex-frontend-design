@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import heroImg from '../../assets/hero.png';
+import heroImg2 from '../../assets/heroimg2.svg';
 import FilterStrip from './FilterStrip';
 import Select from 'react-select';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // Dropdown Options
 const years = [
@@ -52,19 +53,55 @@ const customStyles = {
 };
 
 const Hero = () => {
-  const Navigate=useNavigate();
+  const Navigate = useNavigate();
+  const [currentVariant, setCurrentVariant] = useState(1);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  // Animation properties
+  const animationDuration = 1000; // 1000ms
+  const animationDelay = 1500; // 1500ms
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentVariant(prev => prev === 1 ? 2 : 1);
+        setIsAnimating(false);
+      }, animationDuration);
+    }, animationDelay + animationDuration);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Variant content
+  const variants = {
+    1: {
+      heading: "Best Parts Purchase ",
+      highlight: "Experience",
+      image: heroImg,
+      description: "Easily find the exact parts your vehicle needs in seconds. Search by make, model, year, and engine type to ensure perfect fitment, improved performance, and a hassle-free shopping experience every time."
+    },
+    2: {
+      heading: "Find Parts For Your ",
+      highlight: "Vehicle",
+      image: heroImg2,
+      description: "Get the right parts for your specific vehicle model. Our comprehensive database ensures accurate matches for all makes and models, delivering quality parts directly to your doorstep."
+    }
+  };
+
   return (
-    <section className="bg-[#F4FDFF] py-12 ">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center ">
+    <section className="bg-[#F4FDFF] py-12">
+      <div className="max-w-7xl  mx-auto  h-[400px] lg:h-[270px] flex flex-col-reverse lg:flex-row items-center justify-center">
         {/* Left Content */}
         <div className="w-full lg:w-1/1 text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
-            Best Parts Purchase <span className="text-strip">Experience</span>
+            <span className={`transition-opacity duration-1000 ease-in-out ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+              {variants[currentVariant].heading}
+              <span className="text-strip">{variants[currentVariant].highlight}</span>
+            </span>
           </h1>
-          <p className="mt-4 text-black text-base  sm:text-sm lg:text-base max-w-lg mx-auto lg:mx-0">
-            Easily find the exact parts your vehicle needs in seconds. Search by make, model, year,
-            and engine type to ensure perfect fitment, improved performance, and a hassle-free
-            shopping experience every time.
+          <p className={`mt-4 text-black text-base sm:text-sm lg:text-base max-w-lg mx-auto lg:mx-0 transition-opacity duration-1000 ease-in-out ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+            {variants[currentVariant].description}
           </p>
 
           {/* Filter Form */}
@@ -78,17 +115,25 @@ const Hero = () => {
             <div className="min-w-[160px]">
               <Select options={models} placeholder="Select Model" styles={customStyles} />
             </div>
-            <button className="bg-strip text-white px-7 py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition"
-             onClick={()=>Navigate('/detail-search')}
+            <button
+              className="bg-strip text-white px-7 py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition"
+              onClick={() => Navigate('/detail-search')}
             >
               Search
             </button>
           </div>
         </div>
 
-        {/* Right Image */}
-        <div className="w-full lg:w-1/2 text-center ">
-          <img src={heroImg} alt="Hero" className="w-full   max-w-[500px] mx-auto" />
+        {/* Right Image – locked height on every breakpoint */}
+        <div className="w-full lg:w-1/2 flex justify-center items-center">
+          <div className="w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[500px] h-[220px] sm:h-[160px] md:h-[200px] lg:h-[270px]">
+            <img
+              src={variants[currentVariant].image}
+              alt="Hero"
+              className={`w-full h-full object-contain transition-opacity duration-1000 ease-in-out ${isAnimating ? 'opacity-0' : 'opacity-100'
+                }`}
+            />
+          </div>
         </div>
       </div>
 

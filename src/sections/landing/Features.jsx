@@ -30,7 +30,7 @@ const features = [
 const Features = () => {
   return (
     <section className="bg-feature py-8 px-4 ">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
         {features.map((item, index) => (
           <div
             key={index}

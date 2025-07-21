@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import condenser from '../../assets/condenser.png';
 import headlamp from '../../assets/headlamp.png';
@@ -17,6 +18,7 @@ const categories = [
 ];
 
 const Categories = () => {
+  const navigate=useNavigate();
   return (
     <section className="bg-[#F4FDFF] py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -25,7 +27,9 @@ const Categories = () => {
           <h2 className="text-2xl font-medium text-[#333333] text-center sm:text-left">
             Shop by category
           </h2>
-          <button className="bg-strip hover:bg-red-700 text-white px-7 py-1.5 rounded-lg text-sm font-medium">
+          <button className="bg-strip hover:bg-red-700 text-white px-7 py-1.5 rounded-lg text-sm font-medium"
+          onClick={()=>navigate('/shop-by-category')}
+          >
             View All
           </button>
         </div>
