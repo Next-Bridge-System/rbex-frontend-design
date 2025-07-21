@@ -10,6 +10,7 @@ import AboutUs from './pages/AboutUs';
 import Suspension from './pages/Suspension';
 import Products from './pages/Products';
 import Blogs from './pages/Blogs';
+import DetailSearch from './pages/DetailSearch';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/suspension' element={<Suspension />} />
         <Route path='/products' element={<Products/>} />
         <Route path='/blogs' element={<Blogs/>}/>
+        <Route path='/detail-search' element={<DetailSearch/>}/>
       </Routes>
     </Router>
   )

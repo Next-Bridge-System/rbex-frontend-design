@@ -11,7 +11,10 @@ import LatestArticle from '../sections/landing/latestArticle'
 import Testimonials from '../sections/landing/Testimonials'
 import Footer from '../components/Footer'
 
+
+
 const Landing = () => {
+
   return (
     <div className="overflow-x-hidden">
       <Navbar />

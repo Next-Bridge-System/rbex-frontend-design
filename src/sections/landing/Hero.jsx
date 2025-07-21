@@ -2,6 +2,7 @@ import React from 'react';
 import heroImg from '../../assets/hero.png';
 import FilterStrip from './FilterStrip';
 import Select from 'react-select';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 // Dropdown Options
 const years = [
@@ -51,6 +52,7 @@ const customStyles = {
 };
 
 const Hero = () => {
+  const Navigate=useNavigate();
   return (
     <section className="bg-[#F4FDFF] py-12 ">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center ">
@@ -76,7 +78,9 @@ const Hero = () => {
             <div className="min-w-[160px]">
               <Select options={models} placeholder="Select Model" styles={customStyles} />
             </div>
-            <button className="bg-strip text-white px-7 py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition">
+            <button className="bg-strip text-white px-7 py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition"
+             onClick={()=>Navigate('/detail-search')}
+            >
               Search
             </button>
           </div>
