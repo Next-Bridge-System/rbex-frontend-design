@@ -1,4 +1,5 @@
-import React from 'react';
+
+import { useNavigate } from 'react-router-dom';
 import SkewedRect from '../../assets/Skewed Rectangle.png'; // Adjust path if needed
 
 import bg1 from "../../assets/bg1.png";
@@ -7,6 +8,8 @@ import bg3 from "../../assets/bg3.png";
 
 
 const HeroDetail = () => {
+  // Inside your component:
+  const navigate = useNavigate();
   return (
     <section className="bg-[#F4FDFF] relative pt-6 pb-12  lg:ml-0 px-4 sm:px-6 lg:px-16">
       {/* Layered Background Vectors */}
@@ -43,26 +46,43 @@ const HeroDetail = () => {
         {/* Responsive Breadcrumbs */}
         <div className="flex flex-wrap ml-5 lg:ml-0 items-center gap-y-2">
           {[
-            { label: 'Home', width: 'w-[140px] sm:w-[162px]' },
-            { label: 'Shop by category', width: 'w-[180px] sm:w-[250px]' },
-            { label: 'Plastic Bumper', width: 'w-[190px] sm:w-[200px]' },
+            {
+              label: 'Home',
+              width: 'w-[140px] sm:w-[162px]',
+              onClick: () => navigate('/'),
+              className: 'cursor-pointer'
+            },
+            {
+              label: 'Shop by category',
+              width: 'w-[180px] sm:w-[250px]',
+              onClick: () => navigate('/shop-by-category'),
+              className: 'cursor-pointer'
+            },
+            {
+              label: 'Plastic Bumper',
+              width: 'w-[190px] sm:w-[200px]',
+              onClick: () => navigate('/products'),
+              className: 'cursor-pointer'
+            },
           ].map((item, index) => (
             <div
               key={index}
               className={`relative ${item.width} h-[30px] rounded-[3px] ${index > 0 ? 'ml-[-20px] sm:ml-[-40px]' : ''}`}
               style={{ zIndex: 10 - index }}
+              onClick={item.onClick} // Moved onClick here
             >
               <img
                 src={SkewedRect}
                 alt={`${item.label} Background`}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none" // Added pointer-events-none
               />
-              <span className="absolute inset-0 flex items-center justify-center text-[#4D4D4D] text-sm sm:text-lg font-semibold px-1 truncate">
+              <span
+                className={`absolute inset-0 flex items-center justify-center text-[#4D4D4D] text-sm sm:text-lg font-semibold px-1 truncate ${item.className}`}
+              >
                 {item.label}
               </span>
             </div>
           ))}
-
         </div>
       </div>
     </section>

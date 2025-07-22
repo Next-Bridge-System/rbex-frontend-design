@@ -1,4 +1,4 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import OrderForm from './OrderForm'
 
 import bg1 from "../../assets/bg1.png";
@@ -6,6 +6,7 @@ import bg2 from "../../assets/bg2.png";
 import bg3 from "../../assets/bg3.png";
 
 const HeroTrackOrder = () => {
+    const navigate=useNavigate();
     return (
         <section className="bg-[#F4FDFF] relative pt-8 px-4  sm:px-6  lg:px-16 ">
            {/* Layered Background Vectors */}
@@ -40,7 +41,9 @@ const HeroTrackOrder = () => {
                             alt="Home Background"
                             className="absolute ml-5 inset-0 w-full h-full object-cover z-0"
                         />
-                        <span className="absolute  ml-5 inset-0 flex items-center justify-center text-[#4D4D4D] text-lg font-semibold z-10">
+                        <span className="absolute cursor-pointer  ml-5 inset-0 flex items-center justify-center text-[#4D4D4D] text-lg font-semibold z-10"
+                         onClick={() => navigate("/")}
+                        >
                             Home
                         </span>
                     </div>
@@ -52,7 +55,9 @@ const HeroTrackOrder = () => {
                             alt="Shop by Category Background"
                             className="absolute inset-0 w-full h-full object-cover z-0"
                         />
-                        <span className="absolute inset-0 flex items-center justify-center text-[#4D4D4D] text-lg font-semibold z-10">
+                        <span className="absolute cursor-pointer inset-0 flex items-center justify-center text-[#4D4D4D] text-lg font-semibold z-10"
+                         onClick={()=>navigate('/help-center')}
+                        >
                             FAQs
                         </span>
                     </div>

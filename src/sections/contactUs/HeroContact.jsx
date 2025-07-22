@@ -1,4 +1,4 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import LeaveMessage from './LeaveMessage'
 
 import bg1 from "../../assets/bg1.png";
@@ -7,6 +7,7 @@ import bg3 from "../../assets/bg3.png";
 
 
 const HeroContact = () => {
+    const navigate = useNavigate();
     return (
         <section className="bg-[#F4FDFF] relative  pt-8 px-4  sm:px-6  lg:px-16 ">
             {/* Layered Background Vectors */}
@@ -41,7 +42,9 @@ const HeroContact = () => {
                             alt="Home Background"
                             className="absolute ml-5 inset-0 w-full h-full object-cover z-0"
                         />
-                        <span className="absolute  ml-5 inset-0 flex items-center justify-center text-[#4D4D4D] text-lg font-semibold z-10">
+                        <span className="absolute  ml-5 inset-0 flex cursor-pointer items-center justify-center text-[#4D4D4D] text-lg font-semibold z-10"
+                          onClick={()=>navigate('/')}
+                        >
                             Home
                         </span>
                     </div>
