@@ -3,8 +3,8 @@ import truck from '../../assets/truck.png'; // Adjust path if needed
 
 const OrderForm = () => {
   return (
-   <div className="flex items-center justify-center bg-[#F4FDFF] px-4 py-12 sm:py-20">
-  <div className="w-full max-w-[699px] bg-white shadow-[0px_1px_25px_0px_#00000026] ">
+   <div className="flex items-center justify-center  px-4 py-12 sm:py-10">
+  <div className="w-full max-w-[699px] bg-white mb-9  ">
 
         {/* Header */}
         <div className="bg-strip text-white text-center text-[24px] sm:text-[30px] py-4 font-medium ">

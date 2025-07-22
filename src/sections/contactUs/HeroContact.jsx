@@ -1,11 +1,32 @@
 import React from 'react'
 import LeaveMessage from './LeaveMessage'
 
+import bg1 from "../../assets/bg1.png";
+import bg2 from "../../assets/bg2.png";
+import bg3 from "../../assets/bg3.png";
+
 
 const HeroContact = () => {
     return (
-        <section className="bg-[#F4FDFF] pt-8 px-4  sm:px-6  lg:px-16 ">
-            <div className="max-w-7xl mx-auto mt-6 px-4 sm:px-6 lg:px-10 flex flex-col items-start">                {/* Heading */}
+        <section className="bg-[#F4FDFF] relative  pt-8 px-4  sm:px-6  lg:px-16 ">
+            {/* Layered Background Vectors */}
+                  <img
+                    src={bg1}
+                    alt="bg1"
+                    className="absolute top-0  left-0 w-[70%]  lg:w-[45%]  opacity-10 z-0 pointer-events-none"
+                  />
+                  <img
+                    src={bg2}
+                    alt="bg2"
+                    className="absolute top-0 left-0 w-[60%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
+                  />
+                  <img
+                    src={bg3}
+                    alt="bg3"
+                    className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
+                  />
+           
+            <div className="max-w-7xl  mx-auto mt-6 px-4 sm:px-6 lg:px-10 flex flex-col items-start">                {/* Heading */}
                 <h1 className="text-[32px] ml-6 lg:ml-20 sm:text-[36px] md:text-[40px] font-bold text-[#233D7B] leading-[20px] tracking-tight font-lato mb-6 sm:mb-10">
                     Contact Us
                 </h1>

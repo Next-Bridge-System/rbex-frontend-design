@@ -79,7 +79,7 @@ const EngineDrivetrainSection = () => {
                 {products.map(({ id, name, price, image }) => (
                     <div
                         key={id}
-                        className="w-full lg:max-w-[290px] h-[530px] lg:h-[470px] shadow border-gray-200 border rounded p-3 hover:shadow-md"
+                        className="w-full lg:max-w-[290px] h-[550px] lg:h-[490px] shadow border-gray-200 border rounded p-3 hover:shadow-md"
                     >
                         <div className="-mx-3 mb-2">
                             <img
@@ -89,10 +89,10 @@ const EngineDrivetrainSection = () => {
                             />
                         </div>
 
-                        <h3 className="text-[#333333] text-sm font-semibold">{name}</h3>
-                        <p className="text-[#333333] mt-5 font-semibold text-xs">{price}</p>
+                        <h3 className="text-[#414141] text-[20px] font-semibold font-roboto">{name}</h3>
+                        <p className="text-[#333333] font-rubik mt-5 font-medium text-[16px]">{price}</p>
 
-                        <div className="flex justify-center mt-10">
+                        <div className="flex justify-center mt-6">
                             <button className="bg-strip text-white py-2 px-6 text-xs rounded hover:bg-red-600">
                                 Add to cart
                             </button>

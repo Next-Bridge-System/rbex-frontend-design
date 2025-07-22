@@ -15,6 +15,9 @@ import radiator from '../../assets/radiator support.png'
 
 import grille from '../../assets/grille.png';
 
+import bg1 from "../../assets/bg1.png";
+import bg2 from "../../assets/bg2.png";
+import bg3 from "../../assets/bg3.png";
 
 const categories = [
     { label: 'Plastic Bumper', image: bumper },
@@ -36,8 +39,24 @@ const secondCategories = [
 
 const HeroCategory = () => {
     return (
-        <section className="bg-[#F4FDFF] pt-8 px-4 sm:px-6   lg:px-16 ">
-            <div className="max-w-7xl mx-auto flex flex-col mt-6 items-start">
+        <section className="bg-[#F4FDFF] relative pt-8 px-4 sm:px-6  overflow-hidden  lg:px-16 ">
+      {/* Layered Background Vectors */}
+            <img
+              src={bg1}
+              alt="bg1"
+              className="absolute top-0  left-0 w-[70%]  lg:w-[45%]  opacity-10 z-0 pointer-events-none"
+            />
+            <img
+              src={bg2}
+              alt="bg2"
+              className="absolute top-0 left-0 w-[60%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
+            />
+            <img
+              src={bg3}
+              alt="bg3"
+              className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
+            />
+            <div className="max-w-7xl z-10 mx-auto flex flex-col mt-6 items-start">
                 {/* Heading */}
                 <h1 className="text-[32px] ml-6 lg:ml-28 sm:text-[36px] md:text-[40px] font-bold text-[#233D7B] leading-[20px] tracking-tight font-lato mb-6 sm:mb-10">
                     Shop By Category
@@ -72,7 +91,7 @@ const HeroCategory = () => {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 mb-10 w-full max-w-[85%] mx-auto">
+                <div className="grid relative grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 mb-10 w-full max-w-[85%] mx-auto">
                     {categories.map((item, idx) => (
                         <div
                             key={idx}

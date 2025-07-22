@@ -6,28 +6,28 @@ const products = [
     name: 'Head Lamp – Toyota Corolla 2014–2016',
     price: '$563.00',
     image: 'src/assets/toyota.png',
-    rating: 4.5,
+  
   },
   {
     id: 2,
     name: 'Head Lamp – Honda Civic 2017–2019',
     price: '$563.00',
     image: 'src/assets/civic.png',
-    rating: 4.5,
+  
   },
   {
     id: 3,
     name: 'Head Lamp – Suzuki Cultus 2018',
     price: '$2,356.00',
     image: 'src/assets/cultus.png',
-    rating: 4.5,
+  
   },
   {
     id: 4,
     name: 'Modified LED Head Lamp – Toyota Hilux',
     price: '$65.00',
     image: 'src/assets/hilux.png',
-    rating: 4.5,
+  
   },
 ];
 
@@ -62,10 +62,10 @@ const PopularCategory = () => {
 
       {/* Product Grid */}
       <div className="flex mt-10 flex-wrap justify-center gap-4 ">
-        {products.map(({ id, name, price, image, rating }) => (
+        {products.map(({ id, name, price, image}) => (
           <div
             key={id}
-            className="w-full lg:w-[295px] mx-7 lg:mx-0  bg-white lg:h-[450px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between"
+            className="w-full lg:w-[295px] mx-7 lg:mx-0  bg-white lg:h-[490px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between"
           >
             {/* Top Section */}
             <div>
@@ -77,24 +77,18 @@ const PopularCategory = () => {
                 />
               </div>
 
-              <h3 className="text-[#333333] font-semibold text-sm line-clamp-2">
+              <h3 className="text-[#333333] font-medium font-rubik text-[18px] line-clamp-2">
                 {name}
               </h3>
 
               <div className="flex items-center justify-between mt-3">
-                <p className="text-[#333333] font-semibold text-xs">{price}</p>
-                <div className="flex items-center text-yellow-400 text-sm">
-                  {[...Array(Math.floor(rating))].map((_, i) => (
-                    <span key={i}>★</span>
-                  ))}
-                  {rating % 1 !== 0 && <span>☆</span>}
-                  <span className="text-[#333333] text-xs font-semibold ml-1">{rating}</span>
-                </div>
+                <p className="text-[#333333] font-rubik font-medium text-[16px]">{price}</p>
+                
               </div>
             </div>
 
             {/* Bottom Button */}
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-5">
               <button className="bg-strip text-white py-2 px-6 text-xs rounded hover:bg-red-600 mb-2">
                 Add to cart
               </button>

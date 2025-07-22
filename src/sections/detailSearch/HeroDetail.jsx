@@ -1,9 +1,30 @@
 import React from 'react';
 import SkewedRect from '../../assets/Skewed Rectangle.png'; // Adjust path if needed
 
+import bg1 from "../../assets/bg1.png";
+import bg2 from "../../assets/bg2.png";
+import bg3 from "../../assets/bg3.png";
+
+
 const HeroDetail = () => {
   return (
-    <section className="bg-[#F4FDFF] pt-6 pb-12 ml-5 lg:ml-0 px-4 sm:px-6 lg:px-16">
+    <section className="bg-[#F4FDFF] relative pt-6 pb-12  lg:ml-0 px-4 sm:px-6 lg:px-16">
+      {/* Layered Background Vectors */}
+      <img
+        src={bg1}
+        alt="bg1"
+        className="absolute top-0  left-0  lg:w-[45%] opacity-10 z-0 pointer-events-none"
+      />
+      <img
+        src={bg2}
+        alt="bg2"
+        className="absolute top-0 left-0 w-[90%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
+      />
+      <img
+        src={bg3}
+        alt="bg3"
+        className="absolute top-0 left-0 w-[80%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
+      />
       <div className="max-w-7xl mx-auto flex flex-col gap-4">
 
         {/* Top Row: Heading + Result Count */}
@@ -19,30 +40,30 @@ const HeroDetail = () => {
           </div>
         </div>
 
-       {/* Responsive Breadcrumbs */}
-<div className="flex flex-wrap ml-5 lg:ml-0 items-center gap-y-2">
-  {[
-    { label: 'Home', width: 'w-[140px] sm:w-[162px]' },
-    { label: 'Shop by category', width: 'w-[180px] sm:w-[250px]' },
-    { label: 'Plastic Bumper', width: 'w-[190px] sm:w-[200px]' },
-  ].map((item, index) => (
-    <div 
-      key={index} 
-      className={`relative ${item.width} h-[30px] rounded-[3px] ${index > 0 ? 'ml-[-20px] sm:ml-[-40px]' : ''}`}
-      style={{ zIndex: 10 - index }}
-    >
-      <img
-        src={SkewedRect}
-        alt={`${item.label} Background`}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <span className="absolute inset-0 flex items-center justify-center text-[#4D4D4D] text-sm sm:text-lg font-semibold px-1 truncate">
-        {item.label}
-      </span>
-    </div>
-  ))}
-  
-</div>
+        {/* Responsive Breadcrumbs */}
+        <div className="flex flex-wrap ml-5 lg:ml-0 items-center gap-y-2">
+          {[
+            { label: 'Home', width: 'w-[140px] sm:w-[162px]' },
+            { label: 'Shop by category', width: 'w-[180px] sm:w-[250px]' },
+            { label: 'Plastic Bumper', width: 'w-[190px] sm:w-[200px]' },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`relative ${item.width} h-[30px] rounded-[3px] ${index > 0 ? 'ml-[-20px] sm:ml-[-40px]' : ''}`}
+              style={{ zIndex: 10 - index }}
+            >
+              <img
+                src={SkewedRect}
+                alt={`${item.label} Background`}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <span className="absolute inset-0 flex items-center justify-center text-[#4D4D4D] text-sm sm:text-lg font-semibold px-1 truncate">
+                {item.label}
+              </span>
+            </div>
+          ))}
+
+        </div>
       </div>
     </section>
   );

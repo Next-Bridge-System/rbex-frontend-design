@@ -16,7 +16,7 @@ import Footer from '../components/Footer'
 const Landing = () => {
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden ">
       <Navbar />
       <Hero />
       <Features />

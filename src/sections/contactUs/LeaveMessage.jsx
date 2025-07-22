@@ -3,7 +3,7 @@ import map from '../../assets/map.png'; // Replace with your actual map image pa
 
 const LeaveMessage = () => {
   return (
-    <section className="bg-[#F4FDFF] w-full min-h-[891px] px-4 sm:px-6 lg:px-16 py-16">
+    <section className=" relative w-full min-h-[891px] px-4 sm:px-6 lg:px-16 py-16">
         {/* Heading & Paragraph */}
         <div className="w-full mb-8">
   {/* Heading */}

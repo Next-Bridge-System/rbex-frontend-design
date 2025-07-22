@@ -12,6 +12,8 @@ import paypalIcon from '../../assets/cart6.png';
 import savingsBg from '../../assets/cart7.png';
 import discountTag from '../../assets/polygon.png';
 
+
+
 const CartItem = () => (
     <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-4 p-2 sm:p-4 lg:p-6 bg-white rounded-lg shadow border relative hover:shadow-lg transition duration-300">
 
@@ -75,7 +77,7 @@ const CartItem = () => (
 const HeroCart = () => {
     const navigate = useNavigate();
     return (
-        <div className="bg-[#F5FCFF]  px-4 mb-10 sm:px-6 lg:px-10 py-8">
+        <div className=" relative px-4 mb-10 sm:px-6 lg:px-10 py-8">
             {/* Fast Shipping */}
             <div className="bg-white p-5 border w-full sm:w-[73%]  rounded-lg px-6 py-3 text-sm font-semibold mb-6 shadow-sm">
                 Fast Shipping <br />
@@ -88,7 +90,7 @@ const HeroCart = () => {
                 {/* Left Section */}
                 <div className="flex-1 mb-4  border rounded-lg p-2 space-y-6 flex flex-col">
                     <div className="flex justify-between items-center">
-                        <button className="flex items-center gap-2 text-sm font-semibold border px-3 py-2 rounded hover:bg-gray-100">
+                        <button className="flex bg-white items-center gap-2 text-sm font-semibold border px-3 py-2 rounded hover:bg-gray-100">
                             <img src={trashIcon} alt="trash" className="w-4" />
                             Empty Cart
                         </button>

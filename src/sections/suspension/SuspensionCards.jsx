@@ -86,7 +86,7 @@ const SuspensionCards = () => {
     });
 
     return (
-        <section className="bg-[#F4FDFF] text-gray-800 pb-8 sm:pb-12 lg:pb-16">
+        <section className="relative text-gray-800 pb-8 sm:pb-12 lg:pb-16">
             <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-5 lg:px-8">
                 {/* Header */}
                 <div className="bg-white p-3 sm:p-4 border rounded-2xl shadow-sm">

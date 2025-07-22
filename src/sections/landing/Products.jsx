@@ -72,7 +72,7 @@ const Products = () => {
                 {products.map(({ id, name, price, image }) => (
                     <div
                         key={id}
-                        className="w-full  lg:max-w-[290px]  bg-white  h-[530px] lg:h-[450px] border border-gray-200 rounded-[10px] mx-9 lg:mx-0 p-3 flex flex-col justify-between"
+                        className="w-full  lg:max-w-[290px]  bg-white  h-[530px] lg:h-[470px] border border-gray-200 rounded-[10px] mx-9 lg:mx-0 p-3 flex flex-col justify-between"
                     >
                         <div>
                             {/* Image */}
@@ -89,11 +89,11 @@ const Products = () => {
                             <h3 className="font-rubik font-light text-[18px] leading-[21.6px] tracking-[0px] align-middle">{name}</h3>
 
                             {/* Price */}
-                            <p className="text-[#333333] mt-5 font-semibold text-xs">{price}</p>
+                            <p className="text-[#333333] mt-5 font-medium font-rubik text-[16px]">{price}</p>
                         </div>
 
                         {/* Button always pinned at the bottom */}
-                        <div className="flex justify-center">
+                        <div className="flex justify-center mt-6">
                             <button className="bg-strip  mb-3 text-white py-2 px-6 text-xs rounded hover:bg-red-600">
                                 Add to cart
                             </button>

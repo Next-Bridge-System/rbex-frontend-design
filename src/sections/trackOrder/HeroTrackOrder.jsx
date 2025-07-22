@@ -1,9 +1,29 @@
 import React from 'react'
 import OrderForm from './OrderForm'
 
+import bg1 from "../../assets/bg1.png";
+import bg2 from "../../assets/bg2.png";
+import bg3 from "../../assets/bg3.png";
+
 const HeroTrackOrder = () => {
     return (
-        <section className="bg-[#F4FDFF] pt-8 px-4  sm:px-6  lg:px-16 ">
+        <section className="bg-[#F4FDFF] relative pt-8 px-4  sm:px-6  lg:px-16 ">
+           {/* Layered Background Vectors */}
+                 <img
+                   src={bg1}
+                   alt="bg1"
+                   className="absolute top-0  left-0 w-[70%]  lg:w-[45%]  opacity-10 z-0 pointer-events-none"
+                 />
+                 <img
+                   src={bg2}
+                   alt="bg2"
+                   className="absolute top-0 left-0 w-[60%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
+                 />
+                 <img
+                   src={bg3}
+                   alt="bg3"
+                   className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
+                 />
             <div className="max-w-7xl mx-auto flex mt-6 flex-col items-start">
                 {/* Heading */}
                 <h1 className="text-[32px] ml-6 lg:ml-28 sm:text-[36px] md:text-[40px] font-bold text-[#233D7B] leading-[20px] tracking-tight font-lato mb-6 sm:mb-10">
@@ -38,18 +58,18 @@ const HeroTrackOrder = () => {
                     </div>
 
                 </div>
-              
-               
-               {/* Centered Order Form */}
-        <div className="w-full flex justify-center">
-          <OrderForm />
-        </div>
-            <div className='w-full mb-16 '>
+
+
+                {/* Centered Order Form */}
+                <div className="w-full flex justify-center relative">
+                    <OrderForm />
+                </div>
+                <div className='w-full mb-16 '>
                     <img src='src/assets/Trustedshopping.png' alt='trust' className='w-full  object-cover ' />
                 </div>
 
             </div>
-           
+
         </section>
     )
 }

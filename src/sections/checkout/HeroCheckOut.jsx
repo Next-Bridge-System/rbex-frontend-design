@@ -3,7 +3,7 @@ import truck from '../../assets/truck.png';
 
 const HeroCheckOut = () => {
     return (
-        <div className="max-w-6xl mx-auto p-4 md:p-6 font-sans">
+        <div className="max-w-6xl mx-auto p-4 md:p-6 relative font-sans">
            {/* Coupon Section - Full Width */}
 <div className="mb-8 bg-strip p-4 rounded-lg border border-red-100">
   <div className="flex flex-col md:flex-row items-center justify-between">

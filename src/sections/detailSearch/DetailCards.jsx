@@ -27,6 +27,12 @@ const Modal = ({ title, image, onClose }) => {
     ];
 
     const data = {
+        features: [
+            'HIGH-GRADE ABS PLASTIC',
+            'PRE-PRIMED READY TO PAINT',
+            'DIRECT OEM FITMENT',
+            'IMPACT-RESISTANT AND FLEXIBLE'
+        ],
         fitments: [
             '2016 TOYOTA COROLLA SEDAN',
             '2015 TOYOTA COROLLA SEDAN',
@@ -41,82 +47,77 @@ const Modal = ({ title, image, onClose }) => {
             'PLASTIC BUMPER',
             'HIGH-GRADE ABS PLASTIC',
             'PRE-PRIMED READY TO PAINT',
-
-        ],
-        features: [
-            'HIGH-GRADE ABS PLASTIC',
-            'PRE-PRIMED READY TO PAINT',
-            'DIRECT OEM FITMENT',
-            'IMPACT-RESISTANT AND FLEXIBLE',
-
         ],
     };
 
     return (
-        <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-5">
-            {/* reduced max-width & max-height */}
-            <div className="bg-white rounded-xl  w-[40%] max-h-[90vh] overflow-x-hidden flex flex-col shadow-2xl">
+       <div> 
+        <div className="fixed  inset-0 z-50 bg-black/50 flex items-center justify-center p-2 sm:p-4">
+            {/* Responsive width - full on mobile, 90% on small, 80% on medium, 60% on large */}
+            <div className="bg-white rounded-xl w-full sm:w-[90%] md:w-[80%] lg:w-[60%] xl:w-[50%] max-h-[90vh] overflow-x-hidden flex flex-col shadow-2xl">
 
                 {/* Header */}
-                <div className="flex items-center bg-[#BA2027] justify-between px-4 py-3  border-b">
-                    <h2 className="text-lg text-[#FAFAFA] font-rubik">{title}</h2>
+                <div className="flex items-center bg-[#BA2027] justify-between px-4 py-3 border-b">
+                    <h2 className="text-base sm:text-lg text-[#FAFAFA] font-rubik">{title}</h2>
                     <button
-                        className="text-2xl text-[#FAFAFA]  hover:text-red-600"
+                        className="text-2xl text-[#FAFAFA] hover:text-red-300 transition-colors"
                         onClick={onClose}
                     >
                         &times;
                     </button>
                 </div>
 
-                {/* Image + Features */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 border-b">
-                    <div className="md:col-span-2 flex items-center justify-center">
+                {/* Image + Features - Stack on mobile, side-by-side on larger screens */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-2 sm:gap-4 p-2 sm:p-4 border-b">
+                    {/* Image - full width on mobile, half on larger screens */}
+                    <div className="md:col-span-2 flex items-center justify-center ">
                         <img
                             src={image}
                             alt={title}
-                            className="w-full max-w-[180px] object-contain rounded"
+                            className="w-full max-w-[150px] sm:max-w-[180px] object-contain"
                         />
                     </div>
 
-                    <div className="md:col-span-2 text-[#000000] font-rubik space-y-2 text-sm flex flex-col ml-auto justify-center ">
+                    {/* Features - full width on mobile, half on larger screens */}
+                    <div className="md:col-span-2 text-[#000000] font-rubik space-y-1 sm:space-y-2 text-xs sm:text-sm flex flex-col justify-center">
                         {data.features.map((txt) => (
-                            <div key={txt} className="flex items-center gap-2">
-                                <img src={Ok} alt='ok' />
+                            <div key={txt} className="flex items-start gap-2">
+                                <img src={Ok} alt="ok" className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                 <span>{txt}</span>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Tabs */}
+                {/* Tabs - responsive font size and padding */}
                 <div className="flex border-b">
                     {tabs.map(({ key, label }) => (
                         <button
                             key={key}
                             onClick={() => setActiveTab(key)}
-                            className={`flex-1 py-2 text-sm font-medium transition
+                            className={`flex-1 py-2 text-xs sm:text-sm font-medium transition
                 ${activeTab === key
                                     ? 'border-b-2 border-red-600 text-red-600'
                                     : 'text-gray-600 hover:text-red-500'}`}
                         >
                             {label}
-
                         </button>
                     ))}
                 </div>
 
-                {/* taller tab content (no inner scroll) */}
-                <div className="p-4 text-sm space-y-1">
+                {/* Tab content - responsive padding and font size */}
+                <div className="p-2 sm:p-4 text-xs sm:text-sm space-y-1 overflow-y-auto max-h-[30vh]">
                     {activeTab === 'fitments' &&
-                        data.fitments.map((f) => <div key={f}>• {f}</div>)}
+                        data.fitments.map((f) => <div key={f} className="text-xs">• {f}</div>)}
 
                     {activeTab === 'oem' &&
-                        data.oem.map((o) => <div key={o}>{o}</div>)}
+                        data.oem.map((o) => <div key={o} className="">{o}</div>)}
 
                     {activeTab === 'designations' &&
-                        data.designations.map((d) => <div key={d}>✓ {d}</div>)}
+                        data.designations.map((d) => <div key={d} className="py-1">✓ {d}</div>)}
                 </div>
             </div>
+        </div>
         </div>
     );
 };
@@ -166,8 +167,8 @@ const bumperParts = [
 ];
 
 const DetailCards = () => {
+    const [viewMode, setViewMode] = useState('list'); // 'list' or 'grid'
     const [openModalId, setOpenModalId] = useState(null);
-
     const openModal = (id) => setOpenModalId(id);
     const closeModal = () => setOpenModalId(null);
 
@@ -187,8 +188,6 @@ const DetailCards = () => {
             U: false
         }
     });
-
-    const [viewMode, setViewMode] = useState('list'); // 'list' or 'grid'
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -220,7 +219,7 @@ const DetailCards = () => {
     };
 
     return (
-        <div className="bg-[#F5FCFF] px-4 mb-10 sm:px-6 lg:px-10 py-8">
+        <div className="relative px-4 mb-10 sm:px-6 lg:px-10 py-8">
             <div className="flex justify-end">
                 <div className="bg-[#EAEAEA] text-[#686868] font-roboto border w-full sm:w-[76%] rounded-lg px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm   mb-4 sm:mb-6 shadow-sm flex items-center justify-between">
                     {/* Sort Label and Dropdown */}
@@ -228,10 +227,10 @@ const DetailCards = () => {
                         <span className="text-[#686868]  font-light text-base sm:text-lg whitespace-nowrap">
                             Sort By:
                         </span>
-                        <select className="p-1 w-[150px] lg:w-full font-regular text-[#686868] border rounded-2xl text-xs sm:text-sm">
-                            <option className='font-regualar'>Updated data: Recent First</option>
-                            <option>Price: low to high</option>
-                            <option>Price: high to low</option>
+                        <select className="p-1 w-[150px]  lg:w-full font-regular text-[#686868] border rounded-2xl text-xs sm:text-sm">
+                            <option className='font-regualar text-xs'>Updated data: Recent First</option>
+                            <option className='text-xs'>Price: low to high</option>
+                            <option className='text-xs'>Price: high to low</option>
                         </select>
                     </div>
 

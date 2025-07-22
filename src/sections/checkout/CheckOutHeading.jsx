@@ -1,9 +1,31 @@
 import React from 'react'
 import HeroCheckOut from './HeroCheckOut'
 
+import bg1 from "../../assets/bg1.png";
+import bg2 from "../../assets/bg2.png";
+import bg3 from "../../assets/bg3.png";
+
+
+
 const CheckOutHeading = () => {
-  return (
-    <section className="bg-[#F4FDFF] pt-8 px-4  sm:px-6  lg:px-16   ">
+    return (
+        <section className="bg-[#F4FDFF] relative pt-8 px-4  sm:px-6  lg:px-16   ">
+            {/* Layered Background Vectors */}
+            <img
+                src={bg1}
+                alt="bg1"
+                className="absolute top-0  left-0  lg:w-[45%] opacity-10 z-0 pointer-events-none"
+            />
+            <img
+                src={bg2}
+                alt="bg2"
+                className="absolute top-0 left-0 w-[90%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
+            />
+            <img
+                src={bg3}
+                alt="bg3"
+                className="absolute top-0 left-0 w-[80%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
+            />
             <div className="max-w-7xl mx-auto mt-6 px-4  sm:px-6 lg:px-10 flex flex-col items-start">                {/* Heading */}
                 <h1 className="text-[32px] ml-6 lg:ml-20 sm:text-[36px] md:text-[40px] font-bold text-[#233D7B] leading-[20px] tracking-tight font-lato mb-6 sm:mb-10">
                     Checkout
@@ -38,14 +60,14 @@ const CheckOutHeading = () => {
 
                 </div>
             </div>
-           {/* Hero Checkout component will here */}
-          <HeroCheckOut/>
+            {/* Hero Checkout component will here */}
+            <HeroCheckOut />
 
             <div className='w-full mb-16 '>
                 <img src='src/assets/Trustedshopping.png' alt='trust' className='w-full  object-cover ' />
             </div>
         </section>
-  )
+    )
 }
 
 export default CheckOutHeading

@@ -1,8 +1,29 @@
 import React from 'react'
+import bg1 from "../../assets/bg1.png";
+import bg2 from "../../assets/bg2.png";
+import bg3 from "../../assets/bg3.png";
+
+
 
 const HeroBlogs = () => {
     return (
-        <section className="bg-[#F4FDFF] pt-6 pb-12 px-4 sm:px-6 lg:px-16">
+        <section className="bg-[#F4FDFF] relative pt-6 pb-12 px-4 sm:px-6 lg:px-16">
+            {/* Layered Background Vectors */}
+                  <img
+                    src={bg1}
+                    alt="bg1"
+                    className="absolute top-0  left-0 w-[70%]  lg:w-[45%]  opacity-10 z-0 pointer-events-none"
+                  />
+                  <img
+                    src={bg2}
+                    alt="bg2"
+                    className="absolute top-0 left-0 w-[60%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
+                  />
+                  <img
+                    src={bg3}
+                    alt="bg3"
+                    className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
+                  />
             <div className="max-w-7xl mx-auto flex flex-col items-start">
                 {/* Heading */}
                 <h1 className="text-[26px] ml-6  sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#233D7B] leading-snug tracking-tight font-lato mb-4 sm:mb-8">
