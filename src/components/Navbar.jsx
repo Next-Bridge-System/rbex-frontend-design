@@ -28,10 +28,10 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu and Search */}
-          <div className="hidden lg:flex items-center flex-1 justify-between ml-8">
+          <div className="hidden lg:flex items-center  flex-1 justify-between ml-8">
             {/* Desktop Navigation */}
-            <ul className="flex gap-4 xl:gap-6 font-roboto text-sm items-center">
-              <li className="cursor-pointer hover:text-strip" onClick={() => navigate('/')}>
+            <ul className="flex gap-4 xl:gap-6 font-semibold font-roboto text-[#393C3D]  text-sm items-center">
+              <li className="cursor-pointer  hover:text-strip" onClick={() => navigate('/')}>
                 Home
               </li>
               <li className="relative flex items-center gap-1">

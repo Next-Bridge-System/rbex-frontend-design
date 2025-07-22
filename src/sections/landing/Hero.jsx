@@ -61,8 +61,8 @@ const Hero = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   // Animation properties
-  const animationDuration = 1000; // 1000ms
-  const animationDelay = 1500; // 1500ms
+  const animationDuration = 1200; // 1000ms
+  const animationDelay = 1800; // 1500ms
 
   useEffect(() => {
     const interval = setInterval(() => {

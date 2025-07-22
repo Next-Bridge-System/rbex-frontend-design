@@ -223,12 +223,12 @@ const DetailCards = () => {
             <div className="flex justify-end">
                 <div className="bg-[#EAEAEA] text-[#686868] font-roboto border w-full sm:w-[76%] rounded-lg px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm   mb-4 sm:mb-6 shadow-sm flex items-center justify-between">
                     {/* Sort Label and Dropdown */}
-                    <div className="flex  items-center gap-2">
+                    <div className="flex  items-center gap-2 ">
                         <span className="text-[#686868]  font-light text-base sm:text-lg whitespace-nowrap">
                             Sort By:
                         </span>
-                        <select className="p-1 w-[150px]  lg:w-full font-regular text-[#686868] border rounded-2xl text-xs sm:text-sm">
-                            <option className='font-regualar text-xs'>Updated data: Recent First</option>
+                        <select className="p-2   w-[150px]  lg:w-full font-regular text-[#686868] border rounded-2xl text-xs sm:text-sm">
+                            <option className='font-regualar text-xs'>Updated data : Recent First</option>
                             <option className='text-xs'>Price: low to high</option>
                             <option className='text-xs'>Price: high to low</option>
                         </select>

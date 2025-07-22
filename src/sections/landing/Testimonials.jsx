@@ -33,7 +33,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="bg-[#F4FDFF] px-4 py-10 flex justify-center">
-      <div className="w-full max-w-[1200px] flex flex-col items-center">
+      <div className="w-full max-w-[1200px] flex flex-col ">
         {/* Section Heading */}
         <h2 className="text-xl font-bold text-[#333333] mb-8">Testimonials</h2>
 

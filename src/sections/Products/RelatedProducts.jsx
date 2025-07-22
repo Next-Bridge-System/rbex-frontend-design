@@ -30,9 +30,31 @@ const products = [
 const RelatedProducts = () => {
     return (
         <section className="bg-[#F4FDFF] pt-6 pb-12 px-4 sm:px-6 mb-9 lg:px-16">
-          <div className='max-w-7xl mx-auto mb-6'>
-            <h1 className='font-rubik text-4xl text-[#333333] '>Related Products</h1>
+          {/* Top Heading */}
+      <div className="flex flex-col lg:flex-row  justify-between items-center gap-4 px-4 mb-6">
+        {/* Heading */}
+        <div className="w-full lg:w-auto text-center lg:text-left">
+          <h2 className="text-2xl font-bold text-[#333333]">Related Products</h2>
+        </div>
+
+        {/* Arrows */}
+        <div className="flex items-center gap-4 justify-center lg:justify-end w-full lg:w-auto text-white ">
+          <div className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90">
+            <img
+              src="src/assets/vector.png"
+              alt="Left Arrow"
+              className="w-3 h-3 object-contain"
+            />
           </div>
+          <div className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90">
+            <img
+              src="src/assets/vector (1).png"
+              alt="Right Arrow"
+              className="w-3 h-3 object-contain"
+            />
+          </div>
+        </div>
+      </div>
             <div className="max-w-7xl mx-auto grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {products.map((product) => (
                     <div

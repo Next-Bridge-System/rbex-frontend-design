@@ -14,18 +14,18 @@ const Footer = () => {
               className="w-[100px] h-auto"
             />
             <div className="flex items-center gap-2 text-sm text-[#BBBBBB]">
-              <img src="src/assets/location.png" alt="Location" className="w-4 h-4" />
+              <img src="src/assets/location.png" alt="Location"  />
               <span>Los Angeles, CA 90210</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-[#BBBBBB]">
-              <img src="src/assets/phone.png" alt="Phone" className="w-4 h-4" />
+              <img src="src/assets/phone.png" alt="Phone"  />
               <span>+1 (800) 123-4567</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-[#BBBBBB]">
-              <img src="src/assets/email.png" alt="Email" className="w-4 h-4" />
+              <img src="src/assets/email.png" alt="Email"  />
               <span>support@geauto.com</span>
             </div>
-            <div className="flex gap-3 mt-2">
+            <div className="flex gap-3 mt-2 ml-9">
               <img src="src/assets/facebook.png" alt="Facebook" className="w-4 h-4" />
               <img src="src/assets/twitter.png" alt="Twitter" className="w-4 h-4" />
               <img src="src/assets/instagram.png" alt="Instagram" className="w-4 h-4" />
@@ -73,7 +73,7 @@ const Footer = () => {
               <p className="text-sm text-[#BBBBBB]">FAQs</p>
             </div>
             <div className="flex justify-end mt-6 sm:mt-auto">
-              <img src="src/assets/payments.png" alt="Payments" className="w-full max-w-[150px]" />
+              <img src="src/assets/payments.png" alt="Payments" className="w-full max-w-[290px]" />
             </div>
           </div>
         </div>
