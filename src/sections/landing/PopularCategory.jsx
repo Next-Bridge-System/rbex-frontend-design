@@ -157,31 +157,31 @@ const PopularCategory = () => {
 
                   {/* Bottom Button */}
                   <div className="flex justify-center mt-5">
-                    {quantity === 0 ? (
-                      <button 
-                        className="bg-strip text-white py-2 px-6 text-xs rounded hover:bg-red-600 mb-2"
-                        onClick={increment}
-                      >
-                        Add to cart
-                      </button>
-                    ) : (
-                      <div className="flex items-center border border-strip rounded mb-3">
-                        <button 
-                          className="px-3 py-1 text-strip hover:bg-red-50"
-                          onClick={decrement}
-                        >
-                          -
-                        </button>
-                        <span className="px-3 py-1 text-strip">{quantity}</span>
-                        <button 
-                          className="px-3 py-1 text-strip hover:bg-red-50"
-                          onClick={increment}
-                        >
-                          +
-                        </button>
-                      </div>
-                    )}
-                  </div>
+                                {quantity === 0 ? (
+                                    <button
+                                        onClick={increment}
+                                        className="bg-strip text-white py-2 px-6 text-xs rounded hover:bg-red-600 transition-colors"
+                                    >
+                                        Add to cart
+                                    </button>
+                                ) : (
+                                    <div className="flex items-center border border-strip rounded">
+                                        <button
+                                            onClick={decrement}
+                                            className="px-3 py-1 text-white bg-strip  transition-colors"
+                                        >
+                                            -
+                                        </button>
+                                        <span className="px-3 py-1 text-strip">{quantity}</span>
+                                        <button
+                                            onClick={increment}
+                                            className="px-3 py-1 text-white bg-strip  transition-colors"
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                )}
+                    </div>
                 </div>
               </div>
             );
