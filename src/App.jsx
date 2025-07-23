@@ -12,6 +12,7 @@ import Products from './pages/Products';
 import Blogs from './pages/Blogs';
 import DetailSearch from './pages/DetailSearch';
 
+
 function App() {
 
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/products' element={<Products/>} />
         <Route path='/blogs' element={<Blogs/>}/>
         <Route path='/detail-search' element={<DetailSearch/>}/>
+        
       </Routes>
     </Router>
   )

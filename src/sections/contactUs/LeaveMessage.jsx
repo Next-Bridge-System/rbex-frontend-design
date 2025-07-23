@@ -7,7 +7,7 @@ const LeaveMessage = () => {
         {/* Heading & Paragraph */}
         <div className="w-full mb-8">
   {/* Heading */}
-  <h1 className="text-[24px] sm:text-[32px] md:text-[25px] lg:text-[30px] font-bold text-[#333333] leading-tight font-rubik text-center mb-4">
+  <h1 className="text-[24px] sm:text-[32px] md:text-[25px] lg:text-[48px] font-bold text-[#333333] leading-tight font-rubik text-center mb-4">
     Leave us a Message
   </h1>
 
@@ -34,19 +34,19 @@ const LeaveMessage = () => {
 
         {/* Right: Form Block */}
         <div className="w-full  bg-white shadow-[0px_1px_25px_0px_#00000026] rounded-md p-6 sm:p-10 flex flex-col justify-between">
-          <form className="w-full space-y-6">
+          <form className="w-full space-y-6 font-rubik font-normal text-[#757575]">
             {/* Row: Full Name & Email */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col font-rubik font-normal sm:flex-row gap-4">
               <input
                 type="text"
                 placeholder="Full Name"
-                className="w-full sm:w-1/2 px-4 py-3 border border-gray-300 rounded-full text-sm bg-[#F0F0F0] focus:outline-none focus:ring-2 focus:ring-text-strip"
+                className="w-full sm:w-1/2 px-4 py-3 border border-gray-300 rounded-full text-sm  focus:outline-none focus:ring-2 focus:ring-text-strip"
                 required
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full sm:w-1/2 px-4 py-3 border border-gray-300 rounded-full text-sm bg-[#F0F0F0] focus:outline-none focus:ring-2 focus:ring-text-strip"
+                className="w-full sm:w-1/2 px-4 py-3 border border-gray-300 rounded-full text-sm  focus:outline-none focus:ring-2 focus:ring-text-strip"
                 required
               />
             </div>
@@ -54,13 +54,13 @@ const LeaveMessage = () => {
             <input
               type="text"
               placeholder="Subject"
-              className="w-full px-4 py-3 border border-gray-300 rounded-full text-sm bg-[#F0F0F0] focus:outline-none focus:ring-2 focus:ring-text-strip"
+              className="w-full px-4 py-3 border border-gray-300 rounded-full text-sm  focus:outline-none focus:ring-2 focus:ring-text-strip"
               required
             />
             <textarea
               placeholder="Message"
               rows="9"
-              className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm bg-[#F0F0F0] focus:outline-none focus:ring-2 focus:ring-text-strip resize-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md text-sm  focus:outline-none focus:ring-2 focus:ring-text-strip resize-none"
               required
             ></textarea>
           </form>
@@ -69,7 +69,7 @@ const LeaveMessage = () => {
           <div className="pt-6">
             <button
               type="submit"
-              className="bg-strip text-white py-3 px-6 rounded-xl text-sm hover:bg-red-600 transition"
+              className="bg-strip text-white py-3 px-6 rounded-2xl text-sm hover:bg-red-600 transition"
             >
               Send Message
             </button>

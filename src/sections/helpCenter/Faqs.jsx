@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MotionCard from '../../components/MotionCard';
 
 const faqData = [
   { id: 1, question: 'How can I get help by Sayara?', answer: 'Visit our Help Center or live chat for support.' },
@@ -20,34 +21,38 @@ const Faqs = () => {
   return (
     <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10 py-10 mb-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {faqData.map((item) => (
-          <div
-            key={item.id}
-            className={`bg-white shadow-md rounded-md border border-gray-200 transition-all duration-300 ${
-              activeId === item.id ? 'h-auto' : 'h-[62px]  overflow-hidden'
-            }`}
-          >
-            <button
-              onClick={() => toggleAnswer(item.id)}
-              className={`w-full flex justify-between items-center border-b px-4 py-4     text-left cursor-pointer ${
-                activeId === item.id ? 'mb-2' : ''
-              }`}
-            >
-              <h3 className="text-[#333333] text-base   font-rubik">
-                {item.question}
-              </h3>
-              <span className="text-[#333333] text-xl font-bold">
-                {activeId === item.id ? '−' : '+'}
-              </span>
-            </button>
+        {faqData.map((item, index) => {
+          const direction = index % 2 === 0 ? 'left' : 'right'; // alternating directions
+          return (
+            <MotionCard key={item.id} direction={direction} delay={index * 0.15}>
+              <div
+                className={`bg-white shadow-md rounded-md border border-gray-200 transition-all duration-300 ${
+                  activeId === item.id ? 'h-auto' : 'h-[62px] overflow-hidden'
+                }`}
+              >
+                <button
+                  onClick={() => toggleAnswer(item.id)}
+                  className={`w-full flex justify-between items-center border-b px-4 py-4 text-left cursor-pointer ${
+                    activeId === item.id ? 'mb-2' : ''
+                  }`}
+                >
+                  <h3 className="text-[#333333] text-base font-rubik">
+                    {item.question}
+                  </h3>
+                  <span className="text-[#333333] text-xl font-bold">
+                    {activeId === item.id ? '−' : '+'}
+                  </span>
+                </button>
 
-            <div className="px-4 pb-4">
-              <p className="text-sm text-gray-600 leading-relaxed font-rubik">
-                {item.answer}
-              </p>
-            </div>
-          </div>
-        ))}
+                <div className="px-4 pb-4">
+                  <p className="text-sm text-gray-600 leading-relaxed font-rubik">
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
+            </MotionCard>
+          );
+        })}
       </div>
     </div>
   );

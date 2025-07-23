@@ -1,3 +1,4 @@
+import AnimatedSection from '../components/AnimationSection';
 import Navbar from '../components/Navbar'
 import Categories from '../sections/landing/Categories'
 import EngineDrivetrainSection from '../sections/landing/EngineDrivetrainSection'
@@ -18,16 +19,16 @@ const Landing = () => {
   return (
     <div className="overflow-x-hidden ">
       <Navbar />
-      <Hero />
-      <Features />
-      <Categories />
-      <EngineDrivetrainSection />
-      <Products />
-      <PopularCategory />
-      <PromoBanners />
-      <Items />
-      <LatestArticle />
-      <Testimonials />
+      <AnimatedSection ><Hero /></AnimatedSection>
+      <AnimatedSection ><Features /></AnimatedSection>
+      <AnimatedSection ><Categories /></AnimatedSection>
+      <AnimatedSection ><EngineDrivetrainSection /></AnimatedSection>
+      <AnimatedSection ><Products /></AnimatedSection>
+      <AnimatedSection ><PopularCategory /></AnimatedSection>
+      <AnimatedSection ><PromoBanners /></AnimatedSection>
+      <AnimatedSection ><Items /></AnimatedSection>
+      <AnimatedSection ><LatestArticle /></AnimatedSection>
+      <AnimatedSection ><Testimonials /></AnimatedSection>
       <Footer />
     </div>
   );

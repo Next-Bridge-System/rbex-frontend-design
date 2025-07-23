@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const articles = [
   {
@@ -25,13 +27,19 @@ const articles = [
 ];
 
 const LatestArticle = () => {
+  const navigate=useNavigate();
   return (
     <section className="bg-[#F4FDFF] px-4 py-10 flex justify-center">
       <div className="w-full max-w-[1200px]">
         {/* Top Header */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold text-[#333333]">Latest Article</h2>
-          <button className="bg-[#BA2027] hover:bg-red-700 text-white text-xs font-semibold px-12 py-3 rounded-md">
+          <button className="bg-[#BA2027] hover:bg-red-500 text-white text-xs font-semibold px-12 py-3 rounded-md"
+             onClick={() => {
+                navigate('/blogs')
+                window.scrollTo(0,0)
+              }}
+          >
             Read Articles
           </button>
         </div>

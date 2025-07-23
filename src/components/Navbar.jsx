@@ -28,30 +28,38 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu and Search */}
-          <div className="hidden lg:flex items-center  flex-1 justify-between ml-8">
+          <div className="hidden lg:flex items-center gap-16 justify-between  mr-32">
             {/* Desktop Navigation */}
             <ul className="flex gap-4 xl:gap-6 font-semibold font-roboto text-[#393C3D]  text-sm items-center">
               <li className="cursor-pointer  hover:text-strip" onClick={() => navigate('/')}>
                 Home
               </li>
               <li className="relative flex items-center gap-1">
-                <span className="cursor-pointer" onClick={() => navigate('/shop-by-category')}>
+                <span
+                  className="cursor-pointer text-sm font-semibold hover:text-red-600 transition-colors duration-200"
+                  onClick={() => navigate('/shop-by-category')}
+                >
                   Shop By Category
                 </span>
                 <IoIosArrowDown
-                  className="cursor-pointer hover:text-strip text-lg"
+                  className="cursor-pointer text-lg text-gray-700 hover:text-red-600 transition-transform duration-300"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 />
+
                 {isDropdownOpen && (
-                  <ul className="absolute top-8 left-0 bg-white border border-gray-200 rounded-md shadow-lg w-56 z-50">
+                  <ul className="absolute top-8 left-0 bg-white border border-gray-300 rounded-lg shadow-xl w-56 z-50 py-2">
                     {['Condenser', 'Head Lamp', 'Mirrors', 'Bumper', 'Battery', 'AC Filters'].map(item => (
-                      <li key={item} className="px-4 py-2 hover:bg-gray-100 text-xs cursor-pointer">
+                      <li
+                        key={item}
+                        className="px-4 py-2 text-xs  text-gray-700 hover:bg-red-100 hover:text-red-600 rounded-md transition-all duration-200 cursor-pointer"
+                      >
                         {item}
                       </li>
                     ))}
                   </ul>
                 )}
               </li>
+
               <li className="cursor-pointer hover:text-strip" onClick={() => navigate('/track-order')}>
                 Track Order
               </li>
@@ -65,19 +73,22 @@ const Navbar = () => {
 
             {/* Desktop Search */}
             <div className="flex items-center ml-4">
-              <div className="relative w-[300px] xl:w-[440px]">
-                <input
-                  type="text"
-                  placeholder="Year, make, model, part type, part number"
-                  className="w-full pl-10 pr-4 py-1 md:py-2 text-xs md:text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500 font-roboto"
-                />
-                <FaSearch className="absolute top-2 md:top-3 left-3 text-gray-500 text-sm" />
+              <div className="xl:w-[350px] w-full">
+                <div className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-1 md:py-2 focus-within:ring-2 focus-within:ring-red-500">
+                  <input
+                    type="text"
+                    placeholder="Year, make, model, part type, part number"
+                    className="w-full text-xs md:text-sm font-roboto focus:outline-none"
+                  />
+                  <FaSearch className="text-gray-500 text-sm" />
+                </div>
               </div>
             </div>
+
           </div>
 
           {/* Cart Button - Visible on all screens */}
-          <div 
+          <div
             className="flex items-center gap-1 md:gap-2 cursor-pointer hover:text-red-600"
             onClick={() => navigate('/cart')}
           >
@@ -107,19 +118,19 @@ const Navbar = () => {
               <p className="cursor-pointer hover:text-red-600" onClick={() => navigate('/')}>
                 Home
               </p>
-              <details>
-                <summary className="flex items-center cursor-pointer hover:text-red-600">
-                  Shop By Category
-                  <IoIosArrowDown className="ml-1" />
-                </summary>
-                <ul className="mt-2 pl-4 space-y-2">
-                  {['Condenser', 'Head Lamp', 'Mirrors', 'Bumper', 'Battery', 'AC Filters'].map(item => (
-                    <li key={item} className="py-1 hover:text-red-500 cursor-pointer text-xs">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </details>
+                <details>
+                  <summary className="flex items-center cursor-pointer hover:text-red-600">
+                    Shop By Category
+                    <IoIosArrowDown className="ml-1" />
+                  </summary>
+                  <ul className="mt-2 pl-4 space-y-2">
+                    {['Condenser', 'Head Lamp', 'Mirrors', 'Bumper', 'Battery', 'AC Filters'].map(item => (
+                      <li key={item} className="py-1 hover:text-red-500 cursor-pointer text-xs">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               <p className="cursor-pointer hover:text-red-600" onClick={() => navigate('/track-order')}>
                 Track Order
               </p>
@@ -132,7 +143,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Search Bar */}
-            <div className="relative w-full mt-4">
+            <div className="relative w-[250px] mt-4">
               <input
                 type="text"
                 placeholder="Year, make, model, part type, part number"

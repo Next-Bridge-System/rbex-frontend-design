@@ -18,7 +18,7 @@ const categories = [
 ];
 
 const Categories = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   return (
     <section className="bg-[#F4FDFF] py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -28,7 +28,11 @@ const Categories = () => {
             Shop by category
           </h2>
           <button className="bg-strip hover:bg-red-700 text-white px-7 py-1.5 rounded-lg text-sm font-medium"
-          onClick={()=>navigate('/shop-by-category')}
+            onClick={() => {
+              navigate('/shop-by-category');
+              window.scrollTo(0, 0); // Scrolls to top
+            }}
+
           >
             View All
           </button>
