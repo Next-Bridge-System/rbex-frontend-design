@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import ListIcon from '../../assets/list.svg';
 import GridIcon from '../../assets/grid.svg';
 import cartIcon from '../../assets/button2.png';
@@ -9,7 +9,7 @@ import closeIcon from '../../assets/close.png';
 import detail1 from '../../assets/detail1.svg';
 import detail2 from '../../assets/detail2.svg';
 import detail3 from '../../assets/detail3.png';
-import Corolla from '../../assets/Corolla.png';
+import Corolla from '../../assets/corolla.png';
 import Jeep from '../../assets/Jeep.png';
 import city from '../../assets/city.png';
 import civic from '../../assets/civicbumper.svg';
