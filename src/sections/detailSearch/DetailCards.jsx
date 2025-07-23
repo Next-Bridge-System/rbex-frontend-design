@@ -10,7 +10,7 @@ import detail1 from '../../assets/detail1.svg';
 import detail2 from '../../assets/detail2.svg';
 import detail3 from '../../assets/detail3.png';
 import Corolla from '../../assets/corolla.png';
-import Jeep from '../../assets/Jeep.png';
+import Jeep from '../../assets/jeep.png';
 import city from '../../assets/city.png';
 import civic from '../../assets/civicbumper.svg';
 import Ok from '../../assets/ok.png';
