@@ -8,7 +8,7 @@ import Products from '../sections/landing/Products'
 import PopularCategory from '../sections/landing/PopularCategory'
 import PromoBanners from '../sections/landing/PromoBanners'
 import Items from '../sections/landing/Items'
-import LatestArticle from '../sections/landing/latestArticle'
+import LatestArticle from '../sections/landing/LatestArticle'
 import Testimonials from '../sections/landing/Testimonials'
 import Footer from '../components/Footer'
 
