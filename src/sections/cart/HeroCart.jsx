@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import brakeImage from '../../assets/ProductPic.svg';
-import jeep from '../../assets/Jeep.png';
+import jeep from '../../assets/jeep.png';
 import trashIcon from '../../assets/cart1.png';
 import upgradeIcon from '../../assets/cart2.png';
 import closeIcon from '../../assets/cart3.png';
