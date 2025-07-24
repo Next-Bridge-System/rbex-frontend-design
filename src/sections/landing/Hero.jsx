@@ -167,7 +167,7 @@ const Hero = () => {
 
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/1  text-center lg:text-left">
+        <div className="w-full lg:w-1/1 mx-auto ml-9  text-center lg:text-left">
           {/* Slider Text Block */}
           <AnimatePresence mode="wait">
             <motion.div

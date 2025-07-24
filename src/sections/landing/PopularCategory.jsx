@@ -86,9 +86,9 @@ const PopularCategory = () => {
   const containerWidth = products.length * itemWidth;
 
   return (
-    <section className="text-gray-800 max-w-7xl  lg:ml-9   mt-10">
+<section className="text-gray-800  max-w-7xl mx-auto mt-10">
       {/* Top Heading */}
-      <div className=" flex justify-between px-4 items-center">
+      <div className=" flex container justify-between px-4 items-center">
         {/* Heading */}
         <div className="max-w-7xl  ml-9 lg:ml-14  items-center gap-4 lg:gap-0">
           <h2 className="text-2xl font-semibold text-[#333333]">Head Lamp category</h2>
