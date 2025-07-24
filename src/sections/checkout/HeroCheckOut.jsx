@@ -1,5 +1,4 @@
-import React from 'react';
-import truck from '../../assets/truck.png';
+
 
 const HeroCheckOut = () => {
     return (
@@ -181,7 +180,7 @@ const HeroCheckOut = () => {
                     {/* Place Order Button */}
                     <button className="w-full flex items-center justify-center bg-strip text-white py-3 px-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-red-600 mt-4 sm:mt-6 gap-2">
                         Place Order
-                        <img src={truck} alt="truck" className="w-5 sm:w-7 h-5" />
+                        <img src="/assets/truck.png" alt="truck" className="w-5 sm:w-7 h-5" />
                     </button>
 
                     {/* Shop With Confidence */}

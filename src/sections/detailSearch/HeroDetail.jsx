@@ -1,11 +1,5 @@
 
 import { useNavigate } from 'react-router-dom';
-import SkewedRect from '../../assets/Skewed Rectangle.png'; // Adjust path if needed
-
-import bg1 from "../../assets/bg1.png";
-import bg2 from "../../assets/bg2.png";
-import bg3 from "../../assets/bg3.png";
-
 
 const HeroDetail = () => {
   // Inside your component:
@@ -14,17 +8,17 @@ const HeroDetail = () => {
     <section className="bg-[#F4FDFF] relative pt-6 pb-12  lg:ml-0 px-4 sm:px-6 lg:px-16">
       {/* Layered Background Vectors */}
       <img
-        src={bg1}
+        src="/assets/bg1.png"
         alt="bg1"
         className="absolute top-0  left-0  lg:w-[45%] opacity-10 z-0 pointer-events-none"
       />
       <img
-        src={bg2}
+        src="/assets/bg2.png"
         alt="bg2"
         className="absolute top-0 left-0 w-[90%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
       />
       <img
-        src={bg3}
+        src="/assets/bg3.png"
         alt="bg3"
         className="absolute top-0 left-0 w-[80%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
       />
@@ -72,7 +66,7 @@ const HeroDetail = () => {
               onClick={item.onClick} // Moved onClick here
             >
               <img
-                src={SkewedRect}
+                src="/assets/Skewed Rectangle.png"
                 alt={`${item.label} Background`}
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none" // Added pointer-events-none
               />

@@ -38,17 +38,17 @@
 
 const DiscountBanner = () => {
   return (
-<div className="relative w-full h-[90px] sm:h-[150px] md:h-[200px] lg:h-[200px] mt-36   ">
+    <div className="relative w-full h-[90px] sm:h-[150px] md:h-[200px] lg:h-[200px] mt-36   ">
       {/* Background Image */}
       <img
-        src="src/assets/section.png"
+        src="/assets/Section.png"
         alt="Background"
         className="absolute  w-full h-full object-cover z-0"
       />
 
       {/* Gradient Overlay */}
       <img
-        src="src/assets/gradient.png"
+        src="/assets/Gradient.png"
         alt="Gradient Overlay"
         className="absolute  w-full  h-full object-cover z-10"
       />
@@ -66,13 +66,13 @@ const DiscountBanner = () => {
       </div>
 
       {/* Disc Plate Image */}
-      
+
       <img
-        src="src/assets/discount.png"
+        src="/assets/discount.png"
         alt="Disc Plate"
-className="absolute right-2 sm:right-10 bottom-0 h-[120px] sm:h-[180px] md:h-[200px] lg:h-[250px] z-20 object-contain"
+        className="absolute right-2 sm:right-10 bottom-0 h-[120px] sm:h-[180px] md:h-[200px] lg:h-[250px] z-20 object-contain"
       />
-    
+
     </div>
   );
 };

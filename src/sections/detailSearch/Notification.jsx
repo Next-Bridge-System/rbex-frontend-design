@@ -1,6 +1,5 @@
 import React from "react";
-import smallNotification from "../../assets/smallNotification.png";
-import notification from "../../assets/notification.png";
+
 
 const Notification = () => {
   return (
@@ -8,7 +7,7 @@ const Notification = () => {
       {/* Left side */}
       <div className="flex flex-col gap-2 w-full md:max-w-[60%]">
         <div className="flex items-center gap-2">
-          <img src={smallNotification} alt="notify icon" className="w-5 h-5" />
+          <img src="/assets/smallNotification.png" alt="Notify Icon" className="w-5 h-5" />  
           <h2 className="text-[#233D7B] font-bold font-lato text-lg">Notify Me</h2>
         </div>
         <p className="text-sm text-[#464E60] font-lato">
@@ -35,7 +34,7 @@ const Notification = () => {
 
       {/* Right side large bell */}
       <div className="w-full md:w-auto flex justify-center md:justify-end">
-        <img src={notification} alt="notification bell" className="h-24 md:h-28 object-contain" />
+        <img src="/assets/notification.png" alt="Notification Bell" className="h-24 md:h-28 object-contain" />
       </div>
     </div>
   );

@@ -54,7 +54,7 @@ const LatestArticle = () => {
               {/* Image */}
               <div className="relative object-contain h-[250px] mb-3">
                 <img
-                  src={`src/assets/${image}`}
+                  src={`/assets/${image}`}
                   alt={title}
                   className="w-full h-full object-cover rounded-md"
                 />
@@ -68,7 +68,7 @@ const LatestArticle = () => {
               {/* Author Row */}
               <div className="flex items-center gap-2  p-5">
                 <img
-                  src="src/assets/tb.png"
+                  src="/assets/tb.png"
                   alt="TB Icon"
                   className="w-10 h-10 object-contain"
                 />

@@ -1,31 +1,29 @@
 import React from 'react';
-import shipping from '../../assets/shipping.png';
-import support from '../../assets/support.png';
-import safety from '../../assets/safety.png';
-import offers from '../../assets/offers.png';
+
 
 const features = [
   {
-    icon: shipping,
+    icon: '/assets/shipping.png',
     title: 'Free Shipping',
     desc: 'For orders from $50',
   },
   {
-    icon: support,
+    icon: '/assets/support.png',
     title: 'Support 24/7',
     desc: 'Call us anytime',
   },
   {
-    icon: safety,
+    icon: '/assets/safety.png',
     title: '100% Safety',
     desc: 'Only secure payments',
   },
   {
-    icon: offers,
+    icon: '/assets/offers.png',
     title: 'Hot Offers',
     desc: 'Discounts up to 90%',
   },
 ];
+
 
 const Features = () => {
   return (

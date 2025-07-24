@@ -5,42 +5,42 @@ const products = [
     id: 1,
     name: 'Head Lamp – Toyota Corolla 2014–2016',
     price: '$563.00',
-    image: 'src/assets/toyota.png',
+    image: '/assets/toyota.png',
   
   },
   {
     id: 2,
     name: 'Head Lamp – Honda Civic 2017–2019',
     price: '$563.00',
-    image: 'src/assets/civic.png',
+    image: '/assets/civic.png',
   
   },
   {
     id: 3,
     name: 'Head Lamp – Suzuki Cultus 2018',
     price: '$2,356.00',
-    image: 'src/assets/cultus.png',
+    image: '/assets/cultus.png',
   
   },
   {
     id: 4,
     name: 'Modified LED Head Lamp – Toyota Hilux',
     price: '$65.00',
-    image: 'src/assets/hilux.png',
+    image: '/assets/hilux.png',
   
   },
   {
     id: 5,
     name: 'Head Lamp – Toyota Corolla 2014–2016',
     price: '$563.00',
-    image: 'src/assets/toyota.png',
+    image: '/assets/toyota.png',
   
   },
   {
     id: 6,
     name: 'Head Lamp – Honda Civic 2017–2019',
     price: '$563.00',
-    image: 'src/assets/civic.png',
+    image: '/assets/civic.png',
   
   },
 ];
@@ -101,7 +101,7 @@ const PopularCategory = () => {
             className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
           >
             <img
-              src="src/assets/vector.png"
+              src="/assets/Vector.png"
               alt="Left Arrow"
               className="w-3 h-3 object-contain"
             />
@@ -111,7 +111,7 @@ const PopularCategory = () => {
             className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
           >
             <img
-              src="src/assets/vector (1).png"
+              src="/assets/Vector (1).png"
               alt="Right Arrow"
               className="w-3 h-3 object-contain"
             />

@@ -6,19 +6,19 @@ const products = [
         id: 1,
         name: 'Plastic Bumper Toyota Corolla 2014–2016',
         price: '$563.00',
-        image: 'src/assets/corolla.png',
+        image: '/assets/corolla.png',
     },
     {
         id: 2,
         name: 'Rear plastic bumper Honda City 2017',
         price: '$563.00',
-        image: 'src/assets/city.png',
+        image: '/assets/city.png',
     },
     {
         id: 3,
         name: 'Metal off-road bumper Jeep-style SUV.',
         price: '$2,356.00',
-        image: 'src/assets/jeep.png',
+        image: '/assets/jeep.png',
     },
 ];
 
@@ -41,14 +41,14 @@ const EngineDrivetrainSection = () => {
                     <div className="flex items-center gap-4 text-white">
                         <div className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90">
                             <img
-                                src="src/assets/vector.png"
+                                src="/assets/Vector.png"
                                 alt="Left Arrow"
                                 className="w-3 h-3 object-contain"
                             />
                         </div>
                         <div className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90">
                             <img
-                                src="src/assets/vector (1).png"
+                                src="/assets/Vector (1).png"
                                 alt="Right Arrow"
                                 className="w-3 h-3 object-contain"
                             />
@@ -62,7 +62,7 @@ const EngineDrivetrainSection = () => {
                 {/* Sidebar styled like a product card */}
                 <aside
                     className="w-full lg:max-w-[270px] h-[470px] text-white p-4 rounded bg-cover bg-center flex flex-col justify-between"
-                    style={{ backgroundImage: 'url(src/assets/sidebar-bg.png)' }}
+                    style={{ backgroundImage: 'url(/assets/sidebar-bg.png)' }}
                 >
                     <div className='justify-center flex p-6'>
                         <div className='text-left'>

@@ -6,49 +6,49 @@ const products = [
         id: 1,
         name: 'Condenser with Dryer Attached – KIA Sportage',
         price: '$563.00',
-        image: 'src/assets/sportage.png',
+        image: '/assets/sportage.png',
     },
     {
         id: 2,
         name: 'Compact Car Condenser – Suzuki Alto',
         price: '$563.00',
-        image: 'src/assets/alto.png',
+        image: '/assets/alto.png',
     },
     {
         id: 3,
         name: 'Mini Truck Condenser – Suzuki Ravi',
         price: '$2,356.00',
-        image: 'src/assets/ravi.png',
+        image: '/assets/ravi.png',
     },
     {
         id: 4,
         name: 'Heavy-Duty Condenser – SUV / 4x4',
         price: '$65.00',
-        image: 'src/assets/4x4.png',
+        image: '/assets/4x4.png',
     },
     {
         id: 5,
         name: 'Performance Condenser – Toyota Corolla',
         price: '$420.00',
-        image: 'src/assets/corolla.png',
+        image: '/assets/corolla.png',
     },
     {
         id: 6,
         name: 'Premium Condenser – Honda Civic',
         price: '$580.00',
-        image: 'src/assets/civic.png',
+        image: '/assets/civic.png',
     },
     {
         id: 7,
         name: 'Economy Condenser – Daihatsu Mira',
         price: '$320.00',
-        image: 'src/assets/sportage.png',
+        image: '/assets/sportage.png',
     },
     {
         id: 8,
         name: 'Luxury Condenser – Mercedes E-Class',
         price: '$850.00',
-        image: 'src/assets/alto.png',
+        image: '/assets/alto.png',
     },
 ];
 
@@ -110,7 +110,7 @@ const Products = () => {
                             className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
                         >
                             <img
-                                src="src/assets/vector.png"
+                                src="/assets/Vector.png"
                                 alt="Left Arrow"
                                 className="w-3 h-3 object-contain"
                             />
@@ -120,7 +120,7 @@ const Products = () => {
                             className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
                         >
                             <img
-                                src="src/assets/vector (1).png"
+                                src="/assets/Vector (1).png"
                                 alt="Right Arrow"
                                 className="w-3 h-3 object-contain"
                             />

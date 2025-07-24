@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import heroImg from '../../assets/hero.png';
-import heroImg2 from '../../assets/heroimg2.svg';
+import { useNavigate } from 'react-router-dom';
 import FilterStrip from './FilterStrip';
 import Select from 'react-select';
-import { useNavigate } from 'react-router-dom';
-import bg1 from "../../assets/bg1.png";
-import bg2 from "../../assets/bg2.png";
-import bg3 from "../../assets/bg3.png";
+
 
 // Dropdown Options
 const years = [
@@ -82,13 +78,13 @@ const Hero = () => {
     1: {
       heading: "Best Parts Purchase ",
       highlight: "Experience",
-      image: heroImg,
+       image: "/assets/hero.png",
       description: "Easily find the exact parts your vehicle needs in seconds. Search by make, model, year, and engine type to ensure perfect fitment, improved performance, and a hassle-free shopping experience every time."
     },
     2: {
       heading: "Find Parts For Your ",
       highlight: "Vehicle",
-      image: heroImg2,
+       image: "/assets/heroimg2.svg",
       description: "Get the right parts for your specific vehicle model. Our comprehensive database ensures accurate matches for all makes and models, delivering quality parts directly to your doorstep."
     }
   };
@@ -99,17 +95,17 @@ const Hero = () => {
     <section className="relative bg-[#F4FDFF] py-12 overflow-hidden">
       {/* Layered Background Vectors */}
       <img
-        src={bg1}
-        alt="bg1"
+        src="/assets/bg1.png" 
+        alt="Background 1" 
         className="absolute top-0  left-0 w-[70%]  lg:w-[45%]  opacity-10 z-0 pointer-events-none"
       />
       <img
-        src={bg2}
+        src="/assets/bg2.png"
         alt="bg2"
         className="absolute top-0 left-0 w-[60%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
       />
       <img
-        src={bg3}
+        src="/assets/bg3.png"
         alt="bg3"
         className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
       /> <div className="relative z-10 max-w-7xl mx-auto h-[400px] lg:h-[320px] flex flex-col-reverse lg:flex-row items-center justify-center">

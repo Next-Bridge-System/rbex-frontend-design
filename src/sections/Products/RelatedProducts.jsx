@@ -5,25 +5,25 @@ const products = [
         id: 1,
         title: 'Aluminum Wheels Concav...',
         price: '$3,263.00',
-        image: 'src/assets/related1.png',
+        image: '/assets/related1.png',
     },
     {
         id: 2,
         title: 'Replace – OE Replaceme...',
         price: '$2,356.00',
-        image: 'src/assets/related2.png',
+        image: '/assets/related2.png',
     },
     {
         id: 3,
         title: 'Engine Block',
         price: '$326.00',
-        image: 'src/assets/related3.png',
+        image: '/assets/related3.png',
     },
     {
         id: 4,
         title: 'Radial Tires 165/70R13',
         price: '$365.00',
-        image: 'src/assets/related4.svg',
+        image: '/assets/related4.svg',
     },
 ];
 
@@ -41,14 +41,14 @@ const RelatedProducts = () => {
         <div className="flex items-center gap-4 justify-center lg:justify-end w-full lg:w-auto text-white ">
           <div className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90">
             <img
-              src="src/assets/vector.png"
+              src="/assets/Vector.png"
               alt="Left Arrow"
               className="w-3 h-3 object-contain"
             />
           </div>
           <div className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90">
             <img
-              src="src/assets/vector (1).png"
+              src="/assets/Vector (1).png"
               alt="Right Arrow"
               className="w-3 h-3 object-contain"
             />

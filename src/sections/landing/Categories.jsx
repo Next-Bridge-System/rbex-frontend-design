@@ -1,21 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import condenser from '../../assets/condenser.png';
-import headlamp from '../../assets/headlamp.png';
-import mirror from '../../assets/mirror.png';
-import taillamp from '../../assets/taillamp.png';
-import metalbumper from '../../assets/metalbumper.png';
-import engine from '../../assets/engine.png';
 
 const categories = [
-  { label: 'Condenser', image: condenser },
-  { label: 'Head Lamp', image: headlamp },
-  { label: 'Mirrors', image: mirror },
-  { label: 'Tail Lamp', image: taillamp },
-  { label: 'Metal Bumper', image: metalbumper },
-  { label: 'Hood', image: engine },
+  { label: 'Condenser', image: 'condenser.png' },
+  { label: 'Head Lamp', image: 'headlamp.png' },
+  { label: 'Mirrors', image: 'mirror.png' },
+  { label: 'Tail Lamp', image: 'taillamp.png' },
+  { label: 'Metal Bumper', image: 'metalbumper.png' },
+  { label: 'Hood', image: 'engine.png' },
 ];
+
 
 const Categories = () => {
   const navigate = useNavigate();
@@ -46,7 +41,7 @@ const Categories = () => {
               className="rounded-lg overflow-hidden shadow-md bg-white hover:scale-[1.02] transition duration-300"
             >
               <img
-                src={item.image}
+                src={`/assets/${item.image}`}
                 alt={item.label}
                 className="w-full h-[200px] object-cover"
               />

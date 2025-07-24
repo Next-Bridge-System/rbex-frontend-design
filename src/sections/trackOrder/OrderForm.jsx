@@ -1,5 +1,4 @@
 import React from 'react';
-import truck from '../../assets/truck.png'; // Adjust path if needed
 
 const OrderForm = () => {
   return (
@@ -50,7 +49,7 @@ const OrderForm = () => {
               className="w-full sm:w-[500px] bg-strip text-white py-3 rounded-md flex items-center justify-center gap-2 mx-auto hover:bg-red-600 transition"
             >
               Track Order
-              <img src={truck} alt="Truck Icon" className="mt-1 w-6 h-6 object-contain" />
+              <img src="/assets/truck.png" alt="Truck Icon" className="mt-1 w-6 h-6 object-contain" />
             </button>
           </form>
         </div>

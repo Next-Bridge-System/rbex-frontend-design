@@ -7,7 +7,7 @@ const testimonials = [
     name: 'Jason P.',
     time: '2h ago',
     rating: 5,
-    image: 'ellipse.png',
+    image: 'Ellipse.png',
     message:
       ' “Used them for a corporate event in Manhattan. The black car arrived on time, the driver  was in full suit, and the ride was clean and quiet — exactly what we needed for our executive  team.”',
   },
@@ -16,7 +16,7 @@ const testimonials = [
     name: 'Sarah K.',
     time: '1d ago',
     rating: 4,
-    image: 'ellipse.png',
+    image: 'Ellipse.png',
     message:
       ' “Used them for a corporate event in Manhattan. The black car arrived on time, the driver  was in full suit, and the ride was clean and quiet — exactly what we needed for our executive  team.”'
   },
@@ -25,7 +25,7 @@ const testimonials = [
     name: 'David L.',
     time: '3h ago',
     rating: 5,
-    image: 'ellipse.png',
+    image: 'Ellipse.png',
     message:
       ' “Used them for a corporate event in Manhattan. The black car arrived on time, the driver  was in full suit, and the ride was clean and quiet — exactly what we needed for our executive  team.”'
   },
@@ -34,7 +34,7 @@ const testimonials = [
     name: 'Emily R.',
     time: '5h ago',
     rating: 4,
-    image: 'ellipse.png',
+    image: 'Ellipse.png',
     message:
       ' “Used them for a corporate event in Manhattan. The black car arrived on time, the driver  was in full suit, and the ride was clean and quiet — exactly what we needed for our executive  team.”'
   },
@@ -43,7 +43,7 @@ const testimonials = [
     name: 'Michael T.',
     time: '1w ago',
     rating: 5,
-    image: 'ellipse.png',
+    image: 'Ellipse.png',
     message:
       ' “Used them for a corporate event in Manhattan. The black car arrived on time, the driver  was in full suit, and the ride was clean and quiet — exactly what we needed for our executive  team.”'
   },
@@ -82,7 +82,7 @@ const Testimonials = () => {
                 <div className="bg-[#F4FAFF] rounded-lg border border-gray-200 shadow hover:shadow-md p-4 relative flex flex-col items-start">
                   <span className="absolute top-2 right-2 text-[10px] text-[#8F8B8B]">{time}</span>
                   <div className="flex items-center gap-3 mb-2">
-                    <img src={`src/assets/${image}`} alt={name} className="w-10 h-10 object-cover rounded-full" />
+                    <img src={`/assets/${image}`} alt={name} className="w-10 h-10 object-cover rounded-full" />
                     <div className="flex flex-col">
                       <h3 className="text-lg font-semibold text-[#333333]">{name}</h3>
                       <div className="flex items-center text-yellow-400 text-sm">
@@ -108,7 +108,7 @@ const Testimonials = () => {
             className={`w-6 h-6 rounded-full bg-strip text-white flex items-center justify-center hover:brightness-90 ${startIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
               }`}
           >
-            <img src="src/assets/vector.png" alt="Left" className="w-2 h-2" />
+            <img src="/assets/Vector.png" alt="Left" className="w-2 h-2" />
           </button>
 
           {/* Dots */}
@@ -129,13 +129,13 @@ const Testimonials = () => {
             className={`w-6 h-6 rounded-full bg-strip text-white flex items-center justify-center hover:brightness-90 ${startIndex + visibleCount >= testimonials.length ? 'opacity-50 cursor-not-allowed' : ''
               }`}
           >
-            <img src="src/assets/vector (1).png" alt="Right" className="w-2 h-2" />
+            <img src="/assets/Vector (1).png" alt="Right" className="w-2 h-2" />
           </button>
         </div>
 
         {/* Trusted Image */}
         <div className="w-full mt-16">
-          <img src="src/assets/Trustedshopping.png" alt="trust" className="w-full h-[200px] object-cover mt-5" />
+          <img src="/assets/Trustedshopping.png" alt="trust" className="w-full h-[200px] object-cover mt-5" />
         </div>
       </div>
     </section>

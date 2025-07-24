@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaSearch, FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
+import { FaSearch,  FaBars, FaTimes } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
-import logo from '../assets/logo 6.png';
-import cart from '../assets/cart.png';
-import count from '../assets/count.png';
+
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,7 +16,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo and Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <img src={logo} alt="Logo" className="h-8 md:h-10 w-auto" />
+            <img src="/assets/logo 6.png" alt="Logo" className="h-8 md:h-10 w-auto" />
             <button
               className="lg:hidden text-xl text-navText"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -94,9 +92,9 @@ const Navbar = () => {
           >
             {/* Cart Icon with Count Overlay */}
             <div className="relative w-6 h-6 md:w-7 md:h-7">
-              <img src={cart} alt="Cart Icon" className="w-full h-full object-contain" />
+              <img src="/assets/cart.png" alt="Cart Icon" className="w-full h-full object-contain" />
               <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-5 md:h-5">
-                <img src={count} alt="Count Background" className="w-full h-full object-contain" />
+                <img src="/assets/count.png" alt="Count Background" className="w-full h-full object-contain" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-[10px] md:text-[12px] text-white">2</span>
                 </div>

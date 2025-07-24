@@ -97,7 +97,7 @@ const Items = () => {
         {/* Left: Image */}
         <div className="w-1/3 relative">
           <img
-            src={`src/assets/${image}`}
+            src={`/assets/${image}`}
             alt={name}
             className="w-full h-full object-contain"
           />

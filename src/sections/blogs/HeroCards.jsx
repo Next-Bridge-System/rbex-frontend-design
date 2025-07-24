@@ -1,43 +1,38 @@
 import React from 'react';
-import latest1 from '../../assets/blogCar1.svg';
-import latest2 from '../../assets/blogCar2.svg';
-import latest3 from '../../assets/blogCar3.svg';
-import blog1 from '../../assets/blog1.png';
-import blog2 from '../../assets/blog2.png';
-import blog3 from '../../assets/blog3.png';
-import blogBanner from '../../assets/blogbanner.svg';
+
 import Carousal from '../suspension/Carousal';
 
 const HeroCards = () => {
-    const cards = [
-        {
-            image: latest1,
-            icon: blog1, head1: 'by admin',
-            icon2: blog2, head2: '2 Comments',
-            icon3: blog3, head3: 'body parts',
-            title: 'Electric cars aren\'t pollution-free; they have to get their energy from somewhere',
-            title2: 'Electric cars aren’tpollution-free; ',
-            date: 'May 20,2020',
-        },
-        {
-            image: latest2,
-            icon: blog1, head1: 'by admin',
-            icon2: blog2, head2: '2 Comments',
-            icon3: blog3, head3: 'body parts',
-            title: 'You can know or not know how a car runs and still enjoy riding in a car',
-            title2: 'You can know or not know how a car',
-            date: 'May 20,2020',
-        },
-        {
-            image: latest3,
-            icon: blog1, head1: 'by admin',
-            icon2: blog2, head2: '2 Comments',
-            icon3: blog3, head3: 'body parts',
-            title: 'Race cars, no matter what size or shape they are, they do the same things. It is not complicated',
-            title2: 'Race cars, no matter what size or shape',
-            date: 'May 20,2020',
-        },
-    ];
+   const cards = [
+  {
+    image: '/assets/blogCar1.svg',
+    icon: '/assets/blog1.png', head1: 'by admin',
+    icon2: '/assets/blog2.png', head2: '2 Comments',
+    icon3: '/assets/blog3.png', head3: 'body parts',
+    title: "Electric cars aren't pollution-free; they have to get their energy from somewhere",
+    title2: "Electric cars aren’t pollution-free;",
+    date: 'May 20,2020',
+  },
+  {
+    image: '/assets/blogCar2.svg',
+    icon: '/assets/blog1.png', head1: 'by admin',
+    icon2: '/assets/blog2.png', head2: '2 Comments',
+    icon3: '/assets/blog3.png', head3: 'body parts',
+    title: 'You can know or not know how a car runs and still enjoy riding in a car',
+    title2: 'You can know or not know how a car',
+    date: 'May 20,2020',
+  },
+  {
+    image: '/assets/blogCar3.svg',
+    icon: '/assets/blog1.png', head1: 'by admin',
+    icon2: '/assets/blog2.png', head2: '2 Comments',
+    icon3: '/assets/blog3.png', head3: 'body parts',
+    title: 'Race cars, no matter what size or shape they are, they do the same things. It is not complicated',
+    title2: 'Race cars, no matter what size or shape',
+    date: 'May 20,2020',
+  },
+];
+
 
     return (
         <section className="bg-[#F4FDFF]   pb-16 px-4 sm:px-6 lg:px-16">
@@ -108,7 +103,7 @@ const HeroCards = () => {
 
                     {/* Banner */}
                     <div>
-                        <img src={blogBanner} alt="Blog Banner" className="w-full h-auto rounded-lg shadow" />
+<img src="/assets/blogbanner.svg" alt="Blog Banner" className="w-full h-auto rounded-lg shadow" />
                     </div>
                     {/* categories */}
                     <div className=" bg-white p-4 rounded-xl  shadow-md">
