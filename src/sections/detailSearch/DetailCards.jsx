@@ -116,7 +116,7 @@ const bumperParts = [
     OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
     yourPrice: '$200.00',
     listPrice: '$250.00',
-    image: '/assets/corolla.png',
+    image: 'assets/corolla.png',
     details: ['/assets/detail1.svg', '/assets/detail2.svg', '/assets/detail3.png'],
   },
   {
