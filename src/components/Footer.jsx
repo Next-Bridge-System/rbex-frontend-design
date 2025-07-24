@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo + Contact */}
           <div className="flex flex-col gap-4 ">
             <img
-              src="src/assets/Group.png"
+              src="/assets/Group.png"
               alt="Footer Logo"
               className="w-[100px] h-auto cursor-pointer"
               onClick={() => {
@@ -18,26 +18,26 @@ const Footer = () => {
               }}
             />
             <div className="flex items-center gap-2 text-sm text-[#BBBBBB]">
-              <img src="src/assets/location.png" alt="Location" />
+              <img src="/assets/location.png" alt="Location" />
               <span>Los Angeles, CA 90210</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-[#BBBBBB]">
-              <img src="src/assets/phone.png" alt="Phone" />
+              <img src="/assets/phone.png" alt="Phone" />
               <span>+1 (800) 123-4567</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-[#BBBBBB]">
-              <img src="src/assets/email.png" alt="Email" />
+              <img src="/assets/email.png" alt="Email" />
               <span>support@geauto.com</span>
             </div>
             <div className="flex gap-3 mt-2 ml-9">
               <a href="https://www.facebook.com/login" target="_blank" rel="noopener noreferrer">
-                <img src="src/assets/facebook.png" alt="Facebook" className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
+                <img src="/assets/facebook.png" alt="Facebook" className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
               </a>
               <a href="https://twitter.com/i/flow/login" target="_blank" rel="noopener noreferrer">
-                <img src="src/assets/twitter.png" alt="Twitter" className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
+                <img src="/assets/twitter.png" alt="Twitter" className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
               </a>
               <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer">
-                <img src="src/assets/instagram.png" alt="Instagram" className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
+                <img src="/assets/instagram.png" alt="Instagram" className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform duration-200" />
               </a>
             </div>
 
@@ -115,7 +115,7 @@ const Footer = () => {
               >FAQs</p>
             </div>
             <div className="flex justify-end mt-6 sm:mt-auto">
-              <img src="src/assets/payments.png" alt="Payments" className="w-full max-w-[290px]" />
+              <img src="/assets/payments.png" alt="Payments" className="w-full max-w-[290px]" />
             </div>
           </div>
         </div>

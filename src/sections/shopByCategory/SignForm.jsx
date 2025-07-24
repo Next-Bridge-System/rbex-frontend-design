@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../assets/SVG.png'; // Replace with your actual logo path
 
 const SignForm = () => {
   return (
@@ -7,7 +6,7 @@ const SignForm = () => {
       <div className="bg-[#F4FDFF]  rounded-lg p-6 sm:p-8 max-w-xl w-full text-center">
         {/* Logo */}
         <img
-          src={logo}
+          src="/assets/SVG.png"
           alt="Logo"
           className="w-12 h-12 mx-auto mb-4"
         />

@@ -1,52 +1,42 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import brakeImage from '../../assets/ProductPic.svg';
-import jeep from '../../assets/Jeep.png';
-import trashIcon from '../../assets/cart1.png';
-import upgradeIcon from '../../assets/cart2.png';
-import closeIcon from '../../assets/cart3.png';
-import cartIcon from '../../assets/cart4.png';
-import truckIcon from '../../assets/cart5.png';
-import paypalIcon from '../../assets/cart6.png';
-import savingsBg from '../../assets/cart7.png';
-import discountTag from '../../assets/polygon.png';
-
 // Sample product data
 const cartData = [
   {
     id: 1,
-    title: "Plastic Bumper Toyota Corolla 2014–2016",    
+    title: "Plastic Bumper Toyota Corolla 2014–2016",
     partNumber: "33-3005",
-    condition: "1524-01729C, 31663900, 316639004, VO1070111",    
+    condition: "1524-01729C, 31663900, 316639004, VO1070111",
     yourPrice: "$234.00",
     listPrice: "$250.00",
     shippingDate: "03-12-2025",
-    image: brakeImage,
+    image: "/assets/ProductPic.svg", // ✅ Public path
   },
   {
     id: 2,
-    title: "Rear Plastic Bumper Honda City 2017",    
+    title: "Rear Plastic Bumper Honda City 2017",
     partNumber: "33-3005",
-    condition: "1524-01729C, 31663900, 316639004, VO1070111",   
+    condition: "1524-01729C, 31663900, 316639004, VO1070111",
     yourPrice: "$234.00",
     listPrice: "$290.00",
     shippingDate: "03-12-2025",
-    image: jeep,
+    image: "/assets/jeep.png", // ✅ Public path
   },
 ];
+
 
 const CartItem = ({ product, index }) => (
   <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-4 p-2 sm:p-4 lg:p-6 bg-white rounded-lg shadow border relative hover:shadow-lg transition duration-300">
     {/* Remove Icon */}
     <button className="absolute top-1 right-1 sm:top-2 sm:right-2 text-red-600 text-lg sm:text-xl font-bold">
-      <img src={closeIcon} alt="Close" className="w-4 sm:w-5" />
+      <img src="/assets/cart3.png" alt="Close" className="w-4 sm:w-5" />
     </button>
 
     {/* Discount Tag - only for first card */}
     {index === 0 && (
       <div className="absolute top-0 left-0 w-12 h-12 sm:w-16 sm:h-16">
-        <img src={discountTag} alt="Discount" className="w-full h-full" />
+        <img src="/assets/polygon.png" alt="Discount" className="w-full h-full" />
         <span className="absolute top-[10px] left-[1px] sm:top-[14px] sm:left-[2px] text-white text-[8px] sm:text-[10px] leading-tight rotate-[-45deg]">
           50% OFF
         </span>
@@ -61,7 +51,7 @@ const CartItem = ({ product, index }) => (
       <h3 className="text-[#004379] font-bold font-roboto text-[25px]">{product.title}</h3>
       <p className="text-[14px] mt-5 text-gray-600 leading-snug">
         <strong>Part Number:</strong> {product.partNumber},<br />
-        <strong>OEM Part No</strong> {product.condition} 
+        <strong>OEM Part No</strong> {product.condition}
       </p>
     </div>
 
@@ -89,7 +79,7 @@ const CartItem = ({ product, index }) => (
         </div>
         <button className="bg-red-600 text-white px-3 gap-3 sm:px-4 py-1 sm:py-1 rounded text-xs sm:text-sm flex items-center hover:bg-red-700 transition">
           Add to Cart
-          <img src={cartIcon} alt="cart" className="w-3 h-3 sm:w-4 sm:h-4" />
+          <img src="/assets/cart4.png" alt="cart" className="w-3 h-3 sm:w-4 sm:h-4" />
         </button>
       </div>
     </div>
@@ -113,14 +103,14 @@ const HeroCart = () => {
         <div className="flex-1 mb-4 border rounded-lg p-2 space-y-6 flex flex-col">
           <div className="flex justify-between items-center">
             <button className="flex bg-white items-center gap-2 text-sm font-semibold border px-3 py-2 rounded hover:bg-gray-100">
-              <img src={trashIcon} alt="trash" className="w-4" />
+              <img src='/assets/cart1.png' alt="trash" className="w-4" />
               Empty Cart
             </button>
             <button
               className="flex items-center gap-2 text-sm font-semibold border px-3 py-2 rounded hover:bg-gray-100"
               onClick={() => navigate('/shop-by-category')}
             >
-              <img src={upgradeIcon} alt="upgrade" className="w-4" />
+              <img src="/assets/cart2.png" alt="upgrade" className="w-4" />
               Upgrade Cart
             </button>
           </div>
@@ -139,7 +129,7 @@ const HeroCart = () => {
             <span>Zip Code</span>
             <button className="bg-yellow-300 font-bold text-sm px-2 py-1 rounded flex items-center gap-1 hover:bg-yellow-400 transition">
               Get Shipping
-              <img src={truckIcon} alt="truck" className="w-5 h-4" />
+              <img src="/assets/cart5.png" alt="truck" className="w-5 h-4" />
             </button>
           </div>
 
@@ -174,7 +164,7 @@ const HeroCart = () => {
 
           <div
             className="text-green-700 text-sm font-semibold py-2 px-3 bg-no-repeat bg-contain bg-left-top rounded"
-            style={{ backgroundImage: `url(${savingsBg})` }}
+            style={{ backgroundImage: "url('/assets/cart7.png')" }}
           >
             Total savings of $3.03 on this order
           </div>
@@ -190,7 +180,7 @@ const HeroCart = () => {
 
           <button className="w-full font-bold bg-yellow-400 flex items-center justify-center gap-2 py-2 rounded hover:bg-yellow-500 transition">
             Check Out With PayPal
-            <img src={paypalIcon} alt="PayPal" />
+            <img src="/assets/cart6.png" alt="PayPal" />
           </button>
         </div>
       </div>

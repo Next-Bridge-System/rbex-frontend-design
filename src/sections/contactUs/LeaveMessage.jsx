@@ -1,7 +1,10 @@
 import React from 'react';
-import map from '../../assets/map.png'; // Replace with your actual map image path
+
 
 const LeaveMessage = () => {
+  const MessageSend=()=>{
+        alert("Your Message Send Successfully!");
+    }
   return (
     <section className=" relative w-full min-h-[891px] px-4 sm:px-6 lg:px-16 py-16">
         {/* Heading & Paragraph */}
@@ -26,7 +29,7 @@ const LeaveMessage = () => {
         {/* Left: Map Image */}
         <div className="w-full h-[530px]">
           <img
-            src={map}
+            src="/assets/map.png"
             alt="Map"
             className="w-full h-full object-cover rounded-md"
           />
@@ -70,6 +73,7 @@ const LeaveMessage = () => {
             <button
               type="submit"
               className="bg-strip text-white py-3 px-6 rounded-2xl text-sm hover:bg-red-600 transition"
+              onClick={MessageSend}
             >
               Send Message
             </button>

@@ -1,26 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import ListIcon from '../../assets/list.svg';
-import GridIcon from '../../assets/grid.svg';
-import cartIcon from '../../assets/button2.png';
-import cartIcon1 from '../../assets/button2 (2).png';
-// import discountTag from '../../assets/polygon.png';
-import closeIcon from '../../assets/close.png';
-import detail1 from '../../assets/detail1.svg';
-import detail2 from '../../assets/detail2.svg';
-import detail3 from '../../assets/detail3.png';
-import Corolla from '../../assets/Corolla.png';
-import Jeep from '../../assets/Jeep.png';
-import city from '../../assets/city.png';
-import civic from '../../assets/civicbumper.svg';
-import Ok from '../../assets/ok.png';
-
-
-import dropdownArrow from '../../assets/dropdown.png'
-import selectvehicle from '../../assets/selectvehicle.png'
-
-
-// Helper component (put right above DetailCards)
 
 //Modal Component here
 const Modal = ({ title, image, onClose }) => {
@@ -88,7 +67,7 @@ const Modal = ({ title, image, onClose }) => {
                         <div className="md:col-span-2 text-[#000000] font-rubik space-y-1 sm:space-y-2 text-xs sm:text-sm flex flex-col justify-center">
                             {data.features.map((txt) => (
                                 <div key={txt} className="flex items-start gap-2">
-                                    <img src={Ok} alt="ok" className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                                    <img src="/assets/ok.png" alt="ok" className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                     <span>{txt}</span>
                                 </div>
                             ))}
@@ -130,47 +109,48 @@ const Modal = ({ title, image, onClose }) => {
 
 
 const bumperParts = [
-    {
-        id: 1,
-        title: 'Plastic Bumper Toyota Corolla 2014-2016',
-        portNumber: '33-3035',
-        OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
-        yourPrice: '$200.00',
-        listPrice: '$250.00',
-        image: Corolla,
-        details: [detail1, detail2, detail3]
-    },
-    {
-        id: 2,
-        title: 'Rear plastic bumper Honda City 2017',
-        portNumber: '33-3035',
-        OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
-        yourPrice: '$234.00',
-        listPrice: '$290.00',
-        image: city,
-        details: [detail1, detail3]
-    },
-    {
-        id: 3,
-        title: 'Metal off-road bumper Jeep-style SUV',
-        portNumber: '33-3035',
-        OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
-        yourPrice: '$224.00',
-        listPrice: '$290.00',
-        image: Jeep,
-        details: [detail2, detail3]
-    },
-    {
-        id: 4,
-        title: 'Modified Honda Civic fiber body kit bumper',
-        portNumber: '33-3035',
-        OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
-        yourPrice: '$200.00',
-        listPrice: '$290.00',
-        image: civic,
-        details: [detail1, detail2]
-    }
+  {
+    id: 1,
+    title: 'Plastic Bumper Toyota Corolla 2014-2016',
+    portNumber: '33-3035',
+    OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
+    yourPrice: '$200.00',
+    listPrice: '$250.00',
+    image: '/assets/Corolla.png',
+    details: ['/assets/detail1.svg', '/assets/detail2.svg', '/assets/detail3.png'],
+  },
+  {
+    id: 2,
+    title: 'Rear plastic bumper Honda City 2017',
+    portNumber: '33-3035',
+    OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
+    yourPrice: '$234.00',
+    listPrice: '$290.00',
+    image: '/assets/City.png',
+    details: ['/assets/detail1.svg', '/assets/detail3.png'],
+  },
+  {
+    id: 3,
+    title: 'Metal off-road bumper Jeep-style SUV',
+    portNumber: '33-3035',
+    OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
+    yourPrice: '$224.00',
+    listPrice: '$290.00',
+    image: '/assets/Jeep.png',
+    details: ['/assets/detail2.svg', '/assets/detail3.png'],
+  },
+  {
+    id: 4,
+    title: 'Modified Honda Civic fiber body kit bumper',
+    portNumber: '33-3035',
+    OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
+    yourPrice: '$200.00',
+    listPrice: '$290.00',
+    image: '/assets/Civic.png',
+    details: ['/assets/detail1.svg', '/assets/detail2.svg'],
+  },
 ];
+
 
 const DetailCards = () => {
     const [viewMode, setViewMode] = useState('list'); // 'list' or 'grid'
@@ -250,7 +230,7 @@ const DetailCards = () => {
                             onClick={() => toggleViewMode('list')}
                         >
                             <img
-                                src={ListIcon}
+                                src="/assets/list.svg"
                                 alt="List View"
                                 className="w-4 h-4 sm:w-5 sm:h-5"
                             />
@@ -261,7 +241,7 @@ const DetailCards = () => {
                             onClick={() => toggleViewMode('grid')}
                         >
                             <img
-                                src={GridIcon}
+                                src="/assets/grid.svg"
                                 alt="Grid View"
                                 className="w-3 h-3 sm:w-4 sm:h-4"
                             />
@@ -323,7 +303,7 @@ const DetailCards = () => {
 
                             {/* Custom arrow icon */}
                             <img
-                                src={dropdownArrow}
+                                src="/assets/dropdown.png"
                                 alt="Dropdown Arrow"
                                 className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none "
                             />
@@ -334,7 +314,7 @@ const DetailCards = () => {
                             <div className="flex items-center justify-between px-3 py-1 mt-1 mb-5 rounded text-sm">
                                 <span>{filters.yearMade}</span>
                                 <button onClick={() => clearFilter('yearMade')}>
-                                    <img src={closeIcon} alt="Remove" />
+                                    <img src="/assets/close.png" alt="Remove" />
                                 </button>
                             </div>
                         )}
@@ -364,7 +344,7 @@ const DetailCards = () => {
 
                             {/* Custom arrow icon */}
                             <img
-                                src={dropdownArrow}
+                                src="/assets/dropdown.png"
                                 alt="Dropdown Arrow"
                                 className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none "
                             />
@@ -375,7 +355,7 @@ const DetailCards = () => {
                             <div className="flex items-center justify-between mb-5 px-3 py-1 mt-1 rounded text-sm">
                                 <span>{filters.vehicleMake}</span>
                                 <button onClick={() => clearFilter('vehicleMake')}>
-                                    <img src={closeIcon} alt="Remove" />
+                                    <img src="/assets/close.png" alt="Remove" />
                                 </button>
                             </div>
                         )}
@@ -405,7 +385,7 @@ const DetailCards = () => {
 
                             {/* Custom arrow icon */}
                             <img
-                                src={dropdownArrow}
+                                src="/assets/dropdown.png"
                                 alt="Dropdown Arrow"
                                 className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none "
                             />
@@ -416,7 +396,7 @@ const DetailCards = () => {
                             <div className="flex items-center justify-between mb-5  px-3 py-1 mt-1 rounded text-sm">
                                 <span>{filters.vehicleModel}</span>
                                 <button onClick={() => clearFilter('vehicleModel')}>
-                                    <img src={closeIcon} alt="Remove" />
+                                    <img src="/assets/close.png" alt="Remove" />
                                 </button>
                             </div>
                         )}
@@ -446,7 +426,7 @@ const DetailCards = () => {
 
                             {/* Custom arrow icon */}
                             <img
-                                src={dropdownArrow}
+                                src="/assets/dropdown.png"
                                 alt="Dropdown Arrow"
                                 className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none"
                             />
@@ -457,7 +437,7 @@ const DetailCards = () => {
                             <div className="flex items-center justify-between px-3 mb-5 py-1 mt-1 rounded text-sm">
                                 <span>{filters.category}</span>
                                 <button onClick={() => clearFilter('category')}>
-                                    <img src={closeIcon} alt="Remove" />
+                                    <img src="/assets/close.png" alt="Remove" />
                                 </button>
                             </div>
                         )}
@@ -505,7 +485,7 @@ const DetailCards = () => {
                             className="flex items-center gap-2 text-sm text-white bg-[#0072EF] border px-3 py-1 rounded hover:shadow-md"
                         >
                             Select vehicle
-                            <img src={selectvehicle} alt="Arrow Icon" />
+                            <img src="./assets/selectvehicle.png" alt="Arrow Icon" />
                         </button>
 
                         {/* Dropdown Option */}
@@ -592,7 +572,7 @@ const DetailCards = () => {
                                 </div>
                                 <button className="bg-[#BA2027] text-white px-7 py-2 rounded text-sm flex items-center hover:bg-red-700 transition mt-3">
                                     Add to Cart
-                                    <img src={cartIcon1} alt="cart" className="w-4 h-4 ml-2" />
+                                    <img src="/assets/button2 (2).png" alt="cart" className="w-4 h-4 ml-2" />
                                 </button>
                             </div>
                         </motion.div>
@@ -667,7 +647,7 @@ const DetailCards = () => {
                                 </button>
                                 <button className="w-full border border-[#BA2027] text-[#BA2027] py-2 rounded text-sm font-semibold flex items-center justify-center hover:shadow-md transition">
                                     Add to Cart
-                                    <img src={cartIcon} alt="cart" className="ml-2 w-4 h-4" />
+                                    <img src="/assets/button2.png" alt="cart" className="ml-2 w-4 h-4" />
                                 </button>
                             </div>
                         </motion.div>

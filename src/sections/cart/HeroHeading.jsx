@@ -1,25 +1,23 @@
 import { useNavigate } from 'react-router-dom';
 import HeroCart from './HeroCart'
-import bg1 from "../../assets/bg1.png";
-import bg2 from "../../assets/bg2.png";
-import bg3 from "../../assets/bg3.png";
+
 const HeroHeading = () => {
     const navigate = useNavigate();
     return (
         <section className="bg-[#F4FDFF] relative pt-8 px-4  sm:px-6  lg:px-16   ">
             {/* Layered Background Vectors */}
             <img
-                src={bg1}
+                src="/assets/bg1.png"
                 alt="bg1"
                 className="absolute top-0  left-0  lg:w-[45%] opacity-10 z-0 pointer-events-none"
             />
             <img
-                src={bg2}
+                src="/assets/bg2.png"
                 alt="bg2"
                 className="absolute top-0 left-0 w-[90%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
             />
             <img
-                src={bg3}
+                src="/assets/bg3.png"
                 alt="bg3"
                 className="absolute top-0 left-0 w-[80%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
             />
@@ -34,7 +32,7 @@ const HeroHeading = () => {
 
                     <div className="relative   w-[142px] h-[30px] rounded-[3px]">
                         <img
-                            src="src/assets/Skewed Rectangle.png"
+                            src="/assets/Skewed Rectangle.png"
                             alt="Home Background"
                             className="absolute ml-5 inset-0 w-full h-full object-cover z-0"
                         />
@@ -48,7 +46,7 @@ const HeroHeading = () => {
                     {/* Cart Button */}
                     <div className="relative   w-[142px] h-[30px] rounded-[3px]">
                         <img
-                            src="src/assets/Skewed Rectangle.png"
+                            src="/assets/Skewed Rectangle.png"
                             alt="Home Background"
                             className="absolute  inset-0 w-full h-full object-cover z-0"
                         />
@@ -61,7 +59,7 @@ const HeroHeading = () => {
             </div>
             <HeroCart />
             <div className='w-full mb-16 '>
-                <img src='src/assets/Trustedshopping.png' alt='trust' className='w-full  object-cover ' />
+                <img src='/assets/Trustedshopping.png' alt='trust' className='w-full  object-cover ' />
             </div>
         </section>
     )

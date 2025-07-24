@@ -1,26 +1,21 @@
 import React from 'react'
-import bg1 from "../../assets/bg1.png";
-import bg2 from "../../assets/bg2.png";
-import bg3 from "../../assets/bg3.png";
-
-
 
 const HeroBlogs = () => {
     return (
         <section className="bg-[#F4FDFF] relative pt-6 pb-12 px-4 sm:px-6 lg:px-16">
             {/* Layered Background Vectors */}
                   <img
-                    src={bg1}
+                    src="/assets/bg1.png"
                     alt="bg1"
                     className="absolute top-0  left-0 w-[70%]  lg:w-[45%]  opacity-10 z-0 pointer-events-none"
                   />
                   <img
-                    src={bg2}
+                    src="/assets/bg2.png"
                     alt="bg2"
                     className="absolute top-0 left-0 w-[60%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
                   />
                   <img
-                    src={bg3}
+                    src="/assets/bg3.png"
                     alt="bg3"
                     className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
                   />
@@ -34,7 +29,7 @@ const HeroBlogs = () => {
                     {/* Home Button */}
                     <div className="relative w-[142px] h-[30px] rounded-[3px]">
                         <img
-                            src="src/assets/Skewed Rectangle.png"
+                            src="/assets/Skewed Rectangle.png"
                             alt="Home Background"
                             className="absolute ml-6 inset-0 w-full h-full object-cover z-0"
                         />
@@ -46,7 +41,7 @@ const HeroBlogs = () => {
                     {/* Product Button */}
                     <div className="relative w-[162px] h-[30px] rounded-[3px]">
                         <img
-                            src="src/assets/Skewed Rectangle.png"
+                            src="/assets/Skewed Rectangle.png"
                             alt="Home Background"
                             className="absolute inset-0 w-full h-full object-cover z-0"
                         />

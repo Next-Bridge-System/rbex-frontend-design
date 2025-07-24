@@ -1,33 +1,22 @@
-import React from 'react';
-import Product from '../../assets/ProductPic.svg';
-import Heart from '../../assets/heart.svg';
-import ItemLink from '../../assets/ItemLink.svg';
-import ItemLink1 from '../../assets/ItemLink2.svg';
-import ItemLink2 from '../../assets/ItemLink3.svg';
-import ItemLink3 from '../../assets/ItemLink4.svg';
-
-import bg1 from "../../assets/bg1.png";
-import bg2 from "../../assets/bg2.png";
-import bg3 from "../../assets/bg3.png";
-
-
+import { useNavigate } from "react-router-dom";
 
 const HeroProduct = () => {
+  const navigate =useNavigate();
   return (
     <section className="bg-[#F4FDFF] relative  pt-6 pb-12 px-4 sm:px-6 lg:px-16">
       {/* Layered Background Vectors */}
       <img
-        src={bg1}
+        src="/assets/bg1.png"
         alt="bg1"
         className="absolute top-0  left-0 w-[70%]  lg:w-[45%]  opacity-10 z-0 pointer-events-none"
       />
       <img
-        src={bg2}
+        src="/assets/bg2.png"
         alt="bg2"
         className="absolute top-0 left-0 w-[60%] lg:w-[40%] opacity-10 z-0 pointer-events-none"
       />
       <img
-        src={bg3}
+        src="/assets/bg3.png"
         alt="bg3"
         className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
       />
@@ -42,11 +31,13 @@ const HeroProduct = () => {
           {/* Home Button */}
           <div className="relative w-[142px] h-[30px] rounded-[3px]">
             <img
-              src="src/assets/Skewed Rectangle.png"
+              src="/assets/Skewed Rectangle.png"
               alt="Home Background"
               className="absolute ml-6 inset-0 w-full h-full object-cover z-0"
             />
-            <span className="absolute ml-5 inset-0 flex items-center justify-center text-[#4D4D4D] text-lg font-semibold z-10">
+            <span className="absolute ml-5 inset-0 flex items-center justify-center text-[#4D4D4D] cursor-pointer text-lg font-semibold z-10"
+             onClick={()=>navigate('/')}
+            >
               Home
             </span>
           </div>
@@ -54,7 +45,7 @@ const HeroProduct = () => {
           {/* Product Button */}
           <div className="relative w-[300px] h-[30px] rounded-[3px]">
             <img
-              src="src/assets/Skewed Rectangle.png"
+              src="/assets/Skewed Rectangle.png"
               alt="Home Background"
               className="absolute inset-0 w-full h-full object-cover z-0"
             />
@@ -71,7 +62,7 @@ const HeroProduct = () => {
             {/* Main Product Image */}
             <div className="w-full mt-9  border-gray-200 rounded-lg overflow-hidden">
               <img
-                src={Product}
+                src="/assets/ProductPic.svg"
                 alt="Main Product"
                 className="w-full h-auto object-cover"
               />
@@ -80,17 +71,17 @@ const HeroProduct = () => {
             {/* Thumbnail Images */}
             <div className="flex gap-3 mt-5 sm:mt-0">
               <img
-                src="src/assets/product1.png"
+                src="/assets/product1.png"
                 alt="Product 1"
                 className="w-20 h-20  cursor-pointer"
               />
               <img
-                src="src/assets/product2.png"
+                src="/assets/product2.png"
                 alt="Product 2"
                 className="w-20 h-20  rounded cursor-pointer"
               />
               <img
-                src="src/assets/product3.png"
+                src="/assets/product3.png"
                 alt="Product 3"
                 className="w-20 h-20  rounded cursor-pointer"
               />
@@ -128,7 +119,7 @@ const HeroProduct = () => {
 
               <div className='flex  items-center'>
                 <button className="p-2  hover:bg-gray-100">
-                  <img src={Heart} alt="Add to wishlist" className="w-5 h-5" />
+                  <img src="/assets/heart.svg" alt="Add to wishlist" className="w-5 h-5" />
                 </button>
                 <p className='text-lg text-[#E52727] font-rubik'>Add to wishlist</p>
               </div>
@@ -151,10 +142,10 @@ const HeroProduct = () => {
             {/* Social Links */}
             <div className="mt-6 flex items-center gap-3 justify-end">
 
-              <img src={ItemLink} alt="Social 1" className="w-8 h-8 cursor-pointer" />
-              <img src={ItemLink1} alt="Social 1" className="w-8 h-8 cursor-pointer" />
-              <img src={ItemLink2} alt="Social 2" className="w-8 h-8 cursor-pointer" />
-              <img src={ItemLink3} alt="Social 3" className="w-8 h-8 cursor-pointer" />
+              <img src="/assets/ItemLink.svg" alt="Social 1" className="w-8 h-8 cursor-pointer" />
+              <img src="/assets/ItemLink2.svg" alt="Social 1" className="w-8 h-8 cursor-pointer" />
+              <img src="/assets/ItemLink3.svg" alt="Social 2" className="w-8 h-8 cursor-pointer" />
+              <img src="/assets/ItemLink4.svg" alt="Social 3" className="w-8 h-8 cursor-pointer" />
             </div>
           </div>
         </div>

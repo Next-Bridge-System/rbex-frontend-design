@@ -5,14 +5,14 @@ const SeatBanner = () => {
     <div className="relative w-full h-[100px] sm:h-[150px] md:h-[180px] lg:h-[200px] mb-20 mt-10 overflow-visible">
       {/* Background Image */}
       <img
-        src="src/assets/section.png"
+        src="/assets/Section.png"
         alt="Background"
         className="absolute w-full h-full object-cover z-0"
       />
 
       {/* Gradient Overlay */}
       <img
-        src="src/assets/gradient.png"
+        src="/assets/Gradient.png"
         alt="Gradient Overlay"
         className="absolute w-full h-full object-cover z-10"
       />
@@ -31,7 +31,7 @@ const SeatBanner = () => {
 
       {/* Seat Image - Overlapping top and bottom */}
       <img
-        src="src/assets/aboutSeat.svg"
+        src="/assets/aboutSeat.svg"
         alt="Seat"
         className="absolute right-0 h-[140px] sm:h-[220px] md:h-[260px] lg:h-[300px] z-20 object-contain"
         style={{

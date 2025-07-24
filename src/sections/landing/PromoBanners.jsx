@@ -7,13 +7,13 @@ const bannerData = [
     id: 1,
     title: 'Power tools of next level',
     heading: 'Mega Sale',
-    image: 'src/assets/car1.png',
+    image: '/assets/car1.png',
   },
   {
     id: 2,
     title: 'For Any Vehicle',
     heading: 'Body Parts',
-    image: 'src/assets/car2.png',
+    image: '/assets/car2.png',
   },
 ];
 
@@ -43,7 +43,7 @@ const PromoBanners = () => {
 
             {/* Gradient Overlay */}
             <img
-              src="src/assets/carGradient.png"
+              src="/assets/carGradient.png"
               alt="Gradient"
               className="absolute inset-0 w-full h-full object-cover z-10"
             />
