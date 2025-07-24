@@ -26,26 +26,26 @@ const Faqs = () => {
           return (
             <MotionCard key={item.id} direction={direction} delay={index * 0.15}>
               <div
-                className={`bg-white shadow-md rounded-md border border-gray-200 transition-all duration-300 ${
-                  activeId === item.id ? 'h-auto' : 'h-[62px] overflow-hidden'
-                }`}
+                className="bg-white shadow-md rounded-md border border-gray-200"
               >
                 <button
                   onClick={() => toggleAnswer(item.id)}
-                  className={`w-full flex justify-between items-center border-b px-4 py-4 text-left cursor-pointer ${
-                    activeId === item.id ? 'mb-2' : ''
-                  }`}
+                  className="w-full flex justify-between items-center border-b px-4 py-4 text-left cursor-pointer"
                 >
                   <h3 className="text-[#333333] text-base font-rubik">
                     {item.question}
                   </h3>
-                  <span className="text-[#333333] text-xl font-bold">
+                  <span className="text-[#333333] text-xl font-bold transition-transform duration-300">
                     {activeId === item.id ? '−' : '+'}
                   </span>
                 </button>
 
-                <div className="px-4 pb-4">
-                  <p className="text-sm text-gray-600 leading-relaxed font-rubik">
+                {/* smooth expand / collapse */}
+                <div
+                  className={`px-4 transition-all duration-300 ease-in-out overflow-hidden
+      ${activeId === item.id ? 'max-h-96 pb-4' : 'max-h-0'}`}
+                >
+                  <p className="text-sm text-gray-600 leading-relaxed font-rubik pt-2">
                     {item.answer}
                   </p>
                 </div>

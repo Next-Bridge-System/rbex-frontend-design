@@ -33,7 +33,7 @@ const CheckOutHeading = () => {
 
                     <div className="relative   w-[142px] h-[30px] rounded-[3px]">
                         <img
-                            src="src/assets/Skewed Rectangle.png"
+                            src="/assets/Skewed Rectangle.png"
                             alt="Home Background"
                             className="absolute ml-5 inset-0 w-full h-full object-cover z-0"
                         />
@@ -47,7 +47,7 @@ const CheckOutHeading = () => {
                     {/* Cart Button */}
                     <div className="relative w-[182px] h-[30px] rounded-[3px]">
                         <img
-                            src="src/assets/Skewed Rectangle.png"
+                            src="/assets/Skewed Rectangle.png"
                             alt="Home Background"
                             className="absolute  inset-0 w-full h-full object-cover z-0"
                         />
@@ -62,7 +62,7 @@ const CheckOutHeading = () => {
             <HeroCheckOut />
 
             <div className='w-full mb-16 '>
-                <img src='src/assets/Trustedshopping.png' alt='trust' className='w-full  object-cover ' />
+                <img src='/assets/Trustedshopping.png' alt='trust' className='w-full  object-cover ' />
             </div>
         </section>
     )

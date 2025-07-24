@@ -28,20 +28,20 @@ const features = [
 const Features = () => {
   return (
     <section className="bg-feature py-8 px-4 ">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+      <div className="max-w-8xl  mx-auto grid  grid-cols-2  sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
         {features.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col sm:flex-row items-center sm:items-start gap-3 w-full justify-center text-center sm:text-left"
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-3 w-full justify-center  text-center sm:text-left"
           >
             <img
               src={item.icon}
               alt={item.title}
-              className="h-10 w-10 object-contain"
+              className=" h-12  w-12 lg:h-13 lg:w-13 object-contain"
             />
             <div className="flex flex-col">
-              <h3 className="text-[#333333] font-medium text-sm">{item.title}</h3>
-              <p className="text-xs text-[#808080]">{item.desc}</p>
+              <h3 className="text-[#333333] font-medium text-sm lg:text-lg">{item.title}</h3>
+              <p className=" text-xs lg:text-sm text-[#808080]">{item.desc}</p>
             </div>
           </div>
         ))}

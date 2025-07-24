@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const OrderForm = () => {
-  return (
-   <div className="flex items-center justify-center  px-4 py-12 sm:py-10">
-  <div className="w-full max-w-[699px] bg-white mb-9  ">
+  const [cardNumber, setCardNumber] = useState('');
+  const [email, setEmail] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!cardNumber.trim() || !email.trim()) {
+      alert('Please fill in both fields before tracking your order.');
+      return;
+    }
+
+    alert('Your order is on the way!');
+
+    // 🧹 Clear the input fields
+    setCardNumber('');
+    setEmail('');
+  };
+
+  return (
+    <div className="flex items-center justify-center px-4 py-12 sm:py-10">
+      <div className="w-full max-w-[699px] bg-white mb-9">
         {/* Header */}
-        <div className="bg-strip text-white text-center text-[24px] sm:text-[30px] py-4 font-medium ">
+        <div className="bg-strip text-white text-center text-[24px] sm:text-[30px] py-4 font-medium">
           Track Order
         </div>
 
@@ -18,7 +35,7 @@ const OrderForm = () => {
             </p>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             {/* Credit Card Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -26,6 +43,8 @@ const OrderForm = () => {
               </label>
               <input
                 type="text"
+                value={cardNumber}
+                onChange={(e) => setCardNumber(e.target.value)}
                 className="w-full px-4 py-2 bg-[#F0F0F0] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-text-strip"
                 required
               />
@@ -34,10 +53,12 @@ const OrderForm = () => {
             {/* Email Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Email Address
+                Email Address*
               </label>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-2 bg-[#F0F0F0] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-text-strip"
                 required
               />

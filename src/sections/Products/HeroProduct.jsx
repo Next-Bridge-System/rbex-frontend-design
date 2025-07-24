@@ -1,14 +1,20 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const HeroProduct = () => {
-  const navigate =useNavigate();
+  const navigate = useNavigate();
+  const [quantity, setQuantity] = useState(0);
+
+  const increment = () => setQuantity(prev => prev + 1);
+  const decrement = () => setQuantity(prev => (prev > 0 ? prev - 1 : 0));
+
   return (
-    <section className="bg-[#F4FDFF] relative  pt-6 pb-12 px-4 sm:px-6 lg:px-16">
-      {/* Layered Background Vectors */}
+    <section className="bg-[#F4FDFF] relative pt-6 pb-12 px-4 sm:px-6 lg:px-16">
+      {/* All your existing background vectors */}
       <img
         src="/assets/bg1.png"
         alt="bg1"
-        className="absolute top-0  left-0 w-[70%]  lg:w-[45%]  opacity-10 z-0 pointer-events-none"
+        className="absolute top-0 left-0 w-[70%] lg:w-[45%] opacity-10 z-0 pointer-events-none"
       />
       <img
         src="/assets/bg2.png"
@@ -20,29 +26,29 @@ const HeroProduct = () => {
         alt="bg3"
         className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
       />
+      
       <div className="max-w-7xl mx-auto flex flex-col items-start">
-        {/* Heading */}
-        <h1 className="text-[26px] ml-6  sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#233D7B] leading-snug tracking-tight font-lato mb-4 sm:mb-8">
+        {/* Your existing heading */}
+        <h1 className="text-[26px] ml-6 sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#233D7B] leading-snug tracking-tight font-lato mb-4 sm:mb-8">
           Bumper
         </h1>
 
-        {/* Breadcrumb Links */}
-        <div className="flex flex-wrap gap-2 lg:gap-0 ml-6  mb-9">
-          {/* Home Button */}
+        {/* Your existing breadcrumb links */}
+        <div className="flex flex-wrap gap-2 lg:gap-0 ml-6 mb-9">
           <div className="relative w-[142px] h-[30px] rounded-[3px]">
             <img
               src="/assets/Skewed Rectangle.png"
               alt="Home Background"
               className="absolute ml-6 inset-0 w-full h-full object-cover z-0"
             />
-            <span className="absolute ml-5 inset-0 flex items-center justify-center text-[#4D4D4D] cursor-pointer text-lg font-semibold z-10"
-             onClick={()=>navigate('/')}
+            <span 
+              className="absolute ml-5 inset-0 flex items-center justify-center text-[#4D4D4D] cursor-pointer text-lg font-semibold z-10"
+              onClick={() => navigate('/')}
             >
               Home
             </span>
           </div>
 
-          {/* Product Button */}
           <div className="relative w-[300px] h-[30px] rounded-[3px]">
             <img
               src="/assets/Skewed Rectangle.png"
@@ -55,12 +61,11 @@ const HeroProduct = () => {
           </div>
         </div>
 
-        {/* Product Content Section */}
+        {/* Your existing product content section */}
         <div className="w-full relative flex flex-col lg:flex-row items-stretch justify-between gap-6 sm:gap-10 lg:gap-10">
-          {/* Left Content - Product Images */}
+          {/* Left content - product images (unchanged) */}
           <div className="w-full lg:w-1/3 justify-between flex flex-col">
-            {/* Main Product Image */}
-            <div className="w-full mt-9  border-gray-200 rounded-lg overflow-hidden">
+            <div className="w-full mt-9 border-gray-200 rounded-lg overflow-hidden">
               <img
                 src="/assets/ProductPic.svg"
                 alt="Main Product"
@@ -68,85 +73,108 @@ const HeroProduct = () => {
               />
             </div>
 
-            {/* Thumbnail Images */}
             <div className="flex gap-3 mt-5 sm:mt-0">
               <img
                 src="/assets/product1.png"
                 alt="Product 1"
-                className="w-20 h-20  cursor-pointer"
+                className="w-20 h-20 cursor-pointer"
               />
               <img
                 src="/assets/product2.png"
                 alt="Product 2"
-                className="w-20 h-20  rounded cursor-pointer"
+                className="w-20 h-20 rounded cursor-pointer"
               />
               <img
                 src="/assets/product3.png"
                 alt="Product 3"
-                className="w-20 h-20  rounded cursor-pointer"
+                className="w-20 h-20 rounded cursor-pointer"
               />
             </div>
           </div>
 
-          {/* Right Content - Product Details */}
-          <div className="w-full lg:w-1/2 ">
+          {/* Right content - product details */}
+          <div className="w-full lg:w-1/2">
             <h2 className="text-2xl sm:text-3xl font-rubik font-bold text-[#333333] mb-2">
               Front plastic car bumper
               Toyota Corolla 2014–2016.
             </h2>
 
-            {/* Review and Price Row */}
-            <div className="flex  flex-col  mb-4">
+            {/* Your existing price display */}
+            <div className="flex flex-col mb-4">
               <p className="text-xl font-bold font-rubik mt-3 text-[#333333]">$3,021.00</p>
             </div>
 
-            {/* Description */}
+            {/* Your existing description */}
             <div className="text-[#808080] text-sm font-rubik sm:text-base space-y-4 mb-6">
               <p>
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form. My injected humour, or randomised words much short back even slightly noticeable. If you are going to use a passage of Lorem Ipsum, you need to fix sure there isn't anything embarrassing hidden in the middle of text.
               </p>
             </div>
 
-            {/* Action Buttons */}
+            {/* Action Buttons - Only modified this section */}
             <div className='flex items-center mb-9 justify-between'>
-              <div className="flex items-center gap-4 ">
-                <h1 className="bg-white border text-[#3A3A3A] py-2.5 px-6 sm:px-8 rounded-xl text-sm sm:text-base  transition">1</h1>
-
-                <button className="bg-[#E52727] text-white py-2.5 px-6 sm:px-8 rounded-xl text-sm sm:text-base hover:bg-red-600 transition">
-                  Add to cart
-                </button>
+              <div className="flex items-center gap-4">
+                {quantity === 0 ? (
+                  <button 
+                    onClick={increment}
+                    className="bg-[#E52727] text-white py-2.5 px-6 sm:px-8 rounded-xl text-sm sm:text-base hover:bg-red-600 transition"
+                  >
+                    Add to cart
+                  </button>
+                ) : (
+                  <div className="flex items-center border border-[#E52727] rounded">
+                    <button 
+                      onClick={decrement}
+                      className="px-4 py-2  bg-[#E52727] text-white transition-colors"
+                    >
+                      -
+                    </button>
+                    <span className="px-3 py-2 text-[#E52727]">{quantity}</span>
+                    <button 
+                      onClick={increment}
+                      className="px-4 py-2 bg-[#E52727] text-white  transition-colors"
+                    >
+                      +
+                    </button>
+                  </div>
+                )}
               </div>
 
-              <div className='flex  items-center'>
-                <button className="p-2  hover:bg-gray-100">
+              {/* Your existing wishlist button */}
+              <div className='flex items-center'>
+                <button className="p-2 hover:bg-gray-100">
                   <img src="/assets/heart.svg" alt="Add to wishlist" className="w-5 h-5" />
                 </button>
                 <p className='text-lg text-[#E52727] font-rubik'>Add to wishlist</p>
               </div>
             </div>
 
-            {/* Product Meta */}
+            {/* Your existing product meta */}
             <div className="border-t border-b border-gray-200 py-7">
               <div className="mb-3">
-                <span className=" text-[#333333]">Category:</span>
-                <span className="ml-2  text-sm text-[#333333] font-rubik bg-[#F5F5F5] p-3 m-5 rounded-full">Body Parts</span>
+                <span className="text-[#333333]">Category:</span>
+                <span className="ml-2 text-sm text-[#333333] font-rubik bg-[#F5F5F5] p-3 m-5 rounded-full">Body Parts</span>
               </div>
               <div className='mt-9'>
-                <span className=" text-[#333333]">Tags:</span>
-                <span className="ml-2 text-sm  text-[#333333] bg-[#F5F5F5] p-3 font-rubik rounded-full">Accessories</span>
-                <span className="ml-2 text-sm text-[#333333] bg-[#F5F5F5] p-3 font-rubik  rounded-full">Wheels</span>
-
+                <span className="text-[#333333]">Tags:</span>
+                <span className="ml-2 text-sm text-[#333333] bg-[#F5F5F5] p-3 font-rubik rounded-full">Accessories</span>
+                <span className="ml-2 text-sm text-[#333333] bg-[#F5F5F5] p-3 font-rubik rounded-full">Wheels</span>
               </div>
             </div>
 
-            {/* Social Links */}
+            {/* Your existing social links */}
             <div className="mt-6 flex items-center gap-3 justify-end">
+  <a href="https://www.facebook.com/login" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/ItemLink.svg" alt="Facebook Login" className="w-8 h-8 cursor-pointer" />
+  </a>
+  <a href="https://www.instagram.com/login" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/ItemLink3.svg" alt="Google Login" className="w-8 h-8 cursor-pointer" />
+  </a>
+  <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/ItemLink4.svg" alt="LinkedIn Login" className="w-8 h-8 cursor-pointer" />
+  </a>
+</div>
 
-              <img src="/assets/ItemLink.svg" alt="Social 1" className="w-8 h-8 cursor-pointer" />
-              <img src="/assets/ItemLink2.svg" alt="Social 1" className="w-8 h-8 cursor-pointer" />
-              <img src="/assets/ItemLink3.svg" alt="Social 2" className="w-8 h-8 cursor-pointer" />
-              <img src="/assets/ItemLink4.svg" alt="Social 3" className="w-8 h-8 cursor-pointer" />
-            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SignForm = () => {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email.trim()) {
+      alert('Please enter your email before submitting.');
+      return;
+    }
+
+    alert('Your Email Submit Successfully!');
+    setEmail(''); // 🧹 Clear the input after alert
+  };
+
   return (
-    <div className="w-full flex justify-center  px-4 mb-24 mt-10">
-      <div className="bg-[#F4FDFF]  rounded-lg p-6 sm:p-8 max-w-xl w-full text-center">
+    <div className="w-full flex justify-center px-4 mb-24 mt-10">
+      <div className="bg-[#F4FDFF] rounded-lg p-6 sm:p-8 max-w-xl w-full text-center">
         {/* Logo */}
         <img
           src="/assets/SVG.png"
@@ -17,9 +31,14 @@ const SignForm = () => {
         </h2>
 
         {/* Form */}
-        <form className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <form
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          onSubmit={handleSubmit}
+        >
           <input
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             className="w-full sm:w-[70%] px-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-strip"
             required
