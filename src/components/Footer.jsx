@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-[#1B1A1A]">
       <footer className="text-white px-4 py-10 border-b flex justify-center">
-        <div className="w-full  grid grid-cols-1 ml-9  sm:grid-cols-3 gap-9 ">
+        <div className="w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Logo + Contact */}
           <div className="flex flex-col gap-4 ">
             <img
