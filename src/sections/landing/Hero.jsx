@@ -163,11 +163,11 @@ const Hero = () => {
         alt="bg3"
         className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
       />
-      <div className="relative z-10 mx-16  h-[400px] lg:h-[320px] flex flex-col-reverse lg:flex-row items-center justify-center">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center ">
 
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/1 mx-auto ml-9  text-center lg:text-left">
+        <div className="w-full lg:w-1/1 mx-auto lg:ml-9  text-center lg:text-left">
           {/* Slider Text Block */}
           <AnimatePresence mode="wait">
             <motion.div

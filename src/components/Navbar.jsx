@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     <nav className="bg-navbar  shadow-md py-3 border text-navText">
-      <div className=" mx-9  ">
+      <div className="  ">
         {/* Main Navbar Content */}
-        <div className="flex items-center  justify-between">
+         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           {/* Logo and Mobile Menu Button */}
           <div className="flex items-center gap-4">
             <img src="/assets/logo 6.png" alt="Logo" className="h-10 md:h-10 w-auto" />
@@ -26,9 +26,9 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu and Search */}
-          <div className="hidden lg:flex items-center gap-16 justify-between  mr-32">
+          <div className="hidden lg:flex  items-center gap-13 justify-between  mr-32">
             {/* Desktop Navigation */}
-            <ul className="flex gap-4 font-semibold font-roboto text-[#393C3D]   text-sm items-center">
+            <ul className="flex gap-2 font-semibold font-roboto text-[#393C3D]   text-sm items-center">
               <li className="cursor-pointer  hover:text-strip" onClick={() => navigate('/')}>
                 Home
               </li>
