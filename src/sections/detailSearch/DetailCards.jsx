@@ -116,7 +116,7 @@ const bumperParts = [
     OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
     yourPrice: '$200.00',
     listPrice: '$250.00',
-    image: '/assets/Corolla.png',
+    image: 'assets/corolla.png',
     details: ['/assets/detail1.svg', '/assets/detail2.svg', '/assets/detail3.png'],
   },
   {
@@ -126,7 +126,7 @@ const bumperParts = [
     OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
     yourPrice: '$234.00',
     listPrice: '$290.00',
-    image: '/assets/City.png',
+    image: 'assets/city.png',
     details: ['/assets/detail1.svg', '/assets/detail3.png'],
   },
   {
@@ -136,7 +136,7 @@ const bumperParts = [
     OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
     yourPrice: '$224.00',
     listPrice: '$290.00',
-    image: '/assets/Jeep.png',
+    image: 'assets/jeep.png',
     details: ['/assets/detail2.svg', '/assets/detail3.png'],
   },
   {
@@ -146,7 +146,7 @@ const bumperParts = [
     OEMPartNo: '1524.0172XC, 31663903, 31663908A, V01/07/11',
     yourPrice: '$200.00',
     listPrice: '$290.00',
-    image: '/assets/Civic.png',
+    image: 'assets/civic.png',
     details: ['/assets/detail1.svg', '/assets/detail2.svg'],
   },
 ];
@@ -485,7 +485,7 @@ const DetailCards = () => {
                             className="flex items-center gap-2 text-sm text-white bg-[#0072EF] border px-3 py-1 rounded hover:shadow-md"
                         >
                             Select vehicle
-                            <img src="./assets/selectvehicle.png" alt="Arrow Icon" />
+                            <img src="/assets/selectvehicle.png" alt="Arrow Icon" />
                         </button>
 
                         {/* Dropdown Option */}
