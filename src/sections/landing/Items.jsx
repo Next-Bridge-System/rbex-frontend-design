@@ -85,14 +85,14 @@ const items = [
   },
 ];
 
-const Items = () => {
+const  Items = () => {
   return (
    <section className="bg-[#F4FDFF] px-4 py-10 flex justify-center">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-col-3 gap-6">
     {items.map(({ id, name, price, originalPrice,   image, sale }) => (
       <div
         key={id}
-        className="w-full md:w-[390px] h-[110px] flex bg-white rounded-lg border border-gray-200 shadow hover:shadow-md py-2 px-2"
+        className="w-full md:w-[550px] h-[150px] flex bg-white rounded-lg border border-gray-200 shadow hover:shadow-md py-2 px-2"
       >
         {/* Left: Image */}
         <div className="w-1/3 relative">
@@ -102,7 +102,7 @@ const Items = () => {
             className="w-full h-full object-contain"
           />
           {sale && (
-            <div className="absolute top-2 left-2 bg-red-600 text-white text-[11px] px-3 py-1 rounded-full z-10">
+            <div className="absolute top-2 left-2 bg-red-600 text-white text-[15px] px-5 py-2 rounded-full z-10">
               Sale!
             </div>
           )}
@@ -110,13 +110,13 @@ const Items = () => {
 
         {/* Center: Text */}
         <div className="w-1/1 ml-2 flex flex-col justify-center">
-          <h3 className="text-[#333333] font-rubik text-[17px] ">{name}</h3>
+          <h3 className="text-[#333333] font-rubik text-[17px] lg:text-[20px] ">{name}</h3>
           
           <div className="flex items-center gap-2">
             {sale && (
-              <span className="text-xs  font-semibold text-[#FF0000] line-through mt-5">{originalPrice}</span>
+              <span className="text-sm  font-semibold text-[#FF0000] line-through mt-5">{originalPrice}</span>
             )}
-            <span className="text-xs text-[#333333] font-medium font-rubik mt-5">{price}</span>
+            <span className="text-xs lg:text-lg text-[#333333] font-medium font-rubik mt-5">{price}</span>
           </div>
         </div>
 

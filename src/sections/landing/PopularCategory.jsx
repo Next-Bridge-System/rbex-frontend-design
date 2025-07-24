@@ -6,42 +6,42 @@ const products = [
     name: 'Head Lamp – Toyota Corolla 2014–2016',
     price: '$563.00',
     image: '/assets/toyota.png',
-  
+
   },
   {
     id: 2,
     name: 'Head Lamp – Honda Civic 2017–2019',
     price: '$563.00',
     image: '/assets/civic.png',
-  
+
   },
   {
     id: 3,
     name: 'Head Lamp – Suzuki Cultus 2018',
     price: '$2,356.00',
     image: '/assets/cultus.png',
-  
+
   },
   {
     id: 4,
     name: 'Modified LED Head Lamp – Toyota Hilux',
     price: '$65.00',
     image: '/assets/hilux.png',
-  
+
   },
   {
     id: 5,
     name: 'Head Lamp – Toyota Corolla 2014–2016',
     price: '$563.00',
     image: '/assets/toyota.png',
-  
+
   },
   {
     id: 6,
     name: 'Head Lamp – Honda Civic 2017–2019',
     price: '$563.00',
     image: '/assets/civic.png',
-  
+
   },
 ];
 
@@ -88,17 +88,17 @@ const PopularCategory = () => {
   return (
     <section className="text-gray-800 mt-20">
       {/* Top Heading */}
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-4 px-4 mb-6">
+      <div className="w-full px-4 mb-6">
         {/* Heading */}
-        <div className="w-full lg:w-auto text-center lg:text-left lg:ml-36">
-          <h2 className="text-2xl font-bold text-[#333333]">Head Lamp category</h2>
+        <div className="max-w-8xl  ml-9 lg:ml-14 justify-between items-center gap-4 lg:gap-0">
+          <h2 className="text-4xl font-semibold text-[#333333]">Head Lamp category</h2>
         </div>
 
         {/* Arrows */}
-        <div className="flex items-center gap-4 justify-center lg:justify-end w-full lg:w-auto text-white lg:mr-36">
-          <button 
+        <div className="flex items-center mt-5 lg:mt-0 gap-4 justify-center lg:justify-end w-full lg:w-auto text-white lg:mr-9">
+          <button
             onClick={prevSlide}
-            className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+            className="w-9 h-9 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
           >
             <img
               src="/assets/Vector.png"
@@ -106,9 +106,9 @@ const PopularCategory = () => {
               className="w-3 h-3 object-contain"
             />
           </button>
-          <button 
+          <button
             onClick={nextSlide}
-            className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+            className="w-9 h-9 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
           >
             <img
               src="/assets/Vector (1).png"
@@ -120,8 +120,8 @@ const PopularCategory = () => {
       </div>
 
       {/* Product Carousel */}
-      <div className="relative overflow-hidden max-w-7xl mx-auto mt-10">
-        <div className="flex transition-transform duration-300" style={{ 
+      <div className="relative overflow-hidden max-w-8xl lg:ml-9  mx-auto mt-10">
+        <div className="flex transition-transform duration-300" style={{
           transform: `translateX(-${currentIndex * itemWidth}%)`,
           width: `${products.length * (window.innerWidth < 768 ? 100 : 16.8)}%`
         }}>
@@ -133,9 +133,9 @@ const PopularCategory = () => {
             return (
               <div
                 key={id}
-                className={`${isMobile ? 'w-full' : 'w-1/4'} px-2 flex-shrink-0`}
+                className={`${isMobile ? 'w-full' : 'w-1/4'}  flex-shrink-0`}
               >
-                <div className="w-full lg:w-[295px] mx-7  max-w-[14%] lg:max-w-full lg:mx-0 bg-white lg:h-[490px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
+                <div className="w-full lg:w-[90%] mx-7  max-w-[14%] lg:max-w-full lg:mx-0 bg-white lg:h-[590px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
                   {/* Top Section */}
                   <div>
                     <div className="mb-2 -mx-3">
@@ -157,31 +157,31 @@ const PopularCategory = () => {
 
                   {/* Bottom Button */}
                   <div className="flex justify-center mt-5">
-                                {quantity === 0 ? (
-                                    <button
-                                        onClick={increment}
-                                        className="bg-strip text-white py-2 px-6 text-xs rounded hover:bg-red-600 transition-colors"
-                                    >
-                                        Add to cart
-                                    </button>
-                                ) : (
-                                    <div className="flex items-center border border-strip rounded">
-                                        <button
-                                            onClick={decrement}
-                                            className="px-3 py-1 text-white bg-strip  transition-colors"
-                                        >
-                                            -
-                                        </button>
-                                        <span className="px-3 py-1 text-strip">{quantity}</span>
-                                        <button
-                                            onClick={increment}
-                                            className="px-3 py-1 text-white bg-strip  transition-colors"
-                                        >
-                                            +
-                                        </button>
-                                    </div>
-                                )}
-                    </div>
+                    {quantity === 0 ? (
+                      <button
+                        onClick={increment}
+                        className="bg-strip text-white py-2 px-12 text-xs lg:text-lg rounded hover:bg-red-600 transition-colors"
+                      >
+                        Add to cart
+                      </button>
+                    ) : (
+                      <div className="flex items-center border border-strip rounded">
+                        <button
+                          onClick={decrement}
+                          className="px-4 py-2  text-white bg-strip  transition-colors"
+                        >
+                          -
+                        </button>
+                        <span className="px-4 py-1 text-lg text-strip">{quantity}</span>
+                        <button
+                          onClick={increment}
+                          className="px-4 py-2 text-white bg-strip  transition-colors"
+                        >
+                          +
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             );

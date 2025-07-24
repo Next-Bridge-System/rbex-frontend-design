@@ -55,10 +55,10 @@ const products = [
 const Products = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [quantityStates, setQuantityStates] = useState(products.map(() => 0));
-     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
 
-     useEffect(() => {
+    useEffect(() => {
         const handleResize = () => {
             const mobile = window.innerWidth < 768;
             setIsMobile(mobile);
@@ -95,34 +95,34 @@ const Products = () => {
         <section className="bg-[#F4FDFF] text-gray-800 pb-16">
             {/* Top Heading */}
             <div className="w-full px-4 mb-6">
-                <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0">
+                <div className="max-w-8xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0">
                     {/* Left: Heading */}
                     <div className="flex gap-4 lg:ml-16">
-                        <h2 className="text-2xl font-bold text-[#333333] text-center lg:text-left">
+                        <h2 className="text-4xl font-semibold text-[#333333] text-center lg:text-left">
                             Featured Products
                         </h2>
                     </div>
 
                     {/* Right: Arrows */}
                     <div className="flex items-center gap-4 lg:mr-14 text-white">
-                        <button 
+                        <button
                             onClick={prevSlide}
-                            className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+                            className="w-9 h-9 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
                         >
                             <img
                                 src="/assets/Vector.png"
                                 alt="Left Arrow"
-                                className="w-3 h-3 object-contain"
+                                className=" object-contain"
                             />
                         </button>
-                        <button 
+                        <button
                             onClick={nextSlide}
-                            className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+                            className="w-9 h-9 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
                         >
                             <img
                                 src="/assets/Vector (1).png"
                                 alt="Right Arrow"
-                                className="w-3 h-3 object-contain"
+                                className=" object-contain"
                             />
                         </button>
                     </div>
@@ -130,8 +130,8 @@ const Products = () => {
             </div>
 
             {/* Product Carousel */}
-            <div className="relative mt-10 overflow-hidden max-w-7xl mx-auto">
-                <div className="flex transition-transform duration-300" style={{ 
+            <div className="relative mt-10 overflow-hidden max-w-8xl lg:ml-9 ">
+                <div className="flex transition-transform duration-300" style={{
                     transform: `translateX(-${currentIndex * (100 / (window.innerWidth < 768 ? 1 : 4))}%)`,
                     width: `${products.length * (window.innerWidth < 768 ? 100 : 12.5)}%`
                 }}>
@@ -143,9 +143,9 @@ const Products = () => {
                         return (
                             <div
                                 key={id}
-                                className={`${window.innerWidth < 768 ? 'w-full' : 'w-1/4'} px-2 flex-shrink-0`}
+                                className={`${window.innerWidth < 768 ? 'w-full' : 'w-1/4'} px-2 m flex-shrink-0`}
                             >
-                                <div className="bg-white h-[570px] max-w-[12%] lg:max-w-full lg:h-[470px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
+                                <div className="bg-white h-[570px] max-w-[12%] lg:max-w-[90%]  lg:h-[590px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
                                     <div>
                                         <div className="-m-3 mb-2">
                                             <img
@@ -158,31 +158,31 @@ const Products = () => {
                                         <p className="text-[#333333] mt-5 font-medium font-rubik text-[16px]">{price}</p>
                                     </div>
                                     <div className="flex justify-center mt-6">
-                                {quantity === 0 ? (
-                                    <button
-                                        onClick={increment}
-                                        className="bg-strip text-white py-2 px-6 text-xs rounded hover:bg-red-600 transition-colors"
-                                    >
-                                        Add to cart
-                                    </button>
-                                ) : (
-                                    <div className="flex items-center border border-strip rounded">
-                                        <button
-                                            onClick={decrement}
-                                            className="px-3 py-1 text-white bg-strip  transition-colors"
-                                        >
-                                            -
-                                        </button>
-                                        <span className="px-3 py-1 text-strip">{quantity}</span>
-                                        <button
-                                            onClick={increment}
-                                            className="px-3 py-1 text-white bg-strip  transition-colors"
-                                        >
-                                            +
-                                        </button>
+                                        {quantity === 0 ? (
+                                            <button
+                                                onClick={increment}
+                                                className="bg-strip  text-white py-3 mb-4    px-16 text-lg rounded hover:bg-red-600 transition-colors"
+                                            >
+                                                Add to cart
+                                            </button>
+                                        ) : (
+                                            <div className="flex items-center mb-5  border border-strip rounded">
+                                                <button
+                                                    onClick={decrement}
+                                                    className="px-8 py-3 text-white bg-strip  transition-colors"
+                                                >
+                                                    -
+                                                </button>
+                                                <span className="px-8 py-3 text-strip">{quantity}</span>
+                                                <button
+                                                    onClick={increment}
+                                                    className="px-8 py-3 text-white bg-strip  transition-colors"
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
+                                        )}
                                     </div>
-                                )}
-                            </div>
                                 </div>
                             </div>
                         );

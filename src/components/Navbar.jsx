@@ -10,13 +10,13 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-navbar shadow-md py-2 md:py-4 border text-navText">
-      <div className="container mx-auto px-4">
+    <nav className="bg-navbar  shadow-md py-2 md:py-4 border text-navText">
+      <div className=" mx-10  py-2">
         {/* Main Navbar Content */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center  justify-between">
           {/* Logo and Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <img src="/assets/logo 6.png" alt="Logo" className="h-8 md:h-10 w-auto" />
+            <img src="/assets/logo 6.png" alt="Logo" className="h-10 md:h-12 w-auto" />
             <button
               className="lg:hidden text-xl text-navText"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -28,13 +28,13 @@ const Navbar = () => {
           {/* Desktop Menu and Search */}
           <div className="hidden lg:flex items-center gap-16 justify-between  mr-32">
             {/* Desktop Navigation */}
-            <ul className="flex gap-4 xl:gap-6 font-semibold font-roboto text-[#393C3D]  text-sm items-center">
+            <ul className="flex gap-4 xl:gap-6 font-semibold font-roboto text-[#393C3D]  text-lg items-center">
               <li className="cursor-pointer  hover:text-strip" onClick={() => navigate('/')}>
                 Home
               </li>
               <li className="relative flex items-center gap-1">
                 <span
-                  className="cursor-pointer text-sm font-semibold hover:text-red-600 transition-colors duration-200"
+                  className="cursor-pointer text-lg font-semibold hover:text-red-600 transition-colors duration-200"
                   onClick={() => navigate('/shop-by-category')}
                 >
                   Shop By Category
@@ -71,12 +71,12 @@ const Navbar = () => {
 
             {/* Desktop Search */}
             <div className="flex items-center ml-4">
-              <div className="xl:w-[350px] w-full">
+              <div className="xl:w-[480px] w-full">
                 <div className="flex items-center gap-2 border border-gray-300 rounded-full px-3 py-1 md:py-2 focus-within:ring-2 focus-within:ring-red-500">
                   <input
                     type="text"
                     placeholder="Year, make, model, part type, part number"
-                    className="w-full text-xs md:text-sm font-roboto focus:outline-none"
+                    className="w-full h-9 text-xs md:text-sm bg-navbar  font-roboto focus:outline-none"
                   />
                   <FaSearch className="text-gray-500 text-sm" />
                 </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
             onClick={() => navigate('/cart')}
           >
             {/* Cart Icon with Count Overlay */}
-            <div className="relative w-6 h-6 md:w-7 md:h-7">
+            <div className="relative w-9 h-9 md:w-10 md:h-10">
               <img src="/assets/cart.png" alt="Cart Icon" className="w-full h-full object-contain" />
               <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-5 md:h-5">
                 <img src="/assets/count.png" alt="Count Background" className="w-full h-full object-contain" />
@@ -102,8 +102,8 @@ const Navbar = () => {
             </div>
             {/* Cart Label and Price - Hidden on smallest screens */}
             <div className="hidden sm:flex flex-col items-center">
-              <span className='text-xs'>Cart</span>
-              <span className="text-gray-500 text-xs md:text-sm">$0.00</span>
+              <span className='text-lg'>Cart</span>
+              <span className="text-gray-500 text-sm md:text-sm lg:text-lg">$0.00</span>
             </div>
           </div>
         </div>
