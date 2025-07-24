@@ -86,34 +86,34 @@ const PopularCategory = () => {
   const containerWidth = products.length * itemWidth;
 
   return (
-    <section className="text-gray-800 mt-20">
+    <section className="text-gray-800 max-w-7xl  lg:ml-9   mt-10">
       {/* Top Heading */}
-      <div className="w-full px-4 mb-6">
+      <div className=" flex justify-between px-4 items-center">
         {/* Heading */}
-        <div className="max-w-8xl  ml-9 lg:ml-14 justify-between items-center gap-4 lg:gap-0">
-          <h2 className="text-4xl font-semibold text-[#333333]">Head Lamp category</h2>
+        <div className="max-w-7xl  ml-9 lg:ml-14  items-center gap-4 lg:gap-0">
+          <h2 className="text-2xl font-semibold text-[#333333]">Head Lamp category</h2>
         </div>
 
         {/* Arrows */}
-        <div className="flex items-center mt-5 lg:mt-0 gap-4 justify-center lg:justify-end w-full lg:w-auto text-white lg:mr-9">
+        <div className="flex items-center  gap-4 justify-center lg:justify-end w-full lg:w-auto text-white lg:mr-9">
           <button
             onClick={prevSlide}
-            className="w-9 h-9 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+            className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
           >
             <img
               src="/assets/Vector.png"
               alt="Left Arrow"
-              className="w-3 h-3 object-contain"
+              className="w-2 h-2 object-contain"
             />
           </button>
           <button
             onClick={nextSlide}
-            className="w-9 h-9 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+            className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
           >
             <img
               src="/assets/Vector (1).png"
               alt="Right Arrow"
-              className="w-3 h-3 object-contain"
+              className="w-2 h-2 object-contain"
             />
           </button>
         </div>
@@ -135,7 +135,7 @@ const PopularCategory = () => {
                 key={id}
                 className={`${isMobile ? 'w-full' : 'w-1/4'}  flex-shrink-0`}
               >
-                <div className="w-full lg:w-[90%] mx-7  max-w-[14%] lg:max-w-full lg:mx-0 bg-white lg:h-[590px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
+                <div className="w-full  lg:w-[85%] mx-7  max-w-[14%] lg:max-w-full lg:mx-0 bg-white lg:h-[450px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
                   {/* Top Section */}
                   <div>
                     <div className="mb-2 -mx-3">
@@ -146,12 +146,12 @@ const PopularCategory = () => {
                       />
                     </div>
 
-                    <h3 className="text-[#333333] font-medium font-rubik text-[18px] line-clamp-2">
+                    <h3 className="text-[#333333] font-medium font-rubik text-[16px] line-clamp-2">
                       {name}
                     </h3>
 
                     <div className="flex items-center justify-between mt-3">
-                      <p className="text-[#333333] font-rubik font-medium text-[16px]">{price}</p>
+                      <p className="text-[#333333] font-rubik font-medium text-[14px]">{price}</p>
                     </div>
                   </div>
 
@@ -160,7 +160,7 @@ const PopularCategory = () => {
                     {quantity === 0 ? (
                       <button
                         onClick={increment}
-                        className="bg-strip text-white py-2 px-12 text-xs lg:text-lg rounded hover:bg-red-600 transition-colors"
+                        className="bg-strip text-white py-2 px-10 text-sm  rounded hover:bg-red-600 transition-colors"
                       >
                         Add to cart
                       </button>
@@ -168,14 +168,14 @@ const PopularCategory = () => {
                       <div className="flex items-center border border-strip rounded">
                         <button
                           onClick={decrement}
-                          className="px-4 py-2  text-white bg-strip  transition-colors"
+                          className="px-3 py-1  text-white bg-strip  transition-colors"
                         >
                           -
                         </button>
-                        <span className="px-4 py-1 text-lg text-strip">{quantity}</span>
+                        <span className="px-3  text-sm text-strip">{quantity}</span>
                         <button
                           onClick={increment}
-                          className="px-4 py-2 text-white bg-strip  transition-colors"
+                          className="px-3 py-1 text-white bg-strip  transition-colors"
                         >
                           +
                         </button>

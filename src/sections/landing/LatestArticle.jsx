@@ -30,11 +30,11 @@ const LatestArticle = () => {
   const navigate = useNavigate();
   return (
     <section className="bg-[#F4FDFF] px-9 py-10 flex justify-center">
-        <div className="  max-w-8xl  justify-between items-center gap-4 lg:gap-0">
+        <div className="  max-w-7xl justify-between items-center gap-4 lg:gap-0">
         {/* Top Header */}
         <div className="flex flex-col sm:flex-col lg:flex-row px-12 justify-between items-center mb-8">
-          <h2 className="text-4xl  font-semibold mb-5 lg:mb-0 text-[#333333]">Latest Article</h2>
-          <button className="bg-[#BA2027] hover:bg-red-500 text-white text-xs lg:text-lg font-semibold px-10 py-3 rounded-md"
+          <h2 className="text-2xl  font-semibold mb-5 lg:mb-0 text-[#333333]">Latest Article</h2>
+          <button className="bg-[#BA2027] hover:bg-red-500 text-white text-xs lg:text-sm  px-7 py-2 rounded-md"
             onClick={() => {
               navigate('/blogs')
               window.scrollTo(0, 0)
@@ -51,21 +51,21 @@ const LatestArticle = () => {
           {articles.map(({ id, date, image, title, author }) => (
             <div
               key={id}
-              className="bg-white rounded-lg border border-gray-200 cursor-pointer shadow hover:shadow-md  flex flex-col"
+              className="bg-white  ml-4 rounded-lg border border-gray-200 cursor-pointer shadow hover:shadow-md  flex flex-col"
               onClick={() => {
                 navigate('/blogs')
                 window.scrollTo(0, 0)
               }}
             >
               {/* Image */}
-              <div className="relative object-contain h-[350px]  mb-3">
+              <div className="relative object-contain h-[300px]  mb-3">
                 <img
                   src={`/assets/${image}`}
                   alt={title}
                   className="w-full h-full object-cover rounded-md cursor-pointer"
 
                 />
-                <div className="absolute bottom-3 left-2 bg-[#E52727] text-[#FFFFFF] text-[12px]  px-5 py-2 rounded-full">
+                <div className="absolute bottom-3 left-2 bg-[#E52727] text-[#FFFFFF] text-xs  px-2 py-1 rounded-full">
                   {date}
                 </div>
               </div>
@@ -77,14 +77,14 @@ const LatestArticle = () => {
                 <img
                   src="/assets/tb.png"
                   alt="TB Icon"
-                  className="w-12 h-12 object-contain"
+                  className="w-8 h-8 object-contain"
                 />
-                <p className="text-[17px]  text-[#333333] font-medium"><span className='text-[#E52727]  font-medium'>{author}</span> | Body Parts</p>
+                <p className="text-sm  text-[#333333] font-medium"><span className='text-[#E52727]  font-medium'>{author}</span> | Body Parts</p>
               </div>
 
 
               {/* Title */}
-              <h3 className="text-2xl text-[#333333] font-semibold p-5 leading-tight mb-10">
+              <h3 className="text-lg text-[#333333] font-semibold p-5 leading-tight mb-10">
                 {title}
               </h3>
 

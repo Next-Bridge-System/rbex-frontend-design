@@ -10,13 +10,13 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-navbar  shadow-md py-2 md:py-4 border text-navText">
-      <div className=" mx-10  py-2">
+    <nav className="bg-navbar  shadow-md py-3 border text-navText">
+      <div className=" mx-9  ">
         {/* Main Navbar Content */}
         <div className="flex items-center  justify-between">
           {/* Logo and Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <img src="/assets/logo 6.png" alt="Logo" className="h-10 md:h-12 w-auto" />
+            <img src="/assets/logo 6.png" alt="Logo" className="h-10 md:h-10 w-auto" />
             <button
               className="lg:hidden text-xl text-navText"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -28,19 +28,19 @@ const Navbar = () => {
           {/* Desktop Menu and Search */}
           <div className="hidden lg:flex items-center gap-16 justify-between  mr-32">
             {/* Desktop Navigation */}
-            <ul className="flex gap-4 xl:gap-6 font-semibold font-roboto text-[#393C3D]  text-lg items-center">
+            <ul className="flex gap-4 font-semibold font-roboto text-[#393C3D]   text-sm items-center">
               <li className="cursor-pointer  hover:text-strip" onClick={() => navigate('/')}>
                 Home
               </li>
               <li className="relative flex items-center gap-1">
                 <span
-                  className="cursor-pointer text-lg font-semibold hover:text-red-600 transition-colors duration-200"
+                  className="cursor-pointer text-sm font-semibold hover:text-red-600 transition-colors duration-200"
                   onClick={() => navigate('/shop-by-category')}
                 >
                   Shop By Category
                 </span>
                 <IoIosArrowDown
-                  className="cursor-pointer text-lg text-gray-700 hover:text-red-600 transition-transform duration-300"
+                  className="cursor-pointer text-sm text-gray-700 hover:text-red-600 transition-transform duration-300"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 />
 
@@ -76,7 +76,7 @@ const Navbar = () => {
                   <input
                     type="text"
                     placeholder="Year, make, model, part type, part number"
-                    className="w-full h-9 text-xs md:text-sm bg-navbar  font-roboto focus:outline-none"
+                    className="w-full  text-xs md:text-sm bg-navbar  font-roboto focus:outline-none"
                   />
                   <FaSearch className="text-gray-500 text-sm" />
                 </div>
@@ -91,19 +91,19 @@ const Navbar = () => {
             onClick={() => navigate('/cart')}
           >
             {/* Cart Icon with Count Overlay */}
-            <div className="relative w-9 h-9 md:w-10 md:h-10">
+            <div className="relative w-7 h-7 ">
               <img src="/assets/cart.png" alt="Cart Icon" className="w-full h-full object-contain" />
-              <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-5 md:h-5">
+              <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-2 h-2 md:w-3 md:h-3">
                 <img src="/assets/count.png" alt="Count Background" className="w-full h-full object-contain" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-[10px] md:text-[12px] text-white">2</span>
+                  <span className="text-[8px] md:text-[10px] text-white">2</span>
                 </div>
               </div>
             </div>
             {/* Cart Label and Price - Hidden on smallest screens */}
             <div className="hidden sm:flex flex-col items-center">
-              <span className='text-lg'>Cart</span>
-              <span className="text-gray-500 text-sm md:text-sm lg:text-lg">$0.00</span>
+              <span className='text-xs'>Cart</span>
+              <span className="text-gray-500 text-sm md:text-xs ">$0.00</span>
             </div>
           </div>
         </div>

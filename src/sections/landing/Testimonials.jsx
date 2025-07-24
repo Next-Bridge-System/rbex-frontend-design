@@ -69,9 +69,9 @@ const Testimonials = () => {
 
   return (
     <section className="bg-[#F4FDFF] px-9 py-10 flex justify-center">
-      <div className="max-w-8xl   justify-between items-center gap-4 lg:gap-0">
+      <div className="max-w-7xl   justify-between items-center gap-4 lg:gap-0">
         {/* Section Heading */}
-        <h2 className="text-4xl font-semibold text-[#333333] mb-8">Testimonials</h2>
+        <h2 className="text-2xl ml-9 font-semibold text-[#333333] mb-8">Testimonials</h2>
 
         {/* Testimonial Grid */}
         <div className="grid grid-cols-1  sm:grid-cols-1 md:grid-cols-3 gap-6 w-full mb-16 transition-all duration-300">
@@ -84,15 +84,15 @@ const Testimonials = () => {
                   <div className="flex items-center gap-3 mb-2">
                     <img src={`/assets/${image}`} alt={name} className="w-12 h-12 object-cover rounded-full" />
                     <div className="flex flex-col">
-                      <h3 className="text-xl font-semibold text-[#333333]">{name}</h3>
-                      <div className="flex items-center text-yellow-400 text-lg">
+                      <h3 className="text-lg font-semibold text-[#333333]">{name}</h3>
+                      <div className="flex items-center text-yellow-400 text-xs">
                         {[...Array(Math.floor(rating))].map((_, i) => (
                           <span key={i}>★</span>
                         ))}
                       </div>
                     </div>
                   </div>
-                  <p className="text-lg text-[#333333] leading-snug">{message}</p>
+                  <p className="text-sm text-[#333333] leading-snug">{message}</p>
                 </div>
               </MotionCard>
             );
@@ -105,10 +105,10 @@ const Testimonials = () => {
           <button
             onClick={prevSlide}
             disabled={startIndex === 0}
-            className={`w-8 h-8 rounded-full bg-strip text-white flex items-center justify-center hover:brightness-90 ${startIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
+            className={`w-6 h-6 rounded-full bg-strip text-white flex items-center justify-center hover:brightness-90 ${startIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
               }`}
           >
-            <img src="/assets/Vector.png" alt="Left" className="w-3 h-3" />
+            <img src="/assets/Vector.png" alt="Left" className="w-2 h-2" />
           </button>
 
           {/* Dots */}
@@ -116,7 +116,7 @@ const Testimonials = () => {
             {Array.from({ length: testimonials.length - visibleCount + 1 }).map((_, i) => (
               <span
                 key={i}
-                className={`w-3 h-3 rounded-full ${i === startIndex ? 'bg-strip w-3 h-3' : 'bg-gray-300'
+                className={`w-1 h-1 rounded-full ${i === startIndex ? 'bg-strip w-3 h-3' : 'bg-gray-300'
                   }`}
               ></span>
             ))}
@@ -126,14 +126,14 @@ const Testimonials = () => {
           <button
             onClick={nextSlide}
             disabled={startIndex + visibleCount >= testimonials.length}
-            className={`w-8 h-8 rounded-full bg-strip text-white flex items-center justify-center hover:brightness-90 ${startIndex + visibleCount >= testimonials.length ? 'opacity-50 cursor-not-allowed' : ''
+            className={`w-6 h-6 rounded-full bg-strip text-white flex items-center justify-center hover:brightness-90 ${startIndex + visibleCount >= testimonials.length ? 'opacity-50 cursor-not-allowed' : ''
               }`}
           >
-            <img src="/assets/Vector (1).png" alt="Right" className="w-3 h-3" />
+            <img src="/assets/Vector (1).png" alt="Right" className="w-2 h-2" />
           </button>
         </div>
 
-        <div className=" mx-auto mt-20 ">
+        <div className="  mx-auto mt-20 ">
           <img
             src="/assets/Trustedshopping.png"
             alt="Trust"

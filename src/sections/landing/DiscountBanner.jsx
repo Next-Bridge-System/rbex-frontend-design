@@ -59,10 +59,10 @@ const DiscountBanner = () => {
   <div className="w-full max-w-8xl mx-auto flex items-center justify-between">
     {/* Left Text */}
     <div className="max-w-[230px] lg:max-w-[540px] lg:ml-9 sm:max-w-md">
-      <h2 className="text-base sm:text-xl text-white md:text-3xl lg:text-4xl font-bold mb-2">
+      <h2 className="text-base sm:text-xl text-white md:text-3xl lg:text-3xl font-bold mb-2">
         Get 22% off
       </h2>
-      <p className="text-xs text-white lg:text-[18px] sm:text-sm opacity-70">
+      <p className="text-xs text-white lg:text-[15px] sm:text-sm opacity-70">
         This discount is not valid in conjunction with other offers.
       </p>
     </div>
@@ -71,7 +71,7 @@ const DiscountBanner = () => {
     <img
       src="/assets/discount.png"
       alt="Disc Plate"
-      className="h-[120px] sm:h-[180px] md:h-[200px] lg:h-[390px] object-contain"
+      className="h-[120px] sm:h-[180px] md:h-[200px] lg:h-[290px] object-contain"
     />
   </div>
 </div>

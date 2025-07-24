@@ -70,7 +70,7 @@ const Hero = () => {
 
 
 
-   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -106,7 +106,7 @@ const Hero = () => {
       cursor: 'pointer',
     }),
   };
-  
+
   const Navigate = useNavigate();
   const [currentVariant, setCurrentVariant] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -146,7 +146,7 @@ const Hero = () => {
   return (
 
 
-    <section className="relative mt-10  bg-[#F4FDFF] py-20 overflow-hidden">
+    <section className="relative  bg-[#F4FDFF] py-12 overflow-hidden">
       {/* Layered Background Vectors */}
       <img
         src="/assets/bg1.png"
@@ -162,7 +162,7 @@ const Hero = () => {
         src="/assets/bg3.png"
         alt="bg3"
         className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
-      /> 
+      />
       <div className="relative z-10 mx-16  h-[400px] lg:h-[320px] flex flex-col-reverse lg:flex-row items-center justify-center">
 
 
@@ -177,11 +177,11 @@ const Hero = () => {
               exit={{ x: -100, opacity: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-black leading-tight">
+              <h1 className="text-3xl sm:text-2xl lg:text-4xl font-bold text-black leading-tight">
                 {variants[currentVariant].heading}
                 <span className="text-strip">{variants[currentVariant].highlight}</span>
               </h1>
-              <p className="mt-4 text-black text-base sm:text-sm lg:text-lg max-w-lg mx-auto lg:mx-0">
+              <p className="mt-4 text-black text-base sm:text-xs lg:text-sm max-w-lg mx-auto lg:mx-0">
                 {variants[currentVariant].description}
               </p>
             </motion.div>
@@ -189,17 +189,17 @@ const Hero = () => {
 
           {/* Filter Form */}
           <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-4">
-            <div className="min-w-[180px] ">
+            <div className="min-w-[160px] ">
               <Select options={years} placeholder="Select Year" styles={customStyles} />
             </div>
-            <div className="min-w-[180px]">
+            <div className="min-w-[160px]">
               <Select options={makes} placeholder="Select Make" styles={customStyles} />
             </div>
-            <div className="min-w-[180px]">
+            <div className="min-w-[160px]">
               <Select options={models} placeholder="Select Model" styles={customStyles} />
             </div>
             <button
-              className="bg-strip text-white px-9 py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition"
+              className="bg-strip text-white px-7 py-1.5 rounded-lg text-sm font-medium hover:bg-red-700 transition"
               onClick={() => Navigate('/detail-search')}
             >
               Search
@@ -215,12 +215,12 @@ const Hero = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -100, opacity: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="w-full max-w-[280px]  sm:max-w-[340px] lg:max-w-[800px] h-[220px] sm:h-[160px] md:h-[200px] lg:h-[450px]"
+            className="w-full max-w-[280px]   sm:max-w-[340px]  lg:max-w-[500px] h-[220px] sm:h-[160px] md:h-[200px] lg:h-[350px]"
           >
             <img
               src={variants[currentVariant].image}
               alt="Hero"
-              className="w-[90%] h-full object-contain"
+              className="w-[80%] h-full object-contain"
             />
           </motion.div>
         </AnimatePresence>
@@ -229,7 +229,7 @@ const Hero = () => {
       </div>
 
       {/* Filter Strip */}
-      <div className="mt-40 relative z-10">
+      <div className="mt-28 relative z-10">
         <FilterStrip />
       </div>
     </section>

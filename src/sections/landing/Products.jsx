@@ -95,10 +95,10 @@ const Products = () => {
         <section className="bg-[#F4FDFF] text-gray-800 pb-16">
             {/* Top Heading */}
             <div className="w-full px-4 mb-6">
-                <div className="max-w-8xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0">
+                <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0">
                     {/* Left: Heading */}
                     <div className="flex gap-4 lg:ml-16">
-                        <h2 className="text-4xl font-semibold text-[#333333] text-center lg:text-left">
+                        <h2 className="text-2xl font-semibold text-[#333333] text-center lg:text-left">
                             Featured Products
                         </h2>
                     </div>
@@ -107,22 +107,22 @@ const Products = () => {
                     <div className="flex items-center gap-4 lg:mr-14 text-white">
                         <button
                             onClick={prevSlide}
-                            className="w-9 h-9 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+                            className="w-6 h-6 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
                         >
                             <img
                                 src="/assets/Vector.png"
                                 alt="Left Arrow"
-                                className=" object-contain"
+                                className="h-2 w-2 object-contain"
                             />
                         </button>
                         <button
                             onClick={nextSlide}
-                            className="w-9 h-9 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+                            className="w-6 h-6 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
                         >
                             <img
                                 src="/assets/Vector (1).png"
                                 alt="Right Arrow"
-                                className=" object-contain"
+                                className="h-2 w-2 object-contain"
                             />
                         </button>
                     </div>
@@ -130,7 +130,7 @@ const Products = () => {
             </div>
 
             {/* Product Carousel */}
-            <div className="relative mt-10 overflow-hidden max-w-8xl lg:ml-9 ">
+            <div className="relative mt-10 overflow-hidden max-w-7xl lg:ml-12 ">
                 <div className="flex transition-transform duration-300" style={{
                     transform: `translateX(-${currentIndex * (100 / (window.innerWidth < 768 ? 1 : 4))}%)`,
                     width: `${products.length * (window.innerWidth < 768 ? 100 : 12.5)}%`
@@ -145,7 +145,7 @@ const Products = () => {
                                 key={id}
                                 className={`${window.innerWidth < 768 ? 'w-full' : 'w-1/4'} px-2 m flex-shrink-0`}
                             >
-                                <div className="bg-white h-[570px] max-w-[12%] lg:max-w-[90%]  lg:h-[590px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
+                                <div className="bg-white h-[570px] max-w-[12%] lg:max-w-[95%]  lg:h-[500px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
                                     <div>
                                         <div className="-m-3 mb-2">
                                             <img
@@ -155,13 +155,13 @@ const Products = () => {
                                             />
                                         </div>
                                         <h3 className="font-rubik font-light text-[18px] leading-[21.6px] tracking-[0px] align-middle">{name}</h3>
-                                        <p className="text-[#333333] mt-5 font-medium font-rubik text-[16px]">{price}</p>
+                                        <p className="text-[#333333] mt-5 font-medium font-rubik text-[14px]">{price}</p>
                                     </div>
                                     <div className="flex justify-center mt-6">
                                         {quantity === 0 ? (
                                             <button
                                                 onClick={increment}
-                                                className="bg-strip  text-white py-3 mb-4    px-16 text-lg rounded hover:bg-red-600 transition-colors"
+                                                className="bg-strip  text-white py-2 mb-4    px-12 text-sm rounded hover:bg-red-600 transition-colors"
                                             >
                                                 Add to cart
                                             </button>

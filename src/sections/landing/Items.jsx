@@ -92,17 +92,17 @@ const  Items = () => {
     {items.map(({ id, name, price, originalPrice,   image, sale }) => (
       <div
         key={id}
-        className="w-full md:w-[550px] h-[150px] flex bg-white rounded-lg border border-gray-200 shadow hover:shadow-md py-2 px-2"
+        className="w-full md:w-[400px] h-[120px] flex bg-white rounded-lg border border-gray-200 shadow hover:shadow-md py-2 px-2"
       >
         {/* Left: Image */}
         <div className="w-1/3 relative">
           <img
             src={`/assets/${image}`}
             alt={name}
-            className="w-full h-full object-contain"
+            className="h-full w-full object-contain"
           />
           {sale && (
-            <div className="absolute top-2 left-2 bg-red-600 text-white text-[15px] px-5 py-2 rounded-full z-10">
+            <div className="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-5 py-2 rounded-full z-10">
               Sale!
             </div>
           )}
@@ -110,13 +110,13 @@ const  Items = () => {
 
         {/* Center: Text */}
         <div className="w-1/1 ml-2 flex flex-col justify-center">
-          <h3 className="text-[#333333] font-rubik text-[17px] lg:text-[20px] ">{name}</h3>
+          <h3 className="text-[#333333] font-rubik text-[12px] lg:text-[15px] ">{name}</h3>
           
           <div className="flex items-center gap-2">
             {sale && (
-              <span className="text-sm  font-semibold text-[#FF0000] line-through mt-5">{originalPrice}</span>
+              <span className="text-sm   text-[#FF0000] line-through mt-5">{originalPrice}</span>
             )}
-            <span className="text-xs lg:text-lg text-[#333333] font-medium font-rubik mt-5">{price}</span>
+            <span className="text-xs lg:text-sm text-[#333333] font-medium font-rubik mt-5">{price}</span>
           </div>
         </div>
 
