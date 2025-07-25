@@ -33,7 +33,7 @@ const HeroSuspension = () => {
           {/* Home Button */}
           <div className="relative w-[120px] sm:w-[142px] h-[30px]">
             <img
-              src="src/assets/Skewed Rectangle.png"
+              src="/assets/Skewed Rectangle.png"
               alt="Home Background"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -45,7 +45,7 @@ const HeroSuspension = () => {
           {/* Shop by Category Button */}
           <div className="relative w-[160px] sm:w-[200px] md:w-[238px] h-[30px]">
             <img
-              src="src/assets/Skewed Rectangle (1).png"
+              src="/assets/Skewed Rectangle (1).png"
               alt="Shop by Category Background"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -57,7 +57,7 @@ const HeroSuspension = () => {
           {/* Suspension and brakes */}
           <div className="relative w-[170px] sm:w-[220px] md:w-[248px] h-[30px]">
             <img
-              src="src/assets/Skewed Rectangle (1).png"
+              src="/assets/Skewed Rectangle (1).png"
               alt="Shop by Category Background"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -75,7 +75,7 @@ const HeroSuspension = () => {
 
           <div className='w-full mb-12 sm:mb-16'>
             <img
-              src='src/assets/Trustedshopping.png'
+              src='/assets/Trustedshopping.png'
               alt='trust'
               className='w-full max-w-7xl mx-auto object-cover'
             />

@@ -19,6 +19,7 @@ const OrderForm = () => {
     setEmail('');
   };
 
+  
   return (
     <div className="flex items-center justify-center px-4 py-12 sm:py-10">
       <div className="w-full max-w-[699px] bg-white mb-9">
@@ -68,6 +69,7 @@ const OrderForm = () => {
             <button
               type="submit"
               className="w-full sm:w-[500px] bg-strip text-white py-3 rounded-md flex items-center justify-center gap-2 mx-auto hover:bg-red-600 transition"
+             
             >
               Track Order
               <img src="/assets/truck.png" alt="Truck Icon" className="mt-1 w-6 h-6 object-contain" />

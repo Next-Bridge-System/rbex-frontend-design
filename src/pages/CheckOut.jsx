@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import CheckOutHeading from '../sections/checkout/CheckOutHeading'
 const CheckOut = () => {
   return (
-     <div className="overflow-x-hidden">
+     <div className="overflow-x-hidden bg-[#F4FDFF]">
     <Navbar/>
     <CheckOutHeading/>
     <Footer/>

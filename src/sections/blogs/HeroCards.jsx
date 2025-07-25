@@ -35,7 +35,7 @@ const HeroCards = () => {
 
 
     return (
-        <section className="bg-[#F4FDFF]   pb-16 px-4 sm:px-6 lg:px-16">
+        <section className="bg-[#F4FDFF]  pb-16 px-4 sm:px-6 lg:px-16">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
 
                 {/* Left Section */}

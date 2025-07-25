@@ -208,9 +208,9 @@ const DetailCards = () => {
 
 
     return (
-        <div className="relative px-4 mb-10 sm:px-6 lg:px-10 py-8">
-            <div className="flex justify-end">
-                <div className="bg-[#EAEAEA] text-[#686868] font-roboto border w-full sm:w-[76%] rounded-lg px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm   mb-4 sm:mb-6 shadow-sm flex items-center justify-between">
+        <div className=" container mx-auto  relative px-4 mb-10 sm:px-6 lg:px-10 py-8">
+            <div className="flex lg:mr-14 justify-end">
+                <div className="bg-[#EAEAEA] text-[#686868] font-roboto border w-full  lg:w-[73%] rounded-lg px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm   mb-4 sm:mb-6 shadow-sm flex items-center  justify-between">
                     {/* Sort Label and Dropdown */}
                     <div className="flex  items-center gap-2 ">
                         <span className="text-[#686868]  font-light text-base sm:text-lg whitespace-nowrap">
@@ -250,9 +250,9 @@ const DetailCards = () => {
                     </div>
                 </div>
             </div>
-            <div className="lg:flex gap-6 w-full">
+            <div className="lg:flex gap-6 w-[90%] mx-auto">
                 {/* Left Section */}
-                <div className="bg-[#FFFFFF] border rounded-lg mb-9 p-2 w-[70%] mx-auto h-[95%] lg:w-[25%] space-y-4 text-sm shadow-lg">
+                <div className="bg-[#FFFFFF] border rounded-lg mb-9 p-2 w-[70%] mx-auto h-[95%] lg:w-[23%] space-y-4 text-sm shadow-lg">
                     {/* Header */}
                     <div className='bg-[#B5151E] flex justify-center  text-white w-full p-3 rounded-t-lg'>
                         <h1 className="text-[#FFFFFF] font-lato text-[15px]  font-semibold">SHOW RESULTS BY:</h1>

@@ -61,7 +61,7 @@ const CheckOutHeading = () => {
             {/* Hero Checkout component will here */}
             <HeroCheckOut />
 
-            <div className='w-full mb-16 '>
+            <div className='w-full mb-16 max-w-7xl mx-auto '>
                 <img src='/assets/Trustedshopping.png' alt='trust' className='w-full  object-cover ' />
             </div>
         </section>

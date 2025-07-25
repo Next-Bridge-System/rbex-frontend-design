@@ -31,9 +31,9 @@ const RelatedProducts = () => {
     return (
         <section className="bg-[#F4FDFF] pt-6 pb-12 px-4 sm:px-6 mb-9 lg:px-16">
           {/* Top Heading */}
-      <div className="flex flex-col lg:flex-row  justify-between items-center gap-4 px-4 mb-6">
+      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto justify-between items-center gap-4 px-4 mb-6">
         {/* Heading */}
-        <div className="w-full lg:w-auto text-center lg:text-left">
+        <div className="w-full lg:w-auto  text-center lg:text-left">
           <h2 className="text-2xl font-bold text-[#333333]">Related Products</h2>
         </div>
 

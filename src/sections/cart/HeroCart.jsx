@@ -189,7 +189,11 @@ const HeroCart = () => {
 
             <div className="flex items-center justify-between">
               <span>Zip Code</span>
-              <button className="bg-yellow-300 font-bold text-sm px-2 py-1 rounded flex items-center gap-1 hover:bg-yellow-400 transition">
+              <button className="bg-yellow-300 font-bold text-sm px-2 py-1 rounded flex items-center gap-1 hover:bg-yellow-400 transition"
+              onClick={()=>{
+                navigate('/check-out')
+              }}
+              >
                 Get Shipping
                 <img src="/assets/cart5.png" alt="truck" className="w-5 h-4" />
               </button>
@@ -233,14 +237,22 @@ const HeroCart = () => {
 
             <button
               className="w-full bg-red-600 text-white py-2 rounded text-sm font-bold hover:bg-red-700 transition"
-              onClick={() => navigate('/check-out')}
+              onClick={() => {
+                navigate('/check-out')
+               window.scrollTo(0, 0);
+                }}
             >
-              Proceed to check out &gt;
+              Proceed to check out;
             </button>
 
             <div className="text-center text-sm text-gray-500">or</div>
 
-            <button className="w-full font-bold bg-yellow-400 flex items-center justify-center gap-2 py-2 rounded hover:bg-yellow-500 transition">
+            <button className="w-full font-bold bg-yellow-400 flex items-center justify-center gap-2 py-2 rounded hover:bg-yellow-500 transition"
+             onClick={() => {
+                navigate('/check-out')
+               window.scrollTo(0, 0);
+                }}
+            >
               Check Out With PayPal
               <img src="/assets/cart6.png" alt="PayPal" />
             </button>

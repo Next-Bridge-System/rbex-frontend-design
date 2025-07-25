@@ -20,9 +20,9 @@ const HeroHelp = () => {
   };
 
   return (
-    <section className="bg-[#F4FDFF] relative pt-8 px-4 sm:px-6 lg:px-16">
+    <section className="bg-[#F4FDFF] relative pt-8 px-4 sm:px-6 lg:px-16  overflow-hidden ">
       {/* Layered Background Vectors */}
-      <img src="/assets/bg1.png" alt="bg1" className="absolute top-0 left-0 w-[70%] lg:w-[45%] opacity-10 z-0 pointer-events-none" />
+      <img src="/assets/bg1.png" alt="bg1" className="absolute top-0 left-0 w-[70%] lg:w-[45%]  opacity-10 z-0 pointer-events-none" />
       <img src="/assets/bg2.png" alt="bg2" className="absolute top-0 left-0 w-[60%] lg:w-[40%] opacity-10 z-0 pointer-events-none" />
       <img src="/assets/bg3.png" alt="bg3" className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none" />
 
