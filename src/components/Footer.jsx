@@ -19,7 +19,7 @@ const Footer = () => {
             />
             <div className="flex items-center gap-2 text-sm text-[#BBBBBB]">
               <img src="/assets/location.png" alt="Location" />
-              <span>Los Angeles, CA 90210</span>
+              <span>Los Angeles,CA 90210</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-[#BBBBBB]">
               <img src="/assets/phone.png" alt="Phone" />
