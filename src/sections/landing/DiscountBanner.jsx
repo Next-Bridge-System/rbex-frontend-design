@@ -2,7 +2,7 @@ const DiscountBanner = () => {
   return (
 
     
-<div className="relative w-full max-w-[1440px] mx-auto h-[90px] sm:h-[150px] md:h-[200px] lg:h-[190px] mt-36">
+<div className="relative w-full  mx-auto h-[90px] sm:h-[150px] md:h-[200px] lg:h-[190px] mt-36">
     
       {/* Background Image */}
       <img

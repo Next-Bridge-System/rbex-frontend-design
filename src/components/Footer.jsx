@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-[#1B1A1A] max-w-[1440px] mx-auto ">
+    <div className="bg-[#1B1A1A]  mx-auto ">
 <footer className="text-white px-4 py-7 border-b w-full">
   <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Logo + Contact */}
