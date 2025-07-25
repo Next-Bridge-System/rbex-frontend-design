@@ -1,94 +1,199 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const products = [
-    {
-        id: 1,
-        title: 'Aluminum Wheels Concav...',
-        price: '$3,263.00',
-        image: '/assets/related1.png',
-    },
-    {
-        id: 2,
-        title: 'Replace – OE Replaceme...',
-        price: '$2,356.00',
-        image: '/assets/related2.png',
-    },
-    {
-        id: 3,
-        title: 'Engine Block',
-        price: '$326.00',
-        image: '/assets/related3.png',
-    },
-    {
-        id: 4,
-        title: 'Radial Tires 165/70R13',
-        price: '$365.00',
-        image: '/assets/related4.svg',
-    },
+  {
+    id: 1,
+    name: 'Condenser with Dryer Attached – KIA Sportage',
+    price: '$563.00',
+    image: '/assets/sportage.png',
+
+  },
+  {
+    id: 2,
+    name:   'Compact Car Condenser – Suzuki Alto',
+    price: '$563.00',
+    image: '/assets/alto.png',
+
+  },
+  {
+    id: 3,
+    name: 'Mini Truck Condenser – Suzuki Ravi',
+    price: '$2,356.00',
+    image: '/assets/ravi.png',
+
+  },
+  {
+    id: 4,
+    name: 'Heavy-Duty Condenser – SUV / 4x4',
+    price: '$65.00',
+    image: '/assets/4x4.png',
+
+  },
+  {
+    id: 5,
+    name: 'Performance Condenser – Toyota Corolla',
+    price: '$563.00',
+    image: '/assets/ravi.png',
+
+  },
+  {
+    id: 6,
+    name: 'Mini Truck Condenser – Suzuki Ravi',
+    price: '$563.00',
+    image: '/assets/alto.png',
+
+  },
 ];
 
-const RelatedProducts = () => {
-    return (
-        <section className="bg-[#F4FDFF] pt-6 pb-12 px-4 sm:px-6 mb-9 lg:px-16">
-          {/* Top Heading */}
-      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto justify-between items-center gap-4 px-4 mb-6">
+const PopularCategory = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [quantityStates, setQuantityStates] = useState(products.map(() => 0));
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      setCurrentIndex(0);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => {
+      const itemsToShow = isMobile ? 1 : 4;
+      return prevIndex >= products.length - itemsToShow ? 0 : prevIndex + 1;
+    });
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => {
+      const itemsToShow = isMobile ? 1 : 4;
+      return prevIndex <= 0 ? products.length - itemsToShow : prevIndex - 1;
+    });
+  };
+
+  const updateQuantity = (index, newQuantity) => {
+    const newQuantityStates = [...quantityStates];
+    newQuantityStates[index] = newQuantity;
+    setQuantityStates(newQuantityStates);
+  };
+
+  const itemsToShow = isMobile ? 1 : 4;
+  const itemWidth = 100 / itemsToShow;
+  const containerWidth = products.length * itemWidth;
+
+  return (
+<section className="text-gray-800   max-w-7xl mx-auto mt-10">
+      {/* Top Heading */}
+      <div className=" flex container  justify-between px-4 items-center">
         {/* Heading */}
-        <div className="w-full lg:w-auto  text-center lg:text-left">
-          <h2 className="text-2xl font-bold text-[#333333]">Related Products</h2>
+        <div className="max-w-7xl  ml-9 lg:ml-14  items-center gap-4 lg:gap-0">
+          <h2 className="text-2xl font-semibold text-[#333333]">Featured Products</h2>
         </div>
 
         {/* Arrows */}
-        <div className="flex items-center gap-4 justify-center lg:justify-end w-full lg:w-auto text-white ">
-          <div className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90">
+        <div className="flex items-center  gap-4 justify-center lg:justify-end w-full lg:w-auto text-white lg:mr-9">
+          <button
+            onClick={prevSlide}
+            className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+          >
             <img
               src="/assets/Vector.png"
               alt="Left Arrow"
-              className="w-3 h-3 object-contain"
+              className="w-2 h-2 object-contain"
             />
-          </div>
-          <div className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90">
+          </button>
+          <button
+            onClick={nextSlide}
+            className="w-7 h-7 rounded-full bg-strip flex items-center justify-center hover:brightness-90"
+          >
             <img
               src="/assets/Vector (1).png"
               alt="Right Arrow"
-              className="w-3 h-3 object-contain"
+              className="w-2 h-2 object-contain"
             />
-          </div>
+          </button>
         </div>
       </div>
-            <div className="max-w-7xl mx-auto grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {products.map((product) => (
-                    <div
-                        key={product.id}
-                            className="relative min-w-[250px] shadow bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 flex flex-col justify-between mx-auto w-full max-w-[250px] sm:max-w-none h-auto sm:h-[450px]"            >
-                            {/* Image */}
-                        <div className="-m-2 sm:-m-3 mb-2">
-                            <div className="border-b">
-                                <img
-                                    src={product.image}
-                                    alt={product.title}
-                                    className="w-full h-[220px] sm:h-[220px] lg:h-[250px] object-cover rounded-[10px] border-gray-200"
-                                />
-                            </div>
-                        </div>
-                        {/* Title */}
-                        <h3 className="font-rubik text-[#333333] font-light text-[14px] sm:text-[16px] lg:text-[18px] leading-tight mt-2">
-                            {product.title}
-                        </h3>
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                            <span className="text-[#333333] font-light font-rubik text-sm">{product.price}</span>
-                        </div>
 
-                        {/* Button */}
-                        <div className="flex justify-center mt-4">
-                            <button className="bg-[#E52727] text-white py-2 px-6 text-xs rounded-full hover:bg-red-600 transition-colors">
-                                Add to cart
-                            </button>
-                        </div>
+      {/* Product Carousel */}
+      <div className="relative overflow-hidden max-w-8xl lg:ml-9  mx-auto mt-10">
+        <div className="flex transition-transform duration-300" style={{
+          transform: `translateX(-${currentIndex * itemWidth}%)`,
+          width: `${products.length * (window.innerWidth < 768 ? 100 : 16.8)}%`
+        }}>
+          {products.map(({ id, name, price, image }, index) => {
+            const quantity = quantityStates[index];
+            const increment = () => updateQuantity(index, quantity + 1);
+            const decrement = () => updateQuantity(index, Math.max(0, quantity - 1));
+
+            return (
+              <div
+                key={id}
+                className={`${isMobile ? 'w-full' : 'w-1/4'}  flex-shrink-0`}
+              >
+                <div className="w-full  lg:w-[85%] mx-7  max-w-[14%] lg:max-w-full lg:mx-0 bg-white lg:h-[450px] border border-gray-200 rounded-[10px] p-3 flex flex-col justify-between">
+                  {/* Top Section */}
+                  <div>
+                    <div className="mb-2 -mx-3">
+                      <img
+                        src={image}
+                        alt={name}
+                        className="w-full h-[60%] object-cover border-b border-gray-200 rounded-t-[10px]"
+                      />
                     </div>
-                ))}
+
+                    <h3 className="text-[#333333] font-regular font-rubik text-[16px] line-clamp-2">
+                      {name}
+                    </h3>
+
+                    <div className="flex items-center justify-between mt-3">
+                      <p className="text-[#333333] font-rubik font-medium text-[14px]">{price}</p>
+                    </div>
+                  </div>
+
+                  {/* Bottom Button */}
+                  <div className="flex justify-center mt-5">
+                    {quantity === 0 ? (
+                      <button
+                        onClick={increment}
+                        className="bg-strip text-white py-2 px-10 text-sm  rounded hover:bg-red-600 transition-colors"
+                      >
+                        Add to cart
+                      </button>
+                    ) : (
+                      <div className="flex items-center border border-strip rounded">
+                        <button
+                          onClick={decrement}
+                          className="px-3 py-1  text-white bg-strip  transition-colors"
+                        >
+                          -
+                        </button>
+                        <span className="px-3  text-sm text-strip">{quantity}</span>
+                        <button
+                          onClick={increment}
+                          className="px-3 py-1 text-white bg-strip  transition-colors"
+                        >
+                          +
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="mt-10  sm:px-6 px-2  lg:px-0">
+                
             </div>
-        </section>
-    );
+    </section>
+
+  );
 };
 
-export default RelatedProducts;
+export default PopularCategory;

@@ -6,7 +6,7 @@ import HeroCategory from '../sections/shopByCategory/HeroCategory';
 const ShopByCategory = () => {
     return (
 
-        <div className="overflow-x-hidden">
+        <div className="overflow-x-hidden ">
             <Navbar />
             <HeroCategory />
             <Footer />

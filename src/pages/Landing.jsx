@@ -26,7 +26,6 @@ const Landing = () => {
       <AnimatedSection ><EngineDrivetrainSection /></AnimatedSection>
       <AnimatedSection ><Products /></AnimatedSection>
       <AnimatedSection ><DiscountBanner /></AnimatedSection>
-
       <AnimatedSection ><PopularCategory /></AnimatedSection>
       <AnimatedSection ><PromoBanners /></AnimatedSection>
       <AnimatedSection ><Items /></AnimatedSection>
