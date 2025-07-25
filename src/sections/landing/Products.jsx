@@ -188,10 +188,11 @@ const PopularCategory = () => {
           })}
         </div>
       </div>
-      <div className="mt-10 sm:px-6 lg:px-0">
-                <DiscountBanner />
+      <div className="mt-10  sm:px-6 px-2  lg:px-0">
+                
             </div>
     </section>
+
   );
 };
 

@@ -86,7 +86,7 @@ const PopularCategory = () => {
   const containerWidth = products.length * itemWidth;
 
   return (
-<section className="text-gray-800  max-w-7xl mx-auto mt-10">
+<section className="text-gray-800   max-w-7xl mx-auto mt-32">
       {/* Top Heading */}
       <div className=" flex container justify-between px-4 items-center">
         {/* Heading */}

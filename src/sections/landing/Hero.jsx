@@ -146,7 +146,7 @@ const Hero = () => {
   return (
 
 
-    <section className="relative  bg-[#F4FDFF] py-12 overflow-hidden">
+    <section className="relative  bg-[#F4FDFF] mb-16  overflow-hidden">
       {/* Layered Background Vectors */}
       <img
         src="/assets/bg1.png"
@@ -163,11 +163,11 @@ const Hero = () => {
         alt="bg3"
         className="absolute top-0 left-0 w-[50%] lg:w-[35%] opacity-10 z-0 pointer-events-none"
       />
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center ">
+      <div className="max-w-7xl  mx-auto flex flex-col-reverse lg:flex-row items-center justify-center ">
 
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/1 mx-auto lg:ml-9  text-center lg:text-left">
+        <div className="w-full lg:w-1/1  mx-auto lg:ml-9  text-center lg:text-left">
           {/* Slider Text Block */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -229,7 +229,7 @@ const Hero = () => {
       </div>
 
       {/* Filter Strip */}
-      <div className="mt-28 relative z-10">
+      <div className="mt-16 relative z-10">
         <FilterStrip />
       </div>
     </section>

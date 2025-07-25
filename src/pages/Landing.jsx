@@ -11,6 +11,7 @@ import Items from '../sections/landing/Items'
 import LatestArticle from '../sections/landing/latestArticle'
 import Testimonials from '../sections/landing/Testimonials'
 import Footer from '../components/Footer'
+import DiscountBanner from '../sections/landing/DiscountBanner';
 
 
 
@@ -24,6 +25,8 @@ const Landing = () => {
       <AnimatedSection ><Categories /></AnimatedSection>
       <AnimatedSection ><EngineDrivetrainSection /></AnimatedSection>
       <AnimatedSection ><Products /></AnimatedSection>
+      <AnimatedSection ><DiscountBanner /></AnimatedSection>
+
       <AnimatedSection ><PopularCategory /></AnimatedSection>
       <AnimatedSection ><PromoBanners /></AnimatedSection>
       <AnimatedSection ><Items /></AnimatedSection>

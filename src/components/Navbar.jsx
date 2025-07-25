@@ -10,12 +10,12 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="bg-navbar  shadow-md py-3 border text-navText">
-      <div className="  ">
+    <nav className="bg-navbar   shadow-md py-3 border text-navText">
+      <div className="px-5  ">
         {/* Main Navbar Content */}
-         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+         <div className="max-w-7xl mx-auto  flex justify-between items-center">
           {/* Logo and Mobile Menu Button */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6 ">
             <img src="/assets/logo 6.png" alt="Logo" className="h-10 md:h-10 w-auto" />
             <button
               className="lg:hidden text-xl text-navText"
@@ -28,7 +28,7 @@ const Navbar = () => {
           {/* Desktop Menu and Search */}
           <div className="hidden lg:flex  items-center gap-13 justify-between  mr-32">
             {/* Desktop Navigation */}
-            <ul className="flex gap-2 font-semibold font-roboto text-[#393C3D]   text-sm items-center">
+            <ul className="flex gap-6  font-semibold font-roboto text-[#393C3D]   text-sm items-center">
               <li className="cursor-pointer  hover:text-strip" onClick={() => navigate('/')}>
                 Home
               </li>
