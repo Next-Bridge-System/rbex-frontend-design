@@ -4,7 +4,7 @@ const Footer = () => {
   const navigate = useNavigate();
   return (
     <div className="bg-[#1B1A1A]">
-      <footer className="text-white px-4 py-10 border-b flex justify-center">
+      <footer className="text-white px-4 py-7 border-b flex justify-center">
         <div className="w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Logo + Contact */}
           <div className="flex flex-col gap-4 ">
