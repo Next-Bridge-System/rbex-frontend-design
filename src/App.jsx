@@ -11,14 +11,16 @@ import Suspension from './pages/Suspension';
 import Products from './pages/Products';
 import Blogs from './pages/Blogs';
 import DetailSearch from './pages/DetailSearch';
+import Login from './pages/Login';
 
 
 function App() {
 
   return (
     <Router>
-      <Routes>
+      <Routes> 
         <Route path="/" element={<Landing />} />
+        <Route path='/log-in' element={<Login/>}/>
         <Route path="/shop-by-category" element={<ShopByCategory />} />
         <Route path="/track-order" element={<TrackOrder />} />
         <Route path='/contact' element={<ContactUs />} />

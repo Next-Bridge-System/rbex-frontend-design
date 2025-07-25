@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaSearch,  FaBars, FaTimes } from 'react-icons/fa';
+import { FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
 
 
@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="bg-navbar   shadow-md py-3 border text-navText">
       <div className="px-5  ">
         {/* Main Navbar Content */}
-         <div className="max-w-7xl mx-auto  flex justify-between items-center">
+        <div className="max-w-7xl mx-auto  flex justify-between items-center">
           {/* Logo and Mobile Menu Button */}
           <div className="flex items-center gap-6 ">
             <img src="/assets/logo 6.png" alt="Logo" className="h-10 md:h-10 w-auto" />
@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu and Search */}
-          <div className="hidden lg:flex  items-center gap-13 justify-between  mr-32">
+          <div className="hidden lg:flex  items-center  justify-between ">
             {/* Desktop Navigation */}
             <ul className="flex gap-6  font-semibold font-roboto text-[#393C3D]   text-sm items-center">
               <li className="cursor-pointer  hover:text-strip" onClick={() => navigate('/')}>
@@ -83,8 +83,18 @@ const Navbar = () => {
               </div>
             </div>
 
-          </div>
 
+
+          </div>
+          {/* login Button  */}
+           <div className='bg-[#B5151E] text-white text-center p-2.5 hover:shadow-lg cursor-pointer font-rubik text-xs px-7 rounded-3xl'
+           onClick={()=>{
+            navigate('/log-in')
+            window.scrollTo(0,0);
+           }}
+          >
+            Log in
+          </div>
           {/* Cart Button - Visible on all screens */}
           <div
             className="flex items-center gap-1 md:gap-2 cursor-pointer hover:text-red-600"
@@ -116,19 +126,19 @@ const Navbar = () => {
               <p className="cursor-pointer hover:text-red-600" onClick={() => navigate('/')}>
                 Home
               </p>
-                <details>
-                  <summary className="flex items-center cursor-pointer hover:text-red-600">
-                    Shop By Category
-                    <IoIosArrowDown className="ml-1" />
-                  </summary>
-                  <ul className="mt-2 pl-4 space-y-2">
-                    {['Condenser', 'Head Lamp', 'Mirrors', 'Bumper', 'Battery', 'AC Filters'].map(item => (
-                      <li key={item} className="py-1 hover:text-red-500 cursor-pointer text-xs">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+              <details>
+                <summary className="flex items-center cursor-pointer hover:text-red-600">
+                  Shop By Category
+                  <IoIosArrowDown className="ml-1" />
+                </summary>
+                <ul className="mt-2 pl-4 space-y-2">
+                  {['Condenser', 'Head Lamp', 'Mirrors', 'Bumper', 'Battery', 'AC Filters'].map(item => (
+                    <li key={item} className="py-1 hover:text-red-500 cursor-pointer text-xs">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </details>
               <p className="cursor-pointer hover:text-red-600" onClick={() => navigate('/track-order')}>
                 Track Order
               </p>
