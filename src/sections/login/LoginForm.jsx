@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const LoginForm = () => {
+  const navigate = useNavigate()
   return (
     <section className="relative pb-12 px-4 sm:px-6 lg:px-16 flex items-center justify-center">
       <div className="w-full max-w-2xl bg-white rounded-lg shadow-md p-8">
@@ -57,7 +59,12 @@ const LoginForm = () => {
         
         <p className="mt-6 text-center text-sm text-gray-600">
           Don't Have an Account?{' '}
-          <a href="#" className="font-medium text-blue-600 hover:text-blue-500">Sign Up</a>
+          <a href="#" className="font-medium text-blue-600 hover:text-blue-500"
+            onClick={()=>{
+              navigate('/sign-up')
+              window.scrollTo(0,0);
+            }}
+          >Sign Up</a>
         </p>
       </div>
     </section>

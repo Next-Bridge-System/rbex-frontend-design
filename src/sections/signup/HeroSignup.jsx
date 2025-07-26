@@ -2,7 +2,8 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
-const HeroLogin = () => {
+const HeroSignup
+ = () => {
     const navigate =useNavigate();
     return (
         <section className="bg-[#F4FDFF] relative pt-6  px-4 sm:px-6 lg:px-16">
@@ -26,7 +27,7 @@ const HeroLogin = () => {
             <div className="max-w-7xl mx-auto flex flex-col items-start">
                 {/* Your existing heading */}
                 <h1 className="text-[26px] ml-6 sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#233D7B] leading-snug tracking-tight font-lato mb-4 sm:mb-8">
-                    Log in
+                    Sign Up
                 </h1>
 
                 {/* Your existing breadcrumb links */}
@@ -52,7 +53,7 @@ const HeroLogin = () => {
                             className="absolute inset-0 w-full h-full object-cover z-0"
                         />
                         <span className="absolute inset-0 flex items-center justify-center text-[#4D4D4D] text-lg font-semibold z-10">
-                            Log in
+                            Sign Up
                         </span>
                     </div>
                 </div>
@@ -62,4 +63,4 @@ const HeroLogin = () => {
     )
 }
 
-export default HeroLogin
+export default HeroSignup

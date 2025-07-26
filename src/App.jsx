@@ -12,6 +12,7 @@ import Products from './pages/Products';
 import Blogs from './pages/Blogs';
 import DetailSearch from './pages/DetailSearch';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Routes> 
         <Route path="/" element={<Landing />} />
         <Route path='/log-in' element={<Login/>}/>
+        <Route path='/sign-up' element={<Signup/>}/>
         <Route path="/shop-by-category" element={<ShopByCategory />} />
         <Route path="/track-order" element={<TrackOrder />} />
         <Route path='/contact' element={<ContactUs />} />
