@@ -87,13 +87,15 @@ const Navbar = () => {
 
           </div>
           {/* login Button  */}
-           <div className='bg-[#B5151E] text-white text-center p-2.5 hover:shadow-lg cursor-pointer font-rubik text-xs px-7 rounded-3xl'
+         <div className=' ml-32 lg:ml-0  flex items-end'> 
+           <div className='bg-[#B5151E] text-white text-center p-2.5 hover:shadow-lg cursor-pointer font-rubik text-xs  px-7 rounded-3xl'
            onClick={()=>{
             navigate('/log-in')
             window.scrollTo(0,0);
            }}
           >
             Log in
+          </div>
           </div>
           {/* Cart Button - Visible on all screens */}
           <div
