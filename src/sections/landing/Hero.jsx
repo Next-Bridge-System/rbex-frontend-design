@@ -36,35 +36,6 @@ const models = [
   { value: 'markx', label: 'MarkX' },
 ];
 
-// // Custom Styling
-// const customStyles = {
-//   control: (base) => ({
-//     ...base,
-//     borderRadius: '12px',
-//     boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
-//     padding: '2px 5px',
-//     borderColor: '#d1d5db',
-//     fontSize: '14px',
-//   }),
-//   menu: (base) => ({
-//     ...base,
-//     borderRadius: '12px',
-//     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-//     marginTop: '4px',
-//     maxHeight: '100px',           // 👈 sets a scrollable height
-//     overflowY: 'auto',            // 👈 enables vertical scroll
-//     zIndex: 20                    // 👈 ensures menu stays above other elements
-//   }),
-
-//   option: (base, { isFocused }) => ({
-//     ...base,
-//     padding: '10px 10px',
-//     fontSize: '14px',
-//     backgroundColor: isFocused ? '#fdecea' : 'white',
-//     color: '#333333',
-//     cursor: 'pointer',
-//   }),
-// };
 
 const Hero = () => {
 
@@ -93,9 +64,10 @@ const Hero = () => {
       borderRadius: '12px',
       boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
       marginTop: '4px',
-      maxHeight: windowWidth <= 768 ? '90px' : '150px', // 👈 Fixes the issue
+      maxHeight: windowWidth <= 768 ? '150px' : '200px', // 👈 Fixes the issue
       overflowY: 'auto',
       zIndex: 20,
+    
     }),
     option: (base, { isFocused }) => ({
       ...base,
@@ -195,7 +167,7 @@ const Hero = () => {
             <div className="min-w-[160px]">
               <Select options={makes} placeholder="Select Make" styles={customStyles} />
             </div>
-            <div className="min-w-[160px]">
+            <div className="min-w-[160px] mr-16 lg:mr-0">
               <Select options={models} placeholder="Select Model" styles={customStyles} />
             </div>
             <button
